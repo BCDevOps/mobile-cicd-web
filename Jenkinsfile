@@ -83,7 +83,7 @@ podTemplate(label: "${APP_NAME}-node8-build", name: "${APP_NAME}-node8-build", s
 
       try {
         // Run our unit tests et al.
-        sh "npm test"
+        sh "CI=true npm test"
       } catch (error) {
         def attachment = [:]
         attachment.fallback = 'See build log for more details'
