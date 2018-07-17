@@ -1,6 +1,6 @@
 import groovy.json.JsonOutput
 
-def APP_NAME = 'devhub-signing-web'
+def APP_NAME = 'signing-web'
 def CADDY_BUILD_CONFIG = "${APP_NAME}-caddy"
 def CADDY_IMAGESTREAM_NAME = "${APP_NAME}-caddy"
 def TAG_NAMES = ['dev', 'test', 'prod']
