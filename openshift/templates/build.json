@@ -195,7 +195,9 @@
                 "triggers": [{
                     "type": "github",
                     "github": {
-                        "secret": "${NAME}-github"
+                        "secretReference": {
+                          "name": "${NAME}-github"
+                        }
                     }
                 }],
                 "output": {},
