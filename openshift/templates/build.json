@@ -192,6 +192,12 @@
                         "jenkinsfilePath": "Jenkinsfile"
                     }
                 },
+                "triggers": [{
+                    "type": "github",
+                    "github": {
+                        "secret": "${NAME}-github"
+                    }
+                }],
                 "output": {},
                 "resources": {},
                 "postCommit": {},
