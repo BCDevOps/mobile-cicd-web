@@ -223,13 +223,6 @@
             "value": "openshift"
         },
         {
-            "name": "BUILD_PROJECT",
-            "displayName": "Build Project",
-            "description": "The openshift project where builds and target images are stored.",
-            "required": true,
-            "value": "devops-devexp-tools"
-        },
-        {
             "name": "GIT_REPO_URL",
             "displayName": "Git Repo URL",
             "description": "The URL to your GIT repo, don't use the this default unless your just experimenting.",
