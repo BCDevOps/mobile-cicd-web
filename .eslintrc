@@ -36,6 +36,8 @@
     "no-useless-concat": "warn",
     "block-scoped-var": "error",
     "consistent-return": "error",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "operator-linebreak": "off",
+    "arrow-parens": "off"
   }
 }
