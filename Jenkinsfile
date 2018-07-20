@@ -81,48 +81,103 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
     stage('Test') {
       echo "Testing: ${BUILD_ID}"
 
+      //
+      // Check the code builds
+      //
+
+      try {
+        echo "Checking Build"
+        sh "npm run build"
+      } catch (error) {
+        def attachment = [:]
+        attachment.fallback = 'See build log for more details'
+        attachment.title = "Web Build ${BUILD_ID} FAILED! :face_with_head_bandage: :hankey:"
+        attachment.color = '#CD0000' // Red
+        attachment.text = "The code does not build.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
+        // attachment.title_link = "${env.BUILD_URL}"
+
+        notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
+        sh "exit 1001"
+      }
+
+      //
+      // Check code quality
+      //
+
+      try {
+        echo "Checking code quality with SonarQube"
+        SONARQUBE_URL = sh (
+            script: 'oc get routes -o wide --no-headers | awk \'/sonarqube/{ print match($0,/edge/) ?  "https://"$2 : "http://"$2 }\'',
+            returnStdout: true
+              ).trim()
+        echo "SONARQUBE_URL: ${SONARQUBE_URL}"
+        dir('sonar-runner') {
+          sh returnStdout: true, script: "./gradlew sonarqube -Dsonar.host.url=${SONARQUBE_URL} -Dsonar.verbose=true --stacktrace --info -Dsonar.projectName=${APP_NAME} -Dsonar.branch=${GIT_BRANCH_NAME} -Dsonar.projectKey=org.sonarqube:${APP_NAME} -Dsonar.sources=.."
+        }
+      } catch (error) {
+        def attachment = [:]
+        attachment.fallback = 'See build log for more details'
+        attachment.title = "Web Build ${BUILD_ID} WARNING! :unamused: :zany_face: :facepalm:"
+        attachment.color = '#FFA500' // Orange
+        attachment.text = "The SonarQube code quality check failed.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
+        // attachment.title_link = "${env.BUILD_URL}"
+
+        notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
+      }
+      
+      //
+      // Check code quality with a LINTer
+      //
+
+      try {
+        echo "Checking code quality with LINTer"
+        sh "npx eslint --ext .js,.jsx src"
+      } catch (error) {
+        def attachment = [:]
+        attachment.fallback = 'See build log for more details'
+        attachment.title = "Web Build ${BUILD_ID} WARNING! :unamused: :zany_face: :facepalm:"
+        attachment.color = '#FFA500' // Orange
+        attachment.text = "There LINTer code quality check failed.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
+        // attachment.title_link = "${env.BUILD_URL}"
+
+        notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
+      }
+
+      //
+      // Run a security check on our packages
+      //
+
+      try {
+        echo "Checking dependencies for security issues"
+        sh "npx nsp check"
+      } catch (error) {
+        // def output = readFile('nsp-report.txt').trim()
+        def attachment = [:]
+        attachment.fallback = 'See build log for more details'
+        attachment.title = "Web Build ${BUILD_ID} WARNING! :unamused: :zany_face: :facepalm:"
+        attachment.color = '#FFA500' // Orange
+        attachment.text = "There are security warnings related to some packages.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
+
+        notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
+      }
+
+      //
+      // Run our unit tests et al.
+      //
+
       try {
         // Run our unit tests et al.
         sh "CI=true npm test"
       } catch (error) {
         def attachment = [:]
         attachment.fallback = 'See build log for more details'
-        attachment.title = "WEB Build ${BUILD_ID} Failed :hankey: :face_with_head_bandage:"
+        attachment.title = "Web Build ${BUILD_ID} Failed :hankey: :face_with_head_bandage:"
         attachment.color = '#CD0000' // Red
         attachment.text = "There are issues with the unit tests.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
         // attachment.title_link = "${env.BUILD_URL}"
 
         notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
-        sh "exit 1"
-      }
-    }
-
-    // stage('Code Quality') {
-    //   SONARQUBE_URL = sh (
-    //       script: 'oc get routes -o wide --no-headers | awk \'/sonarqube/{ print match($0,/edge/) ?  "https://"$2 : "http://"$2 }\'',
-    //       returnStdout: true
-    //         ).trim()
-    //   echo "SONARQUBE_URL: ${SONARQUBE_URL}"
-    //   dir('sonar-runner') {
-    //     sh returnStdout: true, script: "./gradlew sonarqube -Dsonar.host.url=${SONARQUBE_URL} -Dsonar.verbose=true --stacktrace --info -Dsonar.projectName=${APP_NAME} -Dsonar.branch=${GIT_BRANCH_NAME} -Dsonar.projectKey=org.sonarqube:${APP_NAME} -Dsonar.sources=.."
-    //   }
-    // }
-
-    stage('Build Artifacts') {
-      echo "Build Artifacts: ${BUILD_ID}"
-      try {
-        // Run our unit tests et al.
-        sh "npm run build"
-      } catch (error) {
-        def attachment = [:]
-        attachment.fallback = 'See build log for more details'
-        attachment.title = "WEB Build ${BUILD_ID} Failed :hankey: :face_with_head_bandage:"
-        attachment.color = '#CD0000' // Red
-        attachment.text = "There are issues with the build.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
-        // attachment.title_link = "${env.BUILD_URL}"
-
-        notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
-        sh "exit 1"
+        sh "exit 1002"
       }
     }
 
