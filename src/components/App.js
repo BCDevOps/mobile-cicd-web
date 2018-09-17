@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import logo from './logo.svg';
+import logo from './bcgovlogo.svg';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { createSigningJob } from '../actionCreators';
