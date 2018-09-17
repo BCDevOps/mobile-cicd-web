@@ -19,12 +19,14 @@
         }
       },
       "spec": {
-        "ports": [{
-          "name": "2015-tcp",
-          "protocol": "TCP",
-          "port": 2015,
-          "targetPort": 2015
-        }],
+        "ports": [
+          {
+            "name": "2015-tcp",
+            "protocol": "TCP",
+            "port": 2015,
+            "targetPort": 2015
+          }
+        ],
         "selector": {
           "deploymentconfig": "${NAME}"
         },
@@ -57,16 +59,15 @@
           "resources": {},
           "activeDeadlineSeconds": 21600
         },
-        "triggers": [{
+        "triggers": [
+          {
             "type": "ConfigChange"
           },
           {
             "type": "ImageChange",
             "imageChangeParams": {
               "automatic": true,
-              "containerNames": [
-                "${NAME}-caddy"
-              ],
+              "containerNames": ["${NAME}-caddy"],
               "from": {
                 "kind": "ImageStreamTag",
                 "namespace": "${SOURCE_IMAGE_NAMESPACE}",
@@ -90,34 +91,40 @@
             }
           },
           "spec": {
-            "containers": [{
-              "name": "${NAME}-caddy",
-              "image": "${NAME}-caddy@${IMAGE_TAG}",
-              "args": [
-                "/tmp/scripts/run"
-              ],
-              "ports": [{
-                "containerPort": 2015,
-                "protocol": "TCP"
-              }],
-              "volumeMounts": [{
-                "name": "${VOLUMN_NAME}",
-                "mountPath": "/etc/Caddyfile",
-                "readOnly": true,
-                "subPath": "Caddyfile"
-              }],
-              "resources": {},
-              "terminationMessagePath": "/dev/termination-log",
-              "terminationMessagePolicy": "File",
-              "imagePullPolicy": "Always"
-            }],
-            "volumes": [{
-              "name": "${VOLUMN_NAME}",
-              "configMap": {
-                "defaultMode": "420",
-                "name": "${NAME}-caddy"
+            "containers": [
+              {
+                "name": "${NAME}-caddy",
+                "image": "${NAME}-caddy@${IMAGE_TAG}",
+                "args": ["/tmp/scripts/run"],
+                "ports": [
+                  {
+                    "containerPort": 2015,
+                    "protocol": "TCP"
+                  }
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "${VOLUMN_NAME}",
+                    "mountPath": "/etc/Caddyfile",
+                    "readOnly": true,
+                    "subPath": "Caddyfile"
+                  }
+                ],
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "Always"
               }
-            }],
+            ],
+            "volumes": [
+              {
+                "name": "${VOLUMN_NAME}",
+                "configMap": {
+                  "defaultMode": "420",
+                  "name": "${NAME}-caddy"
+                }
+              }
+            ],
             "restartPolicy": "Always",
             "terminationGracePeriodSeconds": 30,
             "dnsPolicy": "ClusterFirst",
@@ -190,37 +197,43 @@
       }
     }
   ],
-  "parameters": [{
+  "parameters": [
+    {
       "name": "SOURCE_IMAGE_NAMESPACE",
       "displayName": "Build Project",
       "description": "The openshift project where builds and target images are stored.",
       "required": true,
       "value": "devhub-tools"
-    }, {
+    },
+    {
       "name": "NAME",
       "displayName": "Name",
       "description": "The name assigned to all of the objects defined in this template.  You should keep this as default unless your know what your doing.",
       "required": true,
       "value": "signing-web"
-    }, {
+    },
+    {
       "name": "IMAGE_TAG",
       "displayName": "Name",
       "description": "The suffix for all created objects",
       "required": false,
       "value": "latest"
-    }, {
+    },
+    {
       "name": "ROUTE_NAME",
       "displayName": "Application Route",
       "description": "The name of the default route use to access this service.",
       "required": true,
       "value": "siging-web"
-    }, {
+    },
+    {
       "name": "VOLUMN_NAME",
       "displayName": "The volumn name for caddyfile",
       "description": "The volumn name for caddyfile",
-      "value": "web-caddy-config-sffrf",
+      "value": "web-caddy-config",
       "required": true
-    }, {
+    },
+    {
       "name": "API_SERVICE_NAME",
       "displayName": "Name",
       "description": "The name assigned to all of the objects defined in this template.  You should keep this as default unless your know what your doing.",
