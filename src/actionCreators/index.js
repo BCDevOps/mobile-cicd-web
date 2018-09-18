@@ -23,7 +23,10 @@ import { uploadStarted, jobCreated, jobCreationFailed } from '../actions';
 import { API } from '../constants';
 
 axios.defaults.baseURL = API.BASE_URL;
-axios.defaults.timeout = 30000; // 30 sec
+
+const apiPollTimeout = 3000;
+const maxStatusCheckCount = (120 * 1000) / apiPollTimeout;
+let statusCheckCount = 0;
 
 export const createSigningJob = files => dispatch => {
   const form = new FormData();
@@ -35,11 +38,43 @@ export const createSigningJob = files => dispatch => {
     .post(API.CREATE_JOB('ios'), form, {
       headers: { 'Content-Type': 'multipart/form-data' },
     })
-    .then(response => {
-      dispatch(jobCreated({ jobId: response.data.id }));
+    .then(res => {
+      dispatch(jobCreated({ jobId: res.data.id }));
+      checkJobStatus(res.data.id, dispatch);
     })
     .catch(err => {
       console.log(`FAIL, err = ${err.message}`);
       dispatch(jobCreationFailed());
+    });
+};
+
+const checkJobStatus = (jobId, dispatch) => {
+  // dispatch(uploadStarted());
+  statusCheckCount += 1;
+
+  return axios
+    .get(API.CHECK_JOB_STATUS(jobId), {
+      headers: { Accept: 'application/json' },
+    })
+    .then(res => {
+      if (
+        res.status === 202 &&
+        res.data.status === 'Processing' &&
+        statusCheckCount < maxStatusCheckCount
+      ) {
+        setTimeout(() => {
+          checkJobStatus(jobId, dispatch);
+        }, apiPollTimeout);
+
+        return;
+      }
+
+      if (res.status === 200 && res.data.status === 'Completed') {
+        console.log('WERE DONE !!!');
+        console.log(`download here = ${res.data.url}`);
+      }
+    })
+    .catch(err => {
+      console.log(`error = ${err.message}`);
     });
 };
