@@ -20,8 +20,8 @@
 
 export const ADD_FILE = 'ADD_FILE';
 export const UPLOAD_STARTED = 'UPLOAD_STARTED';
-export const UPLOAD_COMPLETED_OK = 'UPLOAD_COMPLETED_OK';
-export const UPLOAD_COMPLETED_FAILED = 'UPLOAD_COMPLETED_FAILED';
+export const JOB_CREATION_SUCCEEDED = 'JOB_CREATION_SUCCEEDED';
+export const JOB_CREATION_FAILED = 'JOB_CREATION_FAILED';
 
 export const addFile = data => {
   return {
@@ -36,8 +36,16 @@ export const uploadStarted = () => {
   };
 };
 
-export const uploadCompleted = success => {
+export const jobCreated = data => {
   return {
-    type: success ? UPLOAD_COMPLETED_OK : UPLOAD_COMPLETED_FAILED,
+    type: JOB_CREATION_SUCCEEDED,
+    jobId: data.jobId,
+  };
+};
+
+export const jobCreationFailed = data => {
+  return {
+    type: JOB_CREATION_FAILED,
+    jobId: undefined,
   };
 };

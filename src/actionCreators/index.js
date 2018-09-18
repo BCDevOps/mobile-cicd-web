@@ -19,7 +19,7 @@
 //
 
 import axios from 'axios';
-import { uploadStarted, uploadCompleted } from '../actions';
+import { uploadStarted, jobCreated, jobCreationFailed } from '../actions';
 
 export const createSigningJob = files => dispatch => {
   console.log('** HERE **', files);
@@ -34,16 +34,11 @@ export const createSigningJob = files => dispatch => {
     .post(url, form, {
       headers: { 'Content-Type': 'multipart/form-data' },
     })
-    .then(foo => {
-      console.log('SUCCESS!');
-      dispatch(uploadCompleted(true));
-      return;
-      // dispatch finished
+    .then(response => {
+      dispatch(jobCreated({ jobId: response.data.id }));
     })
     .catch(err => {
       console.log(`FAIL, err = ${err.message}`);
-      dispatch(uploadCompleted(false));
-      return;
-      // dispatch finished
+      dispatch(jobCreationFailed());
     });
 };
