@@ -65,7 +65,6 @@ const checkJobStatus = (jobId, dispatch) => {
       headers: { Accept: 'application/json' },
     })
     .then(res => {
-      console.log('HELLO', res);
       if (
         res.status === 202 &&
         res.data.status === 'Processing' &&
@@ -81,10 +80,7 @@ const checkJobStatus = (jobId, dispatch) => {
       }
 
       if (res.status === 200 && res.data.status === 'Completed') {
-        dispatch(jobCompleted());
-
-        console.log('WERE DONE !!!');
-        console.log(`download here = ${res.data.url}`);
+        dispatch(jobCompleted(res.data));
       }
     })
     .catch(err => {

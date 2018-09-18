@@ -69,6 +69,7 @@ const job = (state = {}, action) => {
       return {
         status: JOB_STATUS.COMPLETED,
         jobId: state.jobId,
+        url: action.url,
       };
     default:
       return state;

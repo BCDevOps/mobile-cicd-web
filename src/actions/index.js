@@ -58,8 +58,9 @@ export const jobProcessing = () => {
   };
 };
 
-export const jobCompleted = () => {
+export const jobCompleted = data => {
   return {
     type: JOB_STATUS_COMPLETED,
+    url: data.url,
   };
 };

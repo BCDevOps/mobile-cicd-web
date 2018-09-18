@@ -17,12 +17,23 @@ class App extends Component {
   // };
 
   jobStateChanged = job => {
-    console.log(job);
     if (!job || (Object.keys(job).length === 0 && job.constructor === Object)) {
       return 'Unknown';
     }
 
     return job.status;
+  };
+
+  deliveryUrlForJob = job => {
+    if (!job || (Object.keys(job).length === 0 && job.constructor === Object)) {
+      return <i>No Delivery URL</i>;
+    }
+
+    if (!job.url) {
+      return <i>No Delivery URL</i>;
+    }
+
+    return <a href={job.url}>Download</a>;
   };
 
   render() {
@@ -43,6 +54,7 @@ class App extends Component {
           </button>
         </p>
         <p>status = {this.jobStateChanged(this.props.job)}</p>
+        <p>{this.deliveryUrlForJob(this.props.job)}</p>
       </div>
     );
   }
