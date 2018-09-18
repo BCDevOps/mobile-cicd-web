@@ -20,18 +20,19 @@
 
 import axios from 'axios';
 import { uploadStarted, jobCreated, jobCreationFailed } from '../actions';
+import { API } from '../constants';
+
+axios.defaults.baseURL = API.BASE_URL;
+axios.defaults.timeout = 30000; // 30 sec
 
 export const createSigningJob = files => dispatch => {
-  console.log('** HERE **', files);
-
-  const url = 'http://localhost:8089/api/v1/sign?platform=ios';
   const form = new FormData();
   form.append('file', files[0]);
 
   dispatch(uploadStarted());
 
   return axios
-    .post(url, form, {
+    .post(API.CREATE_JOB('ios'), form, {
       headers: { 'Content-Type': 'multipart/form-data' },
     })
     .then(response => {
