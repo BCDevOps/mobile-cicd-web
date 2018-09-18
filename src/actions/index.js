@@ -22,6 +22,8 @@ export const ADD_FILE = 'ADD_FILE';
 export const UPLOAD_STARTED = 'UPLOAD_STARTED';
 export const JOB_CREATION_SUCCEEDED = 'JOB_CREATION_SUCCEEDED';
 export const JOB_CREATION_FAILED = 'JOB_CREATION_FAILED';
+export const JOB_STATUS_PROCESSING = 'JOB_STATUS_PROCESSING';
+export const JOB_STATUS_COMPLETED = 'JOB_STATUS_COMPLETED';
 
 export const addFile = data => {
   return {
@@ -43,9 +45,21 @@ export const jobCreated = data => {
   };
 };
 
-export const jobCreationFailed = data => {
+export const jobCreationFailed = () => {
   return {
     type: JOB_CREATION_FAILED,
     jobId: undefined,
+  };
+};
+
+export const jobProcessing = () => {
+  return {
+    type: JOB_STATUS_PROCESSING,
+  };
+};
+
+export const jobCompleted = () => {
+  return {
+    type: JOB_STATUS_COMPLETED,
   };
 };

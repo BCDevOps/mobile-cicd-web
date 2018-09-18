@@ -19,7 +19,13 @@
 //
 
 import axios from 'axios';
-import { uploadStarted, jobCreated, jobCreationFailed } from '../actions';
+import {
+  uploadStarted,
+  jobCreated,
+  jobCreationFailed,
+  jobProcessing,
+  jobCompleted,
+} from '../actions';
 import { API } from '../constants';
 
 axios.defaults.baseURL = API.BASE_URL;
@@ -36,7 +42,10 @@ export const createSigningJob = files => dispatch => {
 
   return axios
     .post(API.CREATE_JOB('ios'), form, {
-      headers: { 'Content-Type': 'multipart/form-data' },
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        Accept: 'application/json',
+      },
     })
     .then(res => {
       dispatch(jobCreated({ jobId: res.data.id }));
@@ -49,7 +58,6 @@ export const createSigningJob = files => dispatch => {
 };
 
 const checkJobStatus = (jobId, dispatch) => {
-  // dispatch(uploadStarted());
   statusCheckCount += 1;
 
   return axios
@@ -57,11 +65,14 @@ const checkJobStatus = (jobId, dispatch) => {
       headers: { Accept: 'application/json' },
     })
     .then(res => {
+      console.log('HELLO', res);
       if (
         res.status === 202 &&
         res.data.status === 'Processing' &&
         statusCheckCount < maxStatusCheckCount
       ) {
+        dispatch(jobProcessing());
+
         setTimeout(() => {
           checkJobStatus(jobId, dispatch);
         }, apiPollTimeout);
@@ -70,6 +81,8 @@ const checkJobStatus = (jobId, dispatch) => {
       }
 
       if (res.status === 200 && res.data.status === 'Completed') {
+        dispatch(jobCompleted());
+
         console.log('WERE DONE !!!');
         console.log(`download here = ${res.data.url}`);
       }

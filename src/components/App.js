@@ -16,6 +16,15 @@ class App extends Component {
   //   data.append('description', 'some value user types');
   // };
 
+  jobStateChanged = job => {
+    console.log(job);
+    if (!job || (Object.keys(job).length === 0 && job.constructor === Object)) {
+      return 'Unknown';
+    }
+
+    return job.status;
+  };
+
   render() {
     return (
       <div className="App">
@@ -33,14 +42,14 @@ class App extends Component {
             Upload Document
           </button>
         </p>
-        <p>status = {this.props.job ? this.props.job.status : 'Unknown'}</p>
+        <p>status = {this.jobStateChanged(this.props.job)}</p>
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  return { files: state.files, status: state.upload };
+  return { files: state.files, job: state.job };
 }
 
 function mapDispatchToProps(dispatch) {

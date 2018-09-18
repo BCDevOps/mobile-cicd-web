@@ -20,6 +20,7 @@
 
 // eslint-disable-next-line import/prefer-default-export
 export const JOB_STATUS = {
+  CREATING: 'Creating',
   CREATED: 'Created',
   PROCESSING: 'Processing',
   COMPLETED: 'Completed',
