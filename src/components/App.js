@@ -33,7 +33,7 @@ class App extends Component {
             Upload Document
           </button>
         </p>
-        <p>status = {this.props.status}</p>
+        <p>status = {this.props.job ? this.props.job.status : 'Unknown'}</p>
       </div>
     );
   }
