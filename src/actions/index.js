@@ -18,12 +18,7 @@
 // Created by Jason Leach on 2018-08-24.
 //
 
-export const ADD_FILE = 'ADD_FILE';
-export const UPLOAD_STARTED = 'UPLOAD_STARTED';
-export const JOB_CREATION_SUCCEEDED = 'JOB_CREATION_SUCCEEDED';
-export const JOB_CREATION_FAILED = 'JOB_CREATION_FAILED';
-export const JOB_STATUS_PROCESSING = 'JOB_STATUS_PROCESSING';
-export const JOB_STATUS_COMPLETED = 'JOB_STATUS_COMPLETED';
+import { JOB_STATUS, ADD_FILE } from '../constants';
 
 export const addFile = data => {
   return {
@@ -32,35 +27,35 @@ export const addFile = data => {
   };
 };
 
-export const uploadStarted = () => {
+export const jobCreating = () => {
   return {
-    type: UPLOAD_STARTED,
+    type: JOB_STATUS.CREATING,
   };
 };
 
 export const jobCreated = data => {
   return {
-    type: JOB_CREATION_SUCCEEDED,
+    type: JOB_STATUS.CREATED,
     jobId: data.jobId,
   };
 };
 
 export const jobCreationFailed = () => {
   return {
-    type: JOB_CREATION_FAILED,
+    type: JOB_STATUS.FAILED,
     jobId: undefined,
   };
 };
 
 export const jobProcessing = () => {
   return {
-    type: JOB_STATUS_PROCESSING,
+    type: JOB_STATUS.PROCESSING,
   };
 };
 
 export const jobCompleted = data => {
   return {
-    type: JOB_STATUS_COMPLETED,
+    type: JOB_STATUS.COMPLETED,
     url: data.url,
   };
 };

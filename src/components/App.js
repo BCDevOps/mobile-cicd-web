@@ -33,7 +33,11 @@ class App extends Component {
       return <i>No Delivery URL</i>;
     }
 
-    return <a href={job.url}>Download</a>;
+    return (
+      <a href={job.url} download>
+        Download
+      </a>
+    );
   };
 
   render() {

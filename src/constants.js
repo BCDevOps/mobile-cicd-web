@@ -18,17 +18,18 @@
 // Created by Jason Leach on 2018-09-17.
 //
 
-// eslint-disable-next-line import/prefer-default-export
+export const ADD_FILE = 'ADD_FILE';
+
 export const JOB_STATUS = {
-  CREATING: 'Creating',
-  CREATED: 'Created',
-  PROCESSING: 'Processing',
-  COMPLETED: 'Completed',
-  FAILED: 'Failed',
+  CREATING: 'JOB_STATUS_CREATING',
+  CREATED: 'JOB_STATUS_CREATED',
+  PROCESSING: 'JOB_STATUS_PROCESSING',
+  COMPLETED: 'JOB_STATUS_COMPLETED',
+  FAILED: 'JOB_STATUS_FAILED',
 };
 
 export const API = {
-  BASE_URL: 'http://localhost:8089',
+  BASE_URL: () => 'http://localhost:8089',
   CREATE_JOB: platformId => `/api/v1/sign?platform=${platformId}`,
   CHECK_JOB_STATUS: jobId => `/api/v1/job/${jobId}/status`,
 };

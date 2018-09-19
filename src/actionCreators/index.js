@@ -20,7 +20,7 @@
 
 import axios from 'axios';
 import {
-  uploadStarted,
+  jobCreating,
   jobCreated,
   jobCreationFailed,
   jobProcessing,
@@ -28,7 +28,7 @@ import {
 } from '../actions';
 import { API } from '../constants';
 
-axios.defaults.baseURL = API.BASE_URL;
+axios.defaults.baseURL = API.BASE_URL();
 
 const apiPollTimeout = 3000;
 const maxStatusCheckCount = (120 * 1000) / apiPollTimeout;
@@ -38,7 +38,7 @@ export const createSigningJob = files => dispatch => {
   const form = new FormData();
   form.append('file', files[0]);
 
-  dispatch(uploadStarted());
+  dispatch(jobCreating());
 
   return axios
     .post(API.CREATE_JOB('ios'), form, {

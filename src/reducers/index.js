@@ -19,15 +19,7 @@
 //
 
 import { combineReducers } from 'redux';
-import {
-  ADD_FILE,
-  UPLOAD_STARTED,
-  JOB_CREATION_SUCCEEDED,
-  JOB_CREATION_FAILED,
-  JOB_STATUS_PROCESSING,
-  JOB_STATUS_COMPLETED,
-} from '../actions';
-import { JOB_STATUS } from '../constants';
+import { JOB_STATUS, ADD_FILE } from '../constants';
 
 const file = (state, action) => {
   switch (action.type) {
@@ -49,23 +41,31 @@ const files = (state = [], action) => {
 
 const job = (state = {}, action) => {
   switch (action.type) {
-    case UPLOAD_STARTED:
+    case JOB_STATUS.CREATING:
       return {
         status: JOB_STATUS.CREATING,
+        jobId: undefined,
+        url: undefined,
       };
-    case JOB_CREATION_SUCCEEDED:
+    case JOB_STATUS.CREATED:
       return {
         status: JOB_STATUS.CREATED,
         jobId: action.jobId,
+        url: undefined,
       };
-    case JOB_CREATION_FAILED:
-      return {};
-    case JOB_STATUS_PROCESSING:
+    case JOB_STATUS.FAILED:
+      return {
+        status: JOB_STATUS.FAILED,
+        jobId: undefined,
+        url: undefined,
+      };
+    case JOB_STATUS.PROCESSING:
       return {
         status: JOB_STATUS.PROCESSING,
         jobId: state.jobId,
+        url: undefined,
       };
-    case JOB_STATUS_COMPLETED:
+    case JOB_STATUS.COMPLETED:
       return {
         status: JOB_STATUS.COMPLETED,
         jobId: state.jobId,
