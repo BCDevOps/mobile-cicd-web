@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
-import logo from './bcgovlogo.svg';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { createSigningJob } from '../actionCreators';
 import FileUpload from './FileUpload';
+import Header from './Header';
+import './App.css';
 
 /* eslint-disable react/prefer-stateless-function */
 class App extends Component {
@@ -43,18 +43,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Secure Sign</h1>
-        </header>
+        <Header />
         <FileUpload />
         <p className="App-intro">
           <button
+            className="start-button"
             onClick={() => {
               this.props.createSigningJob(this.props.files);
             }}
           >
-            Upload Document
+            Start
           </button>
         </p>
         <p>status = {this.jobStateChanged(this.props.job)}</p>
