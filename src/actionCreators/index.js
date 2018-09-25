@@ -28,7 +28,9 @@ import {
 } from '../actions';
 import { API } from '../constants';
 
-axios.defaults.baseURL = API.BASE_URL();
+const axi = axios.create({
+  baseURL: API.BASE_URL(),
+});
 
 const apiPollTimeout = 3000;
 const maxStatusCheckCount = (120 * 1000) / apiPollTimeout;
@@ -40,7 +42,7 @@ export const createSigningJob = files => dispatch => {
 
   dispatch(jobCreating());
 
-  return axios
+  return axi
     .post(API.CREATE_JOB('ios'), form, {
       headers: {
         'Content-Type': 'multipart/form-data',
@@ -60,7 +62,7 @@ export const createSigningJob = files => dispatch => {
 const checkJobStatus = (jobId, dispatch) => {
   statusCheckCount += 1;
 
-  return axios
+  return axi
     .get(API.CHECK_JOB_STATUS(jobId), {
       headers: { Accept: 'application/json' },
     })
