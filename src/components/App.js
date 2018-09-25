@@ -65,7 +65,7 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  return { files: state.files, job: state.job };
+  return { files: state.files, job: state.job, api: state.api };
 }
 
 function mapDispatchToProps(dispatch) {

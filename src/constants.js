@@ -33,3 +33,7 @@ export const API = {
   CREATE_JOB: platformId => `/api/v1/sign?platform=${platformId}`,
   CHECK_JOB_STATUS: jobId => `/api/v1/job/${jobId}/status`,
 };
+
+export const API_ERROR = {
+  JOB_STATUS_CHECK_FAILED: 'JOB_STATUS_CHECK_FAILED',
+};

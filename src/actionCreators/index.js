@@ -25,7 +25,7 @@ import {
   jobCreationFailed,
   jobProcessing,
   jobCompleted,
-  jobStatusCheckFailed,
+  apiRequestFailed,
 } from '../actions';
 import { API } from '../constants';
 
@@ -42,6 +42,7 @@ export const createSigningJob = files => dispatch => {
   form.append('file', files[0]);
 
   dispatch(jobCreating());
+  apiRequestFailed(); // clear any errors
 
   return axi
     .post(API.CREATE_JOB('ios'), form, {
@@ -55,13 +56,22 @@ export const createSigningJob = files => dispatch => {
       checkJobStatus(res.data.id, dispatch);
     })
     .catch(err => {
-      console.log(`FAIL, err = ${err.message}`);
       dispatch(jobCreationFailed());
+
+      let message = 'Unable to create signing job';
+      const code = err.response.status;
+      if (err.response.data.error) {
+        message = err.response.data.error;
+      }
+      console.log(`error = ${message}, code = ${code}`);
+      dispatch(apiRequestFailed(message, code));
     });
 };
 
 const checkJobStatus = (jobId, dispatch) => {
   statusCheckCount += 1;
+
+  apiRequestFailed(); // clear any errors
 
   return axi
     .get(API.CHECK_JOB_STATUS(jobId), {
@@ -87,7 +97,12 @@ const checkJobStatus = (jobId, dispatch) => {
       }
     })
     .catch(err => {
-      console.log(`error = ${err.message}`);
-      dispatch(jobStatusCheckFailed(err.message));
+      let message = 'Unable to check job status';
+      const code = err.response.status;
+      if (err.response.data.error) {
+        message = err.response.data.error;
+      }
+      console.log(`error = ${message}, code = ${code}`);
+      dispatch(apiRequestFailed(message, code));
     });
 };

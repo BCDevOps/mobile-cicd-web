@@ -19,7 +19,7 @@
 //
 
 import { combineReducers } from 'redux';
-import { JOB_STATUS, ADD_FILE } from '../constants';
+import { JOB_STATUS, ADD_FILE, API_ERROR } from '../constants';
 
 const file = (state, action) => {
   switch (action.type) {
@@ -76,6 +76,19 @@ const job = (state = {}, action) => {
   }
 };
 
-const rootReducer = combineReducers({ files, job });
+const api = (state = {}, action) => {
+  switch (action.type) {
+    case API_ERROR.JOB_STATUS_CHECK_FAILED:
+      return {
+        status: API_ERROR.JOB_STATUS_CHECK_FAILED,
+        message: action.message,
+        code: action.code,
+      };
+    default:
+      return state;
+  }
+};
+
+const rootReducer = combineReducers({ files, job, api });
 
 export default rootReducer;

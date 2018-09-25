@@ -18,7 +18,7 @@
 // Created by Jason Leach on 2018-08-24.
 //
 
-import { JOB_STATUS, ADD_FILE } from '../constants';
+import { JOB_STATUS, ADD_FILE, API_ERROR } from '../constants';
 
 export const addFile = data => {
   return {
@@ -60,9 +60,10 @@ export const jobCompleted = data => {
   };
 };
 
-export const jobStatusCheckFailed = message => {
+export const apiRequestFailed = (message, code) => {
   return {
-    type: JOB_STATUS.COMPLETED,
+    type: API_ERROR.JOB_STATUS_CHECK_FAILED,
     message,
+    code,
   };
 };
