@@ -19,31 +19,75 @@
 //
 
 import axios from 'axios';
-import { uploadStarted, uploadCompleted } from '../actions';
+import {
+  jobCreating,
+  jobCreated,
+  jobCreationFailed,
+  jobProcessing,
+  jobCompleted,
+  jobStatusCheckFailed,
+} from '../actions';
+import { API } from '../constants';
+
+const axi = axios.create({
+  baseURL: API.BASE_URL(),
+});
+
+const apiPollTimeout = 3000;
+const maxStatusCheckCount = (120 * 1000) / apiPollTimeout;
+let statusCheckCount = 0;
 
 export const createSigningJob = files => dispatch => {
-  console.log('** HERE **', files);
-
-  const url = 'http://localhost:8089/api/v1/sign?platform=ios';
   const form = new FormData();
   form.append('file', files[0]);
 
-  dispatch(uploadStarted());
+  dispatch(jobCreating());
 
-  return axios
-    .post(url, form, {
-      headers: { 'Content-Type': 'multipart/form-data' },
+  return axi
+    .post(API.CREATE_JOB('ios'), form, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        Accept: 'application/json',
+      },
     })
-    .then(foo => {
-      console.log('SUCCESS!');
-      dispatch(uploadCompleted(true));
-      return;
-      // dispatch finished
+    .then(res => {
+      dispatch(jobCreated({ jobId: res.data.id }));
+      checkJobStatus(res.data.id, dispatch);
     })
     .catch(err => {
       console.log(`FAIL, err = ${err.message}`);
-      dispatch(uploadCompleted(false));
-      return;
-      // dispatch finished
+      dispatch(jobCreationFailed());
+    });
+};
+
+const checkJobStatus = (jobId, dispatch) => {
+  statusCheckCount += 1;
+
+  return axi
+    .get(API.CHECK_JOB_STATUS(jobId), {
+      headers: { Accept: 'application/json' },
+    })
+    .then(res => {
+      if (
+        res.status === 202 &&
+        res.data.status === 'Processing' &&
+        statusCheckCount < maxStatusCheckCount
+      ) {
+        dispatch(jobProcessing());
+
+        setTimeout(() => {
+          checkJobStatus(jobId, dispatch);
+        }, apiPollTimeout);
+
+        return;
+      }
+
+      if (res.status === 200 && res.data.status === 'Completed') {
+        dispatch(jobCompleted(res.data));
+      }
+    })
+    .catch(err => {
+      console.log(`error = ${err.message}`);
+      dispatch(jobStatusCheckFailed(err.message));
     });
 };

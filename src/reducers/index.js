@@ -19,7 +19,7 @@
 //
 
 import { combineReducers } from 'redux';
-import { ADD_FILE, UPLOAD_STARTED, UPLOAD_COMPLETED_OK, UPLOAD_COMPLETED_FAILED } from '../actions';
+import { JOB_STATUS, ADD_FILE } from '../constants';
 
 const file = (state, action) => {
   switch (action.type) {
@@ -39,19 +39,43 @@ const files = (state = [], action) => {
   }
 };
 
-const upload = (state = '', action) => {
+const job = (state = {}, action) => {
   switch (action.type) {
-    case UPLOAD_STARTED:
-      return UPLOAD_STARTED;
-    case UPLOAD_COMPLETED_OK:
-      return UPLOAD_COMPLETED_OK;
-    case UPLOAD_COMPLETED_FAILED:
-      return UPLOAD_COMPLETED_FAILED;
+    case JOB_STATUS.CREATING:
+      return {
+        status: JOB_STATUS.CREATING,
+        jobId: undefined,
+        url: undefined,
+      };
+    case JOB_STATUS.CREATED:
+      return {
+        status: JOB_STATUS.CREATED,
+        jobId: action.jobId,
+        url: undefined,
+      };
+    case JOB_STATUS.FAILED:
+      return {
+        status: JOB_STATUS.FAILED,
+        jobId: undefined,
+        url: undefined,
+      };
+    case JOB_STATUS.PROCESSING:
+      return {
+        status: JOB_STATUS.PROCESSING,
+        jobId: state.jobId,
+        url: undefined,
+      };
+    case JOB_STATUS.COMPLETED:
+      return {
+        status: JOB_STATUS.COMPLETED,
+        jobId: state.jobId,
+        url: action.url,
+      };
     default:
       return state;
   }
 };
 
-const rootReducer = combineReducers({ files, upload });
+const rootReducer = combineReducers({ files, job });
 
 export default rootReducer;

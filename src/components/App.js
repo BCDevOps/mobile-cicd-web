@@ -8,12 +8,36 @@ import FileUpload from './FileUpload';
 
 /* eslint-disable react/prefer-stateless-function */
 class App extends Component {
-  handleUploadFile = event => {
-    console.log('***************');
-    const data = new FormData();
-    data.append('file', event.target.files[0]);
-    data.append('name', 'some value user types');
-    data.append('description', 'some value user types');
+  // handleUploadFile = event => {
+  //   console.log('***************');
+  //   const data = new FormData();
+  //   data.append('file', event.target.files[0]);
+  //   data.append('name', 'some value user types');
+  //   data.append('description', 'some value user types');
+  // };
+
+  jobStateChanged = job => {
+    if (!job || (Object.keys(job).length === 0 && job.constructor === Object)) {
+      return 'Unknown';
+    }
+
+    return job.status;
+  };
+
+  deliveryUrlForJob = job => {
+    if (!job || (Object.keys(job).length === 0 && job.constructor === Object)) {
+      return <i>No Delivery URL</i>;
+    }
+
+    if (!job.url) {
+      return <i>No Delivery URL</i>;
+    }
+
+    return (
+      <a href={job.url} download>
+        Download
+      </a>
+    );
   };
 
   render() {
@@ -27,22 +51,21 @@ class App extends Component {
         <p className="App-intro">
           <button
             onClick={() => {
-              console.log('4', this.props.files);
               this.props.createSigningJob(this.props.files);
-              // this.input.value = '';
             }}
           >
             Upload Document
           </button>
         </p>
-        <p>status = {this.props.status}</p>
+        <p>status = {this.jobStateChanged(this.props.job)}</p>
+        <p>{this.deliveryUrlForJob(this.props.job)}</p>
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  return { files: state.files, status: state.upload };
+  return { files: state.files, job: state.job };
 }
 
 function mapDispatchToProps(dispatch) {
