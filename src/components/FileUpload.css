@@ -1,3 +1,40 @@
-.x {
-  background-color: red;
+.file-upload-container {
+  background-color: white;
+  margin: 0em 3em 0em 3em;
+}
+
+.file-upload-container .drop-zone {
+  height: 3em;
+  width: 16em;
+  background-color: white;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: lightgray;
+  border-radius: 0.5em;
+  color: darkgrey;
+  display: inline-block;
+  padding: 1.2em 1.2em 1.2em 1.2em;
+}
+
+.super-crazy-colors {
+  color: green;
+}
+
+.file-upload-container:disabled {
+  background-color: lightcoral;
+}
+
+.file-upload-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.file-upload-container .title {
+  font-size: 1.3em;
+}
+
+.file-upload-container .sub-title {
+  font-size: 0.8em;
 }

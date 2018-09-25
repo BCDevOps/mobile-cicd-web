@@ -23,7 +23,7 @@ import Dropzone from 'react-dropzone';
 import { addFile } from '../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './FileUpload.css';
 
 class FileUpload extends Component {
@@ -37,11 +37,32 @@ class FileUpload extends Component {
     });
   };
 
+  size = sizeInBytes => {
+    return (
+      <div>
+        &nbsp;&nbsp;
+        {Math.round(sizeInBytes * 0.000001)}
+        Mb
+      </div>
+    );
+  };
+
   render() {
     return (
-      <Dropzone className="x" onDrop={files => this.onDrop(files)}>
-        <div>Drop Your File Here, Yo!</div>
-      </Dropzone>
+      <div className="file-upload-container">
+        <Dropzone className="drop-zone" onDrop={files => this.onDrop(files)}>
+          <div className="title">Drag file to upload.</div>
+          <div className="sub-title">(.ZIP format only)</div>
+        </Dropzone>
+        <ul>
+          {this.props.files.map(t => (
+            <li key={t.name}>
+              {<FontAwesomeIcon icon="file" className="super-crazy-colors" />}
+              {t.name} {this.size(t.size)}
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 }
