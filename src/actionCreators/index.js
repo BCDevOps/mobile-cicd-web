@@ -88,6 +88,6 @@ const checkJobStatus = (jobId, dispatch) => {
     })
     .catch(err => {
       console.log(`error = ${err.message}`);
-      dispatch(jobStatusCheckFailed());
+      dispatch(jobStatusCheckFailed(err.message));
     });
 };
