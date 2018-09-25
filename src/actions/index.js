@@ -59,3 +59,10 @@ export const jobCompleted = data => {
     url: data.url,
   };
 };
+
+export const jobStatusCheckFailed = message => {
+  return {
+    type: JOB_STATUS.COMPLETED,
+    message,
+  };
+};

@@ -25,6 +25,7 @@ import {
   jobCreationFailed,
   jobProcessing,
   jobCompleted,
+  jobStatusCheckFailed,
 } from '../actions';
 import { API } from '../constants';
 
@@ -87,5 +88,6 @@ const checkJobStatus = (jobId, dispatch) => {
     })
     .catch(err => {
       console.log(`error = ${err.message}`);
+      dispatch(jobStatusCheckFailed());
     });
 };
