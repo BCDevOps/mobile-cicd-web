@@ -1,8 +1,15 @@
+@font-face {
+  font-family: 'MyriadWebPro';
+  src: url('/font/MyriadWebPro.ttf') format('truetype');
+}
+
 .header {
   background-color: #003366;
   height: 150px;
   padding: 20px;
   color: white;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .header-logo {
@@ -11,18 +18,21 @@
 }
 
 .header-title {
+  padding: 1em 0 0 1em;
+  font-family: 'MyriadWebPro';
   font-size: 1.5em;
+  text-transform: uppercase;
 }
 
 .header-intro {
   font-size: large;
 }
 
-@keyframes logo-spin {
+/* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */

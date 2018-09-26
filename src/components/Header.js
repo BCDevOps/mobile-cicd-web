@@ -29,7 +29,7 @@ class Header extends Component {
     return (
       <header className="header">
         <img src={logo} className="header-logo" alt="logo" />
-        <h1 className="header-title">Welcome to Secure Sign</h1>
+        <h1 className="header-title">Secure Sign</h1>
       </header>
     );
   }
