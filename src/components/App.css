@@ -65,6 +65,7 @@
 }
 
 .flex-outer li button {
+  position: relative;
   margin-left: auto;
   padding: 8px 16px;
   border: none;
@@ -73,6 +74,32 @@
   text-transform: uppercase;
   letter-spacing: 0.2em;
   border-radius: 2px;
+  outline-width: 0;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.flex-outer li button:after {
+  content: '';
+  background: #003366;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.flex-outer li button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
 }
 
 .flex-inner li {

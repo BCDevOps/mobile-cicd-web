@@ -147,8 +147,8 @@ class App extends Component {
             </li>
           </ul>
           {/* </form> */}
+          {this.jobStateChanged(this.props.job)}
         </div>
-        {this.jobStateChanged(this.props.job)}
       </div>
     );
   }
