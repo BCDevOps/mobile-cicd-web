@@ -57,7 +57,7 @@ class FileUpload extends Component {
         <ul>
           {this.props.files.map(t => (
             <li key={t.name}>
-              {<FontAwesomeIcon icon="file" className="super-crazy-colors" />}
+              {<FontAwesomeIcon icon="file" className="file-icon" />}
               {t.name} {this.size(t.size)}
             </li>
           ))}

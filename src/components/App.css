@@ -78,3 +78,14 @@
 .flex-inner li {
   width: 100px;
 }
+
+.file-download-icon {
+  color: #fcba19;
+}
+
+a {
+  color: #003366;
+  /* text-transform: uppercase; */
+  /* letter-spacing: 0.05em; */
+  text-decoration: none;
+}
