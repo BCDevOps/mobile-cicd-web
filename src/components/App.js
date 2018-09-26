@@ -7,6 +7,7 @@ import FileUpload from './FileUpload';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MoonLoader } from 'react-spinners';
 import Header from './Header';
+import Footer from './Footer';
 import { JOB_STATUS } from '../constants';
 import './App.css';
 
@@ -41,7 +42,7 @@ class App extends Component {
     switch (job.status) {
       case JOB_STATUS.CREATING:
         return (
-          <div>
+          <div className="job-status">
             <MoonLoader
               className={override}
               sizeUnit={'px'}
@@ -54,7 +55,7 @@ class App extends Component {
         );
       case JOB_STATUS.PROCESSING:
         return (
-          <div>
+          <div className="job-status">
             <MoonLoader
               className={override}
               sizeUnit={'px'}
@@ -67,7 +68,7 @@ class App extends Component {
         );
       case JOB_STATUS.COMPLETED:
         return (
-          <div>
+          <div className="job-status">
             <FontAwesomeIcon icon="file-download" className="file-download-icon" />
             &nbsp;&nbsp; {this.deliveryUrlForJob(this.props.job)}
           </div>
@@ -149,6 +150,7 @@ class App extends Component {
           {/* </form> */}
           {this.jobStateChanged(this.props.job)}
         </div>
+        <Footer />
       </div>
     );
   }

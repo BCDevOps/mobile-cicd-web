@@ -1,7 +1,11 @@
 .container {
   width: 80%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 3em auto;
+  padding: 1em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
 }
 
 .container * {
