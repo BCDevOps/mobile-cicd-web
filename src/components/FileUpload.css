@@ -1,19 +1,20 @@
 .file-upload-container {
   background-color: white;
-  margin: 0em 3em 0em 3em;
+  /* margin: 0em 3em 0em 3em; */
 }
 
 .file-upload-container .drop-zone {
+  text-align: center;
   height: 3em;
-  width: 16em;
+  /* width: 16em; */
   background-color: white;
   border-style: dashed;
   border-width: 1px;
   border-color: lightgray;
   border-radius: 0.5em;
   color: darkgrey;
-  display: inline-block;
-  padding: 1.2em 1.2em 1.2em 1.2em;
+  /* display: inline-block; */
+  /* padding: 1.2em 1.2em 1.2em 1.2em; */
 }
 
 .super-crazy-colors {
