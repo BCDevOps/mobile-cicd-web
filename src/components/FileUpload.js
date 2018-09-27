@@ -54,11 +54,12 @@ class FileUpload extends Component {
           <div className="title">Drag file to upload.</div>
           <div className="sub-title">(.ZIP format only)</div>
         </Dropzone>
-        <ul>
+        <ul className="file-list">
           {this.props.files.map(t => (
             <li key={t.name}>
               {<FontAwesomeIcon icon="file" className="file-icon" />}
-              {t.name} {this.size(t.size)}
+              <span className="file-name">{t.name}</span>
+              <span className="file-size">{this.size(t.size)}</span>
             </li>
           ))}
         </ul>
