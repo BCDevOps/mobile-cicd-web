@@ -22,9 +22,9 @@
   margin: 0 0.3em 0 0;
 }
 
-.file-upload-container:disabled {
+/* .file-upload-container:disabled {
   background-color: lightcoral;
-}
+} */
 
 .file-upload-container ul {
   list-style-type: none;

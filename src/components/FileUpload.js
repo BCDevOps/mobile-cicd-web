@@ -47,12 +47,37 @@ class FileUpload extends Component {
     );
   };
 
+  isDisabled = () => {
+    if (this.props.files.length >= 1) return true;
+    return false;
+  };
+
+  titleForCurrentState = () => {
+    if (this.isDisabled()) {
+      return <div className="title">Only one file can be selected.</div>;
+    }
+
+    return <div className="title">Drag file to upload.</div>;
+  };
+
+  subTitleForCurrentState = () => {
+    if (this.isDisabled()) {
+      return <div className="sub-title" />;
+    }
+
+    return <div className="sub-title">(.ZIP format only)</div>;
+  };
+
   render() {
     return (
       <div className="file-upload-container">
-        <Dropzone className="drop-zone" onDrop={files => this.onDrop(files)}>
-          <div className="title">Drag file to upload.</div>
-          <div className="sub-title">(.ZIP format only)</div>
+        <Dropzone
+          className="drop-zone"
+          onDrop={files => this.onDrop(files)}
+          disabled={this.isDisabled()}
+        >
+          {this.titleForCurrentState()}
+          {this.subTitleForCurrentState()}
         </Dropzone>
         <ul className="file-list">
           {this.props.files.map(t => (
