@@ -24,7 +24,8 @@ import { uploadStarted, uploadCompleted } from '../actions';
 export const createSigningJob = files => dispatch => {
   console.log('** HERE **', files);
 
-  const url = 'http://localhost:8089/api/v1/sign?platform=ios';
+  // shelly notes: wait for platform update!
+  const url = 'http://localhost:8089/api/v1/sign?platform=android';
   const form = new FormData();
   form.append('file', files[0]);
 
