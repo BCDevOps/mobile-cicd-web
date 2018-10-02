@@ -28,13 +28,11 @@ import './FileUpload.css';
 
 class FileUpload extends Component {
   onDrop = async (acceptedFiles, rejectedFiles) => {
-    console.log(this.props);
-    console.log('Hello World', acceptedFiles);
-    // const req = request.post('/upload');
     acceptedFiles.forEach(element => {
-      console.log(`got file = ${element.name}`);
       this.props.addFile(element);
     });
+    this.setState({ barf: 123 });
+    console.log('xxx', this.state);
   };
 
   size = sizeInBytes => {
