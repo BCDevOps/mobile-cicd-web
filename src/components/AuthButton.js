@@ -15,30 +15,50 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Created by Jason Leach on 2018-09-04.
+// Created by Jason Leach on 2018-10-03.
 //
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import AuthButton from './AuthButton';
-import logo from './bcgovlogo.svg';
-import './Header.css';
+import implicitAuthManager from '../auth';
+import './AuthButton.css';
 
-class Header extends Component {
+class AuthButton extends Component {
+  titleForAuthenticationState = state => {
+    if (state.authenticated) {
+      return 'Logout';
+    }
+
+    return 'Login';
+  };
+
+  locationForCurrentState = state => {
+    if (state.authenticated) {
+      return implicitAuthManager.getSSOLogoutURI();
+    }
+
+    return implicitAuthManager.getSSOLoginURI();
+  };
+
   render() {
     return (
-      <header className="header">
-        <img src={logo} className="header-logo" alt="logo" />
-        <h1 className="header-title">Secure Sign</h1>
-        <AuthButton />
-      </header>
+      <span className="boo">
+        <button
+          className="auth-button"
+          onClick={() => {
+            window.location = implicitAuthManager.getSSOLoginURI();
+          }}
+        >
+          {this.titleForAuthenticationState(this.props.authentication)}
+        </button>
+      </span>
     );
   }
 }
 
 function mapStateToProps(state) {
-  return {};
+  return { authentication: state.authentication };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -48,4 +68,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Header);
+)(AuthButton);

@@ -1,15 +1,16 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { Component } from 'react';
 import { css } from 'react-emotion';
 import { connect } from 'react-redux';
+import { MoonLoader } from 'react-spinners';
 import { bindActionCreators } from 'redux';
 import { createSigningJob } from '../actionCreators';
-import FileUpload from './FileUpload';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { MoonLoader } from 'react-spinners';
-import Header from './Header';
-import Footer from './Footer';
+import { authenticateFailed, authenticateSuccess } from '../actions';
 import { JOB_STATUS } from '../constants';
 import './App.css';
+import FileUpload from './FileUpload';
+import Footer from './Footer';
+import Header from './Header';
 
 const override = css`
   display: block;
@@ -33,6 +34,15 @@ class App extends Component {
       loading: true,
     };
   }
+
+  componentDidMount = () => {
+    // implicitAuthManager.registerHooks({
+    //   onAuthenticateSuccess: () => this.props.login(),
+    //   onAuthenticateFail: () => this.props.logout(),
+    //   onAuthLocalStorageCleared: () => this.props.logout(),
+    // });
+    // implicitAuthManager.handleOnPageLoad();
+  };
 
   jobStateChanged = job => {
     if (!job || (Object.keys(job).length === 0 && job.constructor === Object)) {
@@ -164,6 +174,8 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       createSigningJob,
+      login: () => dispatch(authenticateSuccess()),
+      logout: () => dispatch(authenticateFailed()),
     },
     dispatch
   );

@@ -1,0 +1,10 @@
+.auth-button {
+  background-color: green;
+}
+
+.boo {
+  background-color: yellow;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
