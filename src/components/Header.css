@@ -3,18 +3,27 @@
   src: url('/font/MyriadWebPro.ttf') format('truetype');
 }
 
-.header {
+header {
   background-color: #003366;
   height: 100px;
   padding: 20px;
   color: white;
   display: flex;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
 }
 
 .header-logo {
   animation: logo-spin infinite 20s linear;
   height: 80px;
+}
+
+/* header .left {
+  display: flex;
+} */
+
+header .right-push {
+  margin-left: auto;
+  align-self: flex-end;
 }
 
 .header-title {

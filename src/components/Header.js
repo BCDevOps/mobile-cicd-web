@@ -28,10 +28,12 @@ import './Header.css';
 class Header extends Component {
   render() {
     return (
-      <header className="header">
+      <header>
         <img src={logo} className="header-logo" alt="logo" />
-        <h1 className="header-title">Secure Sign</h1>
-        <AuthButton />
+        <p className="header-title">Secure Sign</p>
+        <div className="right-push">
+          <AuthButton />
+        </div>
       </header>
     );
   }
