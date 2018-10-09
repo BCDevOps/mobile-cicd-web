@@ -18,59 +18,44 @@
 // Created by Jason Leach on 2018-10-03.
 //
 
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import implicitAuthManager from '../auth';
 import './AuthButton.css';
 
-class AuthButton extends Component {
-  titleForAuthenticationState = isAuthenticated => {
-    if (isAuthenticated) {
-      return 'Logout';
-    }
-
-    return 'Login';
-  };
-
-  locationForCurrentState = isAuthenticated => {
-    if (isAuthenticated) {
-      return implicitAuthManager.getSSOLogoutURI();
-    }
-
-    return implicitAuthManager.getSSOLoginURI();
-  };
-
-  render() {
-    return (
-      <span className="boo">
-        <button
-          className="auth-button"
-          onClick={() => {
-            window.location = implicitAuthManager.getSSOLoginURI();
-          }}
-        >
-          {this.titleForAuthenticationState(this.props.isAuthenticated)}
-        </button>
-      </span>
-    );
+const titleForAuthenticationState = isAuthenticated => {
+  if (isAuthenticated) {
+    return 'Logout';
   }
-}
+
+  return 'Login';
+};
+
+const locationForCurrentState = isAuthenticated => {
+  if (isAuthenticated) {
+    return implicitAuthManager.getSSOLogoutURI();
+  }
+
+  return implicitAuthManager.getSSOLoginURI();
+};
+
+const AuthButton = ({ isAuthenticated }) => {
+  return (
+    <span>
+      <button
+        className="auth-button"
+        onClick={() => {
+          window.location = locationForCurrentState();
+        }}
+      >
+        {titleForAuthenticationState(isAuthenticated)}
+      </button>
+    </span>
+  );
+};
 
 AuthButton.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,
 };
 
-function mapStateToProps(state) {
-  return { isAuthenticated: state.authentication.isAuthenticated };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({}, dispatch);
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(AuthButton);
+export default AuthButton;

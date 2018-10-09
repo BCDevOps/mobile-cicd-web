@@ -32,7 +32,7 @@ class Header extends Component {
         <img src={logo} className="header-logo" alt="logo" />
         <p className="header-title">Secure Sign</p>
         <div className="right-push">
-          <AuthButton />
+          <AuthButton isAuthenticated={this.props.isAuthenticated} />
         </div>
       </header>
     );
@@ -40,7 +40,7 @@ class Header extends Component {
 }
 
 function mapStateToProps(state) {
-  return {};
+  return { isAuthenticated: state.authentication.isAuthenticated };
 }
 
 function mapDispatchToProps(dispatch) {
