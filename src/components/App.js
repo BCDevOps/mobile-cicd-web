@@ -6,6 +6,7 @@ import { MoonLoader } from 'react-spinners';
 import { bindActionCreators } from 'redux';
 import { createSigningJob } from '../actionCreators';
 import { authenticateFailed, authenticateSuccess } from '../actions';
+import implicitAuthManager from '../auth';
 import { JOB_STATUS } from '../constants';
 import './App.css';
 import FileUpload from './FileUpload';
@@ -36,12 +37,12 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    // implicitAuthManager.registerHooks({
-    //   onAuthenticateSuccess: () => this.props.login(),
-    //   onAuthenticateFail: () => this.props.logout(),
-    //   onAuthLocalStorageCleared: () => this.props.logout(),
-    // });
-    // implicitAuthManager.handleOnPageLoad();
+    implicitAuthManager.registerHooks({
+      onAuthenticateSuccess: () => this.props.login(),
+      onAuthenticateFail: () => this.props.logout(),
+      // onAuthLocalStorageCleared: () => this.props.logout(),
+    });
+    implicitAuthManager.handleOnPageLoad();
   };
 
   jobStateChanged = job => {
@@ -105,10 +106,8 @@ class App extends Component {
     );
   };
 
-  currentStatus = () => {};
-
-  onPlatformChanged = () => {
-    console.log('**********************');
+  onPlatformChanged = e => {
+    this.setState({ platform: e.currentTarget.value });
   };
 
   render() {
@@ -140,7 +139,7 @@ class App extends Component {
                     type="radio"
                     id="platform-android"
                     name="platform"
-                    value="ios"
+                    value="android"
                     onChange={this.onPlatformChanged}
                   />
                   <label htmlFor="platform-android">Android</label>
@@ -150,7 +149,7 @@ class App extends Component {
             <li>
               <button
                 onClick={() => {
-                  this.props.createSigningJob(this.props.files);
+                  this.props.createSigningJob(this.props.files, 'ios');
                 }}
               >
                 Start
