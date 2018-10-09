@@ -40,7 +40,7 @@ class App extends Component {
     implicitAuthManager.registerHooks({
       onAuthenticateSuccess: () => this.props.login(),
       onAuthenticateFail: () => this.props.logout(),
-      // onAuthLocalStorageCleared: () => this.props.logout(),
+      onAuthLocalStorageCleared: () => this.props.logout(),
     });
     implicitAuthManager.handleOnPageLoad();
   };
