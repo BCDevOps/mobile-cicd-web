@@ -18,30 +18,15 @@
 // Created by Jason Leach on 2018-09-26.
 //
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import React from 'react';
 import './Footer.css';
 
-class Footer extends Component {
-  render() {
-    return (
-      <footer className="footer">
-        <p className="footer-title">Copyright &copy; 2018, Province of British Columbia.</p>
-      </footer>
-    );
-  }
-}
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <p className="footer-title">Copyright &copy; 2018, Province of British Columbia.</p>
+    </footer>
+  );
+};
 
-function mapStateToProps(state) {
-  return {};
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({}, dispatch);
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Footer);
+export default Footer;
