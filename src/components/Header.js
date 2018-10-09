@@ -24,20 +24,20 @@ import AuthButton from './AuthButton';
 import logo from './bcgovlogo.svg';
 import './Header.css';
 
-const Header = ({ isAuthenticated }) => {
+const Header = ({ authentication }) => {
   return (
     <header>
       <img src={logo} className="header-logo" alt="logo" />
       <p className="header-title">Secure Sign</p>
       <div className="right-push">
-        <AuthButton isAuthenticated={isAuthenticated} />
+        <AuthButton isAuthenticated={authentication.isAuthenticated} />
       </div>
     </header>
   );
 };
 
-AuthButton.propTypes = {
-  isAuthenticated: PropTypes.bool.isRequired,
+Header.propTypes = {
+  authentication: PropTypes.object.isRequired,
 };
 
 export default Header;
