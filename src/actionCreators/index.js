@@ -20,14 +20,15 @@
 
 import axios from 'axios';
 import {
-  jobCreating,
+  apiRequestFailed,
+  jobCompleted,
   jobCreated,
+  jobCreating,
   jobCreationFailed,
   jobProcessing,
-  jobCompleted,
-  apiRequestFailed,
 } from '../actions';
 import { API } from '../constants';
+// import implicitAuthManager from '../auth';
 
 const axi = axios.create({
   baseURL: API.BASE_URL(),
@@ -37,7 +38,17 @@ const apiPollTimeout = 3000;
 const maxStatusCheckCount = (120 * 1000) / apiPollTimeout;
 let statusCheckCount = 0;
 
-export const createSigningJob = files => dispatch => {
+const authenticationHeaderVaule = () => {
+  try {
+    const token = JSON.parse(localStorage.getItem('auth')).id_token.bearer;
+    return `Bearer ${token}`;
+  } catch (err) {
+    console.log(err.message);
+    return undefined;
+  }
+};
+
+export const createSigningJob = (files, platform) => dispatch => {
   const form = new FormData();
   form.append('file', files[0]);
 
@@ -45,10 +56,11 @@ export const createSigningJob = files => dispatch => {
   apiRequestFailed(); // clear any errors
 
   return axi
-    .post(API.CREATE_JOB('ios'), form, {
+    .post(API.CREATE_JOB(platform), form, {
       headers: {
         'Content-Type': 'multipart/form-data',
         Accept: 'application/json',
+        Authorization: authenticationHeaderVaule(),
       },
     })
     .then(res => {
@@ -75,7 +87,10 @@ const checkJobStatus = (jobId, dispatch) => {
 
   return axi
     .get(API.CHECK_JOB_STATUS(jobId), {
-      headers: { Accept: 'application/json' },
+      headers: {
+        Accept: 'application/json',
+        Authorization: authenticationHeaderVaule(),
+      },
     })
     .then(res => {
       if (
