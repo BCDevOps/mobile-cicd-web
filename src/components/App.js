@@ -113,7 +113,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header isAuthenticated={this.props.isAuthenticated} />
         <div className="container">
           {/* <form> */}
           <ul className="flex-outer">
@@ -166,7 +166,12 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  return { files: state.files, job: state.job, api: state.api };
+  return {
+    files: state.files,
+    job: state.job,
+    api: state.api,
+    isAuthenticated: state.authentication.isAuthenticated,
+  };
 }
 
 function mapDispatchToProps(dispatch) {
