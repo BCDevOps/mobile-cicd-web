@@ -19,22 +19,23 @@
 //
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import implicitAuthManager from '../auth';
 import './AuthButton.css';
 
 class AuthButton extends Component {
-  titleForAuthenticationState = state => {
-    if (state.authenticated) {
+  titleForAuthenticationState = isAuthenticated => {
+    if (isAuthenticated) {
       return 'Logout';
     }
 
     return 'Login';
   };
 
-  locationForCurrentState = state => {
-    if (state.authenticated) {
+  locationForCurrentState = isAuthenticated => {
+    if (isAuthenticated) {
       return implicitAuthManager.getSSOLogoutURI();
     }
 
@@ -50,15 +51,19 @@ class AuthButton extends Component {
             window.location = implicitAuthManager.getSSOLoginURI();
           }}
         >
-          {this.titleForAuthenticationState(this.props.authentication)}
+          {this.titleForAuthenticationState(this.props.isAuthenticated)}
         </button>
       </span>
     );
   }
 }
 
+AuthButton.propTypes = {
+  isAuthenticated: PropTypes.bool.isRequired,
+};
+
 function mapStateToProps(state) {
-  return { authentication: state.authentication };
+  return { isAuthenticated: state.authentication.isAuthenticated };
 }
 
 function mapDispatchToProps(dispatch) {

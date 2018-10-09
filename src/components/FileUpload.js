@@ -31,8 +31,6 @@ class FileUpload extends Component {
     acceptedFiles.forEach(element => {
       this.props.addFile(element);
     });
-    this.setState({ barf: 123 });
-    console.log('xxx', this.state);
   };
 
   size = sizeInBytes => {

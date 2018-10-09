@@ -22,13 +22,13 @@ import { combineReducers } from 'redux';
 import implicitAuthManager from '../auth';
 import { ADD_FILE, API_ERROR, AUTHENTICATION, JOB_STATUS } from '../constants';
 
-const authentication = (state = { authenticated: false }, action) => {
+const authentication = (state = { isAuthenticated: false }, action) => {
   switch (action.type) {
     case AUTHENTICATION.SUCCESS:
-      return { authenticated: true };
+      return { isAuthenticated: true };
     case AUTHENTICATION.FAILED:
       implicitAuthManager.clearAuthLocalStorage();
-      return { authenticated: false };
+      return { isAuthenticated: false };
     default:
       return state;
   }
