@@ -1,15 +1,17 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { Component } from 'react';
 import { css } from 'react-emotion';
 import { connect } from 'react-redux';
+import { MoonLoader } from 'react-spinners';
 import { bindActionCreators } from 'redux';
 import { createSigningJob } from '../actionCreators';
-import FileUpload from './FileUpload';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { MoonLoader } from 'react-spinners';
-import Header from './Header';
-import Footer from './Footer';
+import { authenticateFailed, authenticateSuccess } from '../actions';
+import implicitAuthManager from '../auth';
 import { JOB_STATUS } from '../constants';
 import './App.css';
+import FileUpload from './FileUpload';
+import Footer from './Footer';
+import Header from './Header';
 
 const override = css`
   display: block;
@@ -33,6 +35,15 @@ class App extends Component {
       loading: true,
     };
   }
+
+  componentDidMount = () => {
+    implicitAuthManager.registerHooks({
+      onAuthenticateSuccess: () => this.props.login(),
+      onAuthenticateFail: () => this.props.logout(),
+      // onAuthLocalStorageCleared: () => this.props.logout(),
+    });
+    implicitAuthManager.handleOnPageLoad();
+  };
 
   jobStateChanged = job => {
     if (!job || (Object.keys(job).length === 0 && job.constructor === Object)) {
@@ -95,10 +106,8 @@ class App extends Component {
     );
   };
 
-  currentStatus = () => {};
-
-  onPlatformChanged = () => {
-    console.log('**********************');
+  onPlatformChanged = e => {
+    this.setState({ platform: e.currentTarget.value });
   };
 
   render() {
@@ -130,7 +139,7 @@ class App extends Component {
                     type="radio"
                     id="platform-android"
                     name="platform"
-                    value="ios"
+                    value="android"
                     onChange={this.onPlatformChanged}
                   />
                   <label htmlFor="platform-android">Android</label>
@@ -140,7 +149,7 @@ class App extends Component {
             <li>
               <button
                 onClick={() => {
-                  this.props.createSigningJob(this.props.files);
+                  this.props.createSigningJob(this.props.files, 'ios');
                 }}
               >
                 Start
@@ -164,6 +173,8 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       createSigningJob,
+      login: () => dispatch(authenticateSuccess()),
+      logout: () => dispatch(authenticateFailed()),
     },
     dispatch
   );

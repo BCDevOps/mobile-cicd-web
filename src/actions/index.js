@@ -18,7 +18,19 @@
 // Created by Jason Leach on 2018-08-24.
 //
 
-import { JOB_STATUS, ADD_FILE, API_ERROR } from '../constants';
+import { ADD_FILE, API_ERROR, AUTHENTICATION, JOB_STATUS } from '../constants';
+
+export const authenticateSuccess = () => {
+  return {
+    type: AUTHENTICATION.SUCCESS,
+  };
+};
+
+export const authenticateFailed = () => {
+  return {
+    type: AUTHENTICATION.FAILED,
+  };
+};
 
 export const addFile = data => {
   return {

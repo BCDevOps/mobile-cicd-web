@@ -28,11 +28,7 @@ import './FileUpload.css';
 
 class FileUpload extends Component {
   onDrop = async (acceptedFiles, rejectedFiles) => {
-    console.log(this.props);
-    console.log('Hello World', acceptedFiles);
-    // const req = request.post('/upload');
     acceptedFiles.forEach(element => {
-      console.log(`got file = ${element.name}`);
       this.props.addFile(element);
     });
   };
