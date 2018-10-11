@@ -19,16 +19,7 @@ const override = css`
   border-color: #003366;
 `;
 
-/* eslint-disable react/prefer-stateless-function */
 class App extends Component {
-  // handleUploadFile = event => {
-  //   console.log('***************');
-  //   const data = new FormData();
-  //   data.append('file', event.target.files[0]);
-  //   data.append('name', 'some value user types');
-  //   data.append('description', 'some value user types');
-  // };
-
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +31,7 @@ class App extends Component {
     implicitAuthManager.registerHooks({
       onAuthenticateSuccess: () => this.props.login(),
       onAuthenticateFail: () => this.props.logout(),
-      onAuthLocalStorageCleared: () => this.props.logout(),
+      // onAuthLocalStorageCleared: () => this.props.logout(),
     });
     implicitAuthManager.handleOnPageLoad();
   };
