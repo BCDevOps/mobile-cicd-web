@@ -28,7 +28,7 @@ import {
   jobProcessing,
 } from '../actions';
 import { API } from '../constants';
-// import implicitAuthManager from '../auth';
+import implicitAuthManager from '../auth';
 
 const axi = axios.create({
   baseURL: API.BASE_URL(),
@@ -37,16 +37,6 @@ const axi = axios.create({
 const apiPollTimeout = 3000;
 const maxStatusCheckCount = (120 * 1000) / apiPollTimeout;
 let statusCheckCount = 0;
-
-const authenticationHeaderVaule = () => {
-  try {
-    const token = JSON.parse(localStorage.getItem('auth')).id_token.bearer;
-    return `Bearer ${token}`;
-  } catch (err) {
-    console.log(err.message);
-    return undefined;
-  }
-};
 
 export const createSigningJob = (files, platform) => dispatch => {
   const form = new FormData();
@@ -60,7 +50,7 @@ export const createSigningJob = (files, platform) => dispatch => {
       headers: {
         'Content-Type': 'multipart/form-data',
         Accept: 'application/json',
-        Authorization: authenticationHeaderVaule(),
+        Authorization: implicitAuthManager.idToken.bearer,
       },
     })
     .then(res => {
