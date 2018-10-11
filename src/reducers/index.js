@@ -20,7 +20,7 @@
 
 import { combineReducers } from 'redux';
 import implicitAuthManager from '../auth';
-import { ADD_FILE, API_ERROR, AUTHENTICATION, JOB_STATUS } from '../constants';
+import { API_ERROR, AUTHENTICATION, JOB_STATUS } from '../constants';
 
 const authentication = (state = { isAuthenticated: false }, action) => {
   switch (action.type) {
@@ -29,24 +29,6 @@ const authentication = (state = { isAuthenticated: false }, action) => {
     case AUTHENTICATION.FAILED:
       implicitAuthManager.clearAuthLocalStorage();
       return { isAuthenticated: false };
-    default:
-      return state;
-  }
-};
-
-const file = (state, action) => {
-  switch (action.type) {
-    case ADD_FILE:
-      return action.data;
-    default:
-      return {};
-  }
-};
-
-const files = (state = [], action) => {
-  switch (action.type) {
-    case ADD_FILE:
-      return [...state, file(undefined, action)];
     default:
       return state;
   }
@@ -102,6 +84,6 @@ const api = (state = {}, action) => {
   }
 };
 
-const rootReducer = combineReducers({ files, job, api, authentication });
+const rootReducer = combineReducers({ job, api, authentication });
 
 export default rootReducer;

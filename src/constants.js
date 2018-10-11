@@ -18,8 +18,6 @@
 // Created by Jason Leach on 2018-09-17.
 //
 
-export const ADD_FILE = 'ADD_FILE';
-
 export const AUTHENTICATION = {
   SUCCESS: 'AUTHENTICATE_SUCCESS',
   FAILED: 'AUTHENTICATE_FAILED',

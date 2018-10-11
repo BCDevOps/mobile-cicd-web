@@ -110,6 +110,10 @@ class App extends Component {
     this.setState({ platform: e.currentTarget.value });
   };
 
+  onFileAccepted = files => {
+    this.setState({ files });
+  };
+
   render() {
     return (
       <div>
@@ -119,7 +123,7 @@ class App extends Component {
           <ul className="flex-outer">
             <li>
               <label>Drag and drop the archive you with to sign onto this area.</label>
-              <FileUpload />
+              <FileUpload files={this.state.files || []} onFileAccepted={this.onFileAccepted} />
             </li>
             <li>
               <p>What is the deployment platform this archive is meant for?</p>
@@ -149,7 +153,7 @@ class App extends Component {
             <li>
               <button
                 onClick={() => {
-                  this.props.createSigningJob(this.props.files, 'ios');
+                  this.props.createSigningJob(this.state.files, this.state.platform);
                 }}
               >
                 Start
@@ -167,7 +171,6 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    files: state.files,
     job: state.job,
     api: state.api,
     authenication: state.authentication,
