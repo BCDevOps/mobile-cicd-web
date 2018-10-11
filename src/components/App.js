@@ -1,23 +1,14 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { Component } from 'react';
-import { css } from 'react-emotion';
 import { connect } from 'react-redux';
-import { MoonLoader } from 'react-spinners';
 import { bindActionCreators } from 'redux';
 import { createSigningJob } from '../actionCreators';
 import { authenticateFailed, authenticateSuccess } from '../actions';
 import implicitAuthManager from '../auth';
-import { JOB_STATUS } from '../constants';
 import './App.css';
 import FileUpload from './FileUpload';
 import Footer from './Footer';
 import Header from './Header';
-
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: #003366;
-`;
+import JobStatusIndicator from './JobStatusIndicator';
 
 class App extends Component {
   constructor(props) {
@@ -34,67 +25,6 @@ class App extends Component {
       // onAuthLocalStorageCleared: () => this.props.logout(),
     });
     implicitAuthManager.handleOnPageLoad();
-  };
-
-  jobStateChanged = job => {
-    if (!job || (Object.keys(job).length === 0 && job.constructor === Object)) {
-      return <div />;
-    }
-
-    switch (job.status) {
-      case JOB_STATUS.CREATING:
-        return (
-          <div className="job-status">
-            <MoonLoader
-              className={override}
-              sizeUnit={'px'}
-              size={18}
-              color={'#123abc'}
-              loading={this.state.loading}
-            />
-            &nbsp;&nbsp; Creating
-          </div>
-        );
-      case JOB_STATUS.PROCESSING:
-        return (
-          <div className="job-status">
-            <MoonLoader
-              className={override}
-              sizeUnit={'px'}
-              size={18}
-              color={'#003366'}
-              loading={this.state.loading}
-            />
-            &nbsp;&nbsp; Processing
-          </div>
-        );
-      case JOB_STATUS.COMPLETED:
-        return (
-          <div className="job-status">
-            <FontAwesomeIcon icon="file-download" className="file-download-icon" />
-            &nbsp;&nbsp; {this.deliveryUrlForJob(this.props.job)}
-          </div>
-        );
-
-      default:
-        return <div />;
-    }
-  };
-
-  deliveryUrlForJob = job => {
-    if (!job || (Object.keys(job).length === 0 && job.constructor === Object)) {
-      return <i>No Delivery URL</i>;
-    }
-
-    if (!job.url) {
-      return <i>No Delivery URL</i>;
-    }
-
-    return (
-      <a href={job.url} download>
-        Download
-      </a>
-    );
   };
 
   onPlatformChanged = e => {
@@ -152,7 +82,7 @@ class App extends Component {
             </li>
           </ul>
           {/* </form> */}
-          {this.jobStateChanged(this.props.job)}
+          <JobStatusIndicator job={this.props.job} />
         </div>
         <Footer />
       </div>
