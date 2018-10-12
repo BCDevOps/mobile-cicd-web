@@ -18,10 +18,19 @@
 // Created by Jason Leach on 2018-08-24.
 //
 
-export const ADD_FILE = 'ADD_FILE';
-export const UPLOAD_STARTED = 'UPLOAD_STARTED';
-export const UPLOAD_COMPLETED_OK = 'UPLOAD_COMPLETED_OK';
-export const UPLOAD_COMPLETED_FAILED = 'UPLOAD_COMPLETED_FAILED';
+import { ADD_FILE, API_ERROR, AUTHENTICATION, JOB_STATUS } from '../constants';
+
+export const authenticateSuccess = () => {
+  return {
+    type: AUTHENTICATION.SUCCESS,
+  };
+};
+
+export const authenticateFailed = () => {
+  return {
+    type: AUTHENTICATION.FAILED,
+  };
+};
 
 export const addFile = data => {
   return {
@@ -30,14 +39,43 @@ export const addFile = data => {
   };
 };
 
-export const uploadStarted = () => {
+export const jobCreating = () => {
   return {
-    type: UPLOAD_STARTED,
+    type: JOB_STATUS.CREATING,
   };
 };
 
-export const uploadCompleted = success => {
+export const jobCreated = data => {
   return {
-    type: success ? UPLOAD_COMPLETED_OK : UPLOAD_COMPLETED_FAILED,
+    type: JOB_STATUS.CREATED,
+    jobId: data.jobId,
+  };
+};
+
+export const jobCreationFailed = () => {
+  return {
+    type: JOB_STATUS.FAILED,
+    jobId: undefined,
+  };
+};
+
+export const jobProcessing = () => {
+  return {
+    type: JOB_STATUS.PROCESSING,
+  };
+};
+
+export const jobCompleted = data => {
+  return {
+    type: JOB_STATUS.COMPLETED,
+    url: data.url,
+  };
+};
+
+export const apiRequestFailed = (message, code) => {
+  return {
+    type: API_ERROR.JOB_STATUS_CHECK_FAILED,
+    message,
+    code,
   };
 };

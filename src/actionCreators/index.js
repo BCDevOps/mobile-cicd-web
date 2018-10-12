@@ -19,36 +19,95 @@
 //
 
 import axios from 'axios';
-import { uploadStarted, uploadCompleted } from '../actions';
+import {
+  apiRequestFailed,
+  jobCompleted,
+  jobCreated,
+  jobCreating,
+  jobCreationFailed,
+  jobProcessing,
+} from '../actions';
+import { API } from '../constants';
+import implicitAuthManager from '../auth';
 
-export const createSigningJob = files => dispatch => {
-  console.log('** HERE **', files);
+const axi = axios.create({
+  baseURL: API.BASE_URL(),
+});
 
-  // shelly notes: wait for platform update!
-  const url = 'http://localhost:8089/api/v1/sign?platform=android';
-  /* eslint-disable-next-line */
-  // const url = 'http://localhost:8089/api/v1/deploy/20?deploymentPlatform=enterprise&projectId=2';
+const apiPollTimeout = 3000;
+const maxStatusCheckCount = (120 * 1000) / apiPollTimeout;
+let statusCheckCount = 0;
 
+export const createSigningJob = (files, platform) => dispatch => {
   const form = new FormData();
   form.append('file', files[0]);
 
-  dispatch(uploadStarted());
+  dispatch(jobCreating());
+  apiRequestFailed(); // clear any errors
 
-  return axios
-    .post(url, form, {
-    // .post(url_deploy, {
-      headers: { 'Content-Type': 'multipart/form-data' },
+  return axi
+    .post(API.CREATE_JOB(platform), form, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        Accept: 'application/json',
+        Authorization: implicitAuthManager.idToken.bearer,
+      },
     })
-    .then(foo => {
-      console.log('SUCCESS!');
-      dispatch(uploadCompleted(true));
-      return;
-      // dispatch finished
+    .then(res => {
+      dispatch(jobCreated({ jobId: res.data.id }));
+      checkJobStatus(res.data.id, dispatch);
     })
     .catch(err => {
-      console.log(`FAIL, err = ${err.message}`);
-      dispatch(uploadCompleted(false));
-      return;
-      // dispatch finished
+      dispatch(jobCreationFailed());
+
+      let message = 'Unable to create signing job';
+      const code = err.response.status;
+      if (err.response.data.error) {
+        message = err.response.data.error;
+      }
+      console.log(`error = ${message}, code = ${code}`);
+      dispatch(apiRequestFailed(message, code));
+    });
+};
+
+const checkJobStatus = (jobId, dispatch) => {
+  statusCheckCount += 1;
+
+  apiRequestFailed(); // clear any errors
+
+  return axi
+    .get(API.CHECK_JOB_STATUS(jobId), {
+      headers: {
+        Accept: 'application/json',
+        Authorization: authenticationHeaderVaule(),
+      },
+    })
+    .then(res => {
+      if (
+        res.status === 202 &&
+        res.data.status === 'Processing' &&
+        statusCheckCount < maxStatusCheckCount
+      ) {
+        dispatch(jobProcessing());
+
+        setTimeout(() => {
+          checkJobStatus(jobId, dispatch);
+        }, apiPollTimeout);
+
+        return;
+      }
+
+      if (res.status === 200 && res.data.status === 'Completed') {
+        dispatch(jobCompleted(res.data));
+      }
+    })
+    .catch(err => {
+      let message = 'Unable to check job status';
+      const code = err.response.status;
+      if (err.response.data.error) {
+        message = err.response.data.error;
+      }
+      console.log(`error = ${message}, code = ${code}`);
+      dispatch(apiRequestFailed(message, code));
     });
 };

@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'MyriadWebPro';
+  src: url('/font/MyriadWebPro.ttf') format('truetype');
+}
+
+header {
+  background-color: #003366;
+  height: 100px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  /* flex-flow: row wrap; */
+}
+
+.header-logo {
+  animation: logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+/* header .left {
+  display: flex;
+} */
+
+header .right-push {
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+.header-title {
+  padding: 1em 0 0 1em;
+  font-family: 'MyriadWebPro';
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.header-intro {
+  font-size: large;
+}
+
+/* @keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

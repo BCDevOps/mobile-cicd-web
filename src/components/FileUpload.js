@@ -23,25 +23,68 @@ import Dropzone from 'react-dropzone';
 import { addFile } from '../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './FileUpload.css';
 
 class FileUpload extends Component {
   onDrop = async (acceptedFiles, rejectedFiles) => {
-    console.log(this.props);
-    console.log('Hello World', acceptedFiles);
-    // const req = request.post('/upload');
     acceptedFiles.forEach(element => {
-      console.log(`got file = ${element.name}`);
       this.props.addFile(element);
     });
   };
 
+  size = sizeInBytes => {
+    return (
+      <div>
+        &nbsp;&nbsp;
+        {Math.round(sizeInBytes * 0.000001)}
+        Mb
+      </div>
+    );
+  };
+
+  isDisabled = () => {
+    if (this.props.files.length >= 1) return true;
+    return false;
+  };
+
+  titleForCurrentState = () => {
+    if (this.isDisabled()) {
+      return <div className="title">Only one file can be selected.</div>;
+    }
+
+    return <div className="title">Drag file to upload.</div>;
+  };
+
+  subTitleForCurrentState = () => {
+    if (this.isDisabled()) {
+      return <div className="sub-title" />;
+    }
+
+    return <div className="sub-title">(.ZIP format only)</div>;
+  };
+
   render() {
     return (
-      <Dropzone className="x" onDrop={files => this.onDrop(files)}>
-        <div>Drop Your File Here, Yo!</div>
-      </Dropzone>
+      <div className="file-upload-container">
+        <Dropzone
+          className="drop-zone"
+          onDrop={files => this.onDrop(files)}
+          disabled={this.isDisabled()}
+        >
+          {this.titleForCurrentState()}
+          {this.subTitleForCurrentState()}
+        </Dropzone>
+        <ul className="file-list">
+          {this.props.files.map(t => (
+            <li key={t.name}>
+              {<FontAwesomeIcon icon="file" className="file-icon" />}
+              <span className="file-name">{t.name}</span>
+              <span className="file-size">{this.size(t.size)}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 }
