@@ -26,6 +26,9 @@ export const createSigningJob = files => dispatch => {
 
   // shelly notes: wait for platform update!
   const url = 'http://localhost:8089/api/v1/sign?platform=android';
+  /* eslint-disable-next-line */
+  // const url = 'http://localhost:8089/api/v1/deploy/20?deploymentPlatform=enterprise&projectId=2';
+
   const form = new FormData();
   form.append('file', files[0]);
 
@@ -33,6 +36,7 @@ export const createSigningJob = files => dispatch => {
 
   return axios
     .post(url, form, {
+    // .post(url_deploy, {
       headers: { 'Content-Type': 'multipart/form-data' },
     })
     .then(foo => {
