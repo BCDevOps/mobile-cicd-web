@@ -87,7 +87,7 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
 
       try {
         echo "Checking Build"
-        sh "npm run build"
+        sh "SKIP_PREFLIGHT_CHECK=true npm run build" //TODO: ignore the react-scripts issue for now. Please remove SKIP_PREFLIGHT_CHECK after major version update
       } catch (error) {
         def attachment = [:]
         attachment.fallback = 'See build log for more details'
@@ -167,7 +167,7 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
 
       try {
         // Run our unit tests et al.
-        sh "CI=true npm test"
+        sh "CI=true SKIP_PREFLIGHT_CHECK=true npm test"
       } catch (error) {
         def attachment = [:]
         attachment.fallback = 'See build log for more details'
