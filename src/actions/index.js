@@ -18,7 +18,7 @@
 // Created by Jason Leach on 2018-08-24.
 //
 
-import { ADD_FILE, API_ERROR, AUTHENTICATION, JOB_STATUS } from '../constants';
+import { API_ERROR, AUTHENTICATION, JOB_STATUS } from '../constants';
 
 export const authenticateSuccess = () => {
   return {
@@ -29,13 +29,6 @@ export const authenticateSuccess = () => {
 export const authenticateFailed = () => {
   return {
     type: AUTHENTICATION.FAILED,
-  };
-};
-
-export const addFile = data => {
-  return {
-    type: ADD_FILE,
-    data,
   };
 };
 

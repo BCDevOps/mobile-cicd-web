@@ -18,36 +18,26 @@
 // Created by Jason Leach on 2018-09-04.
 //
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import React from 'react';
+import PropTypes from 'prop-types';
 import AuthButton from './AuthButton';
 import logo from './bcgovlogo.svg';
 import './Header.css';
 
-class Header extends Component {
-  render() {
-    return (
-      <header>
-        <img src={logo} className="header-logo" alt="logo" />
-        <p className="header-title">Secure Sign</p>
-        <div className="right-push">
-          <AuthButton />
-        </div>
-      </header>
-    );
-  }
-}
+const Header = ({ authentication }) => {
+  return (
+    <header>
+      <img src={logo} className="header-logo" alt="logo" />
+      <h1>Secure Sign</h1>
+      <div className="right-push">
+        <AuthButton isAuthenticated={authentication.isAuthenticated} />
+      </div>
+    </header>
+  );
+};
 
-function mapStateToProps(state) {
-  return {};
-}
+Header.propTypes = {
+  authentication: PropTypes.object.isRequired,
+};
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({}, dispatch);
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Header);
+export default Header;
