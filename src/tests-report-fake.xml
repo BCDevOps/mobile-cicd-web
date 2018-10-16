@@ -1,90 +1,14 @@
-<testsuites name="jest tests" tests="30" failures="0" time="3.426">
-  <testsuite name="Login Component" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:38" time="0.283" tests="3">
-    <testcase classname="Login Component shows logout button when logged in" name="Login Component shows logout button when logged in" time="0.027">
-    </testcase>
-    <testcase classname="Login Component shows login button when logged out" name="Login Component shows login button when logged out" time="0.001">
-    </testcase>
-    <testcase classname="Login Component logs user out when logout button clicked" name="Login Component logs user out when logout button clicked" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="Hexgrid component" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:38" time="0.213" tests="3">
-    <testcase classname="Hexgrid component it matches snapshot" name="Hexgrid component it matches snapshot" time="0.007">
-    </testcase>
-    <testcase classname="Hexgrid component it has the default [3, 2] pattern when no gridPattern is passed in" name="Hexgrid component it has the default [3, 2] pattern when no gridPattern is passed in" time="0.009">
-    </testcase>
-    <testcase classname="Hexgrid component it has hex blocks that follow the [5,3] pattern when passed in" name="Hexgrid component it has hex blocks that follow the [5,3] pattern when passed in" time="0.003">
-    </testcase>
-  </testsuite>
-  <testsuite name="Primary Header Component" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:38" time="0.079" tests="1">
-    <testcase classname="Primary Header Component it matches snapshot" name="Primary Header Component it matches snapshot" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="Navigational Item Component" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:38" time="0.062" tests="1">
-    <testcase classname="Navigational Item Component it matches snapshot" name="Navigational Item Component it matches snapshot" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="Index Container" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:38" time="0.044" tests="1">
-    <testcase classname="Index Container it matches snapshot" name="Index Container it matches snapshot" time="0.004">
-    </testcase>
-  </testsuite>
-  <testsuite name="Learn Container" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:38" time="0.036" tests="1">
-    <testcase classname="Learn Container it renders without crashing" name="Learn Container it renders without crashing" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="Navigational Item Component" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:39" time="0.029" tests="1">
-    <testcase classname="Navigational Item Component it matches snapshot" name="Navigational Item Component it matches snapshot" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="Hex Block Component" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:39" time="0.029" tests="2">
-    <testcase classname="Hex Block Component it accepts nodes as children" name="Hex Block Component it accepts nodes as children" time="0.002">
-    </testcase>
-    <testcase classname="Hex Block Component it adds to classNames if collapse flag is passed" name="Hex Block Component it adds to classNames if collapse flag is passed" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="Gatsby Link Component" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:39" time="0.029" tests="2">
-    <testcase classname="Gatsby Link Component it renders an anchor tag if passed a path that doesn&apos;t link to a page component" name="Gatsby Link Component it renders an anchor tag if passed a path that doesn&apos;t link to a page component" time="0.001">
-    </testcase>
-    <testcase classname="Gatsby Link Component it renders a gatsby link if passed a path that links to a page componented" name="Gatsby Link Component it renders a gatsby link if passed a path that links to a page componented" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="Do Container" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:39" time="0.027" tests="1">
-    <testcase classname="Do Container it renders without crashing" name="Do Container it renders without crashing" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="Deliver Container" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:39" time="0.027" tests="1">
-    <testcase classname="Deliver Container it renders without crashing" name="Deliver Container it renders without crashing" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="Primary Footer Component" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:39" time="0.02" tests="1">
-    <testcase classname="Primary Footer Component it matches snapshot" name="Primary Footer Component it matches snapshot" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="Button Component" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:39" time="0.016" tests="2">
-    <testcase classname="Button Component matches snapshot" name="Button Component matches snapshot" time="0.001">
-    </testcase>
-    <testcase classname="Button Component it calls event handling function when clicked" name="Button Component it calls event handling function when clicked" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="Hex Grid Calculation" errors="0" failures="0" skipped="0" timestamp="2018-10-12T21:14:39" time="0.018" tests="10">
-    <testcase classname="Hex Grid Calculation it should return [3, 3, 3, 2, 2] when passed in 5 and [3, 2]" name="Hex Grid Calculation it should return [3, 3, 3, 2, 2] when passed in 5 and [3, 2]" time="0.001">
-    </testcase>
-    <testcase classname="Hex Grid Calculation it should return [3, 3, 3, 2, 2, 3, 3, 3, 2, 2] when passed in 10 and [3, 2]" name="Hex Grid Calculation it should return [3, 3, 3, 2, 2, 3, 3, 3, 2, 2] when passed in 10 and [3, 2]" time="0">
-    </testcase>
-    <testcase classname="Hex Grid Calculation it should throw if not passed a number as array length or if number is less than 0" name="Hex Grid Calculation it should throw if not passed a number as array length or if number is less than 0" time="0.001">
-    </testcase>
-    <testcase classname="Hex Grid Calculation it should throw error if not passed in an array as a pattern or if array is not made of ints" name="Hex Grid Calculation it should throw error if not passed in an array as a pattern or if array is not made of ints" time="0">
-    </testcase>
-    <testcase classname="Hex Grid Calculation it should throw if integers passed to pattern are negative" name="Hex Grid Calculation it should throw if integers passed to pattern are negative" time="0">
-    </testcase>
-    <testcase classname="Data Massagers it groups data correctly when passed in the right arguments" name="Data Massagers it groups data correctly when passed in the right arguments" time="0.001">
-    </testcase>
-    <testcase classname="Data Massagers Throws error if key is not passed into func" name="Data Massagers Throws error if key is not passed into func" time="0">
-    </testcase>
-    <testcase classname="Data Massagers Throws if collection passed is not an array" name="Data Massagers Throws if collection passed is not an array" time="0">
-    </testcase>
-    <testcase classname="Data Massagers Throws if collection is not array of objects" name="Data Massagers Throws if collection is not array of objects" time="0">
-    </testcase>
-    <testcase classname="Data Massagers If grouping doesn&apos;t exist in object it is not returned" name="Data Massagers If grouping doesn&apos;t exist in object it is not returned" time="0">
-    </testcase>
-  </testsuite>
-</testsuites>
+<testExecutions version="1">
+  <file path="testx/ClassOneTest.xoo">
+    <testCase name="test1" duration="5"/>
+    <testCase name="test2" duration="500">
+      <skipped message="short message">other</skipped>
+    </testCase>
+    <testCase name="test3" duration="100">
+      <failure message="short">stacktrace</failure>
+    </testCase>
+    <testCase name="test4" duration="500">
+      <error message="short">stacktrace</error>
+    </testCase>
+  </file>
+</testExecutions>
