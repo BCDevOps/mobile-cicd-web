@@ -1,34 +1,16 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { Component } from 'react';
-import { css } from 'react-emotion';
 import { connect } from 'react-redux';
-import { MoonLoader } from 'react-spinners';
 import { bindActionCreators } from 'redux';
 import { createSigningJob } from '../actionCreators';
 import { authenticateFailed, authenticateSuccess } from '../actions';
 import implicitAuthManager from '../auth';
-import { JOB_STATUS } from '../constants';
 import './App.css';
 import FileUpload from './FileUpload';
 import Footer from './Footer';
 import Header from './Header';
+import JobStatusIndicator from './JobStatusIndicator';
 
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: #003366;
-`;
-
-/* eslint-disable react/prefer-stateless-function */
 class App extends Component {
-  // handleUploadFile = event => {
-  //   console.log('***************');
-  //   const data = new FormData();
-  //   data.append('file', event.target.files[0]);
-  //   data.append('name', 'some value user types');
-  //   data.append('description', 'some value user types');
-  // };
-
   constructor(props) {
     super(props);
     this.state = {
@@ -45,81 +27,24 @@ class App extends Component {
     implicitAuthManager.handleOnPageLoad();
   };
 
-  jobStateChanged = job => {
-    if (!job || (Object.keys(job).length === 0 && job.constructor === Object)) {
-      return <div />;
-    }
-
-    switch (job.status) {
-      case JOB_STATUS.CREATING:
-        return (
-          <div className="job-status">
-            <MoonLoader
-              className={override}
-              sizeUnit={'px'}
-              size={18}
-              color={'#123abc'}
-              loading={this.state.loading}
-            />
-            &nbsp;&nbsp; Creating
-          </div>
-        );
-      case JOB_STATUS.PROCESSING:
-        return (
-          <div className="job-status">
-            <MoonLoader
-              className={override}
-              sizeUnit={'px'}
-              size={18}
-              color={'#003366'}
-              loading={this.state.loading}
-            />
-            &nbsp;&nbsp; Processing
-          </div>
-        );
-      case JOB_STATUS.COMPLETED:
-        return (
-          <div className="job-status">
-            <FontAwesomeIcon icon="file-download" className="file-download-icon" />
-            &nbsp;&nbsp; {this.deliveryUrlForJob(this.props.job)}
-          </div>
-        );
-
-      default:
-        return <div />;
-    }
-  };
-
-  deliveryUrlForJob = job => {
-    if (!job || (Object.keys(job).length === 0 && job.constructor === Object)) {
-      return <i>No Delivery URL</i>;
-    }
-
-    if (!job.url) {
-      return <i>No Delivery URL</i>;
-    }
-
-    return (
-      <a href={job.url} download>
-        Download
-      </a>
-    );
-  };
-
   onPlatformChanged = e => {
     this.setState({ platform: e.currentTarget.value });
+  };
+
+  onFileAccepted = files => {
+    this.setState({ files });
   };
 
   render() {
     return (
       <div>
-        <Header />
+        <Header authentication={this.props.authenication} />
         <div className="container">
           {/* <form> */}
           <ul className="flex-outer">
             <li>
               <label>Drag and drop the archive you with to sign onto this area.</label>
-              <FileUpload />
+              <FileUpload files={this.state.files || []} onFileAccepted={this.onFileAccepted} />
             </li>
             <li>
               <p>What is the deployment platform this archive is meant for?</p>
@@ -149,7 +74,7 @@ class App extends Component {
             <li>
               <button
                 onClick={() => {
-                  this.props.createSigningJob(this.props.files, 'ios');
+                  this.props.createSigningJob(this.state.files, this.state.platform);
                 }}
               >
                 Start
@@ -157,7 +82,7 @@ class App extends Component {
             </li>
           </ul>
           {/* </form> */}
-          {this.jobStateChanged(this.props.job)}
+          <JobStatusIndicator job={this.props.job} />
         </div>
         <Footer />
       </div>
@@ -166,7 +91,11 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  return { files: state.files, job: state.job, api: state.api };
+  return {
+    job: state.job,
+    api: state.api,
+    authenication: state.authentication,
+  };
 }
 
 function mapDispatchToProps(dispatch) {
