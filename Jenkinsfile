@@ -112,7 +112,7 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
               ).trim()
         echo "SONARQUBE_URL: ${SONARQUBE_URL}"
         dir('sonar-runner') {
-          sh returnStdout: true, script: "./gradlew sonarqube -Dsonar.host.url=${SONARQUBE_URL} -Dsonar.verbose=true --stacktrace --info -Dsonar.projectName=${APP_NAME} -Dsonar.branch=${GIT_BRANCH_NAME} -Dsonar.projectKey=org.sonarqube:${APP_NAME} -Dsonar.sources=.. -Dsonar.tests=../src/ -Dsonar.test.inclusions=../**/*.test.js,../src/**/*.spec.js,../src/**/*.test.js -Dsonar.testExecutionReportPaths=tests-report-fake.xml"
+          sh returnStdout: true, script: "./gradlew sonarqube -Dsonar.host.url=${SONARQUBE_URL} -Dsonar.verbose=true --stacktrace --info -Dsonar.projectName=${APP_NAME} -Dsonar.branch=${GIT_BRANCH_NAME} -Dsonar.projectKey=org.sonarqube:${APP_NAME} -Dsonar.sources=.. -Dsonar.tests=../src/ -Dsonar.test.inclusions=../src/**/*.spec.js,../src/**/*.test.js -Dsonar.testExecutionReportPaths=tests-report-fake.xml"
         }
       } catch (error) {
         def attachment = [:]
