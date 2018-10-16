@@ -87,7 +87,7 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
 
       try {
         echo "Checking Build"
-        sh "npm run build"
+        sh "SKIP_PREFLIGHT_CHECK=true npm run build" //TODO: ignore the react-scripts issue for now. Please remove SKIP_PREFLIGHT_CHECK after major version update
       } catch (error) {
         def attachment = [:]
         attachment.fallback = 'See build log for more details'
@@ -112,7 +112,7 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
               ).trim()
         echo "SONARQUBE_URL: ${SONARQUBE_URL}"
         dir('sonar-runner') {
-          sh returnStdout: true, script: "./gradlew sonarqube -Dsonar.host.url=${SONARQUBE_URL} -Dsonar.verbose=true --stacktrace --info -Dsonar.projectName=${APP_NAME} -Dsonar.branch=${GIT_BRANCH_NAME} -Dsonar.projectKey=org.sonarqube:${APP_NAME} -Dsonar.sources=.. -Dsonar.tests=../src/ -Dsonar.test.inclusions=../**/*.test.js,../src/**/*.spec.js,../src/**/*.test.js -Dsonar.testExecutionReportPaths=tests-report-fake.xml"
+          sh returnStdout: true, script: "./gradlew sonarqube -Dsonar.host.url=${SONARQUBE_URL} -Dsonar.verbose=true --stacktrace --info -Dsonar.projectName=${APP_NAME} -Dsonar.branch=${GIT_BRANCH_NAME} -Dsonar.projectKey=org.sonarqube:${APP_NAME} -Dsonar.sources=.. -Dsonar.tests=../src/ -Dsonar.test.inclusions=../src/**/*.spec.js,../src/**/*.test.js -Dsonar.testExecutionReportPaths=tests-report-fake.xml"
         }
       } catch (error) {
         def attachment = [:]
@@ -167,7 +167,7 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
 
       try {
         // Run our unit tests et al.
-        sh "CI=true npm test"
+        sh "CI=true SKIP_PREFLIGHT_CHECK=true npm test"
       } catch (error) {
         def attachment = [:]
         attachment.fallback = 'See build log for more details'
