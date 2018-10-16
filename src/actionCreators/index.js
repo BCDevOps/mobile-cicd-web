@@ -38,7 +38,7 @@ const apiPollTimeout = 3000;
 const maxStatusCheckCount = (120 * 1000) / apiPollTimeout;
 let statusCheckCount = 0;
 
-const authenticationHeaderVaule = () => {
+const authenticationHeaderValue = () => {
   let token = '';
   try {
     token = implicitAuthManager.idToken.bearer;
@@ -61,7 +61,7 @@ export const createSigningJob = (files, platform) => dispatch => {
       headers: {
         'Content-Type': 'multipart/form-data',
         Accept: 'application/json',
-        Authorization: authenticationHeaderVaule(),
+        Authorization: authenticationHeaderValue(),
       },
     })
     .then(res => {
@@ -90,7 +90,7 @@ const checkJobStatus = (jobId, dispatch) => {
     .get(API.CHECK_JOB_STATUS(jobId), {
       headers: {
         Accept: 'application/json',
-        Authorization: authenticationHeaderVaule(),
+        Authorization: authenticationHeaderValue(),
       },
     })
     .then(res => {
