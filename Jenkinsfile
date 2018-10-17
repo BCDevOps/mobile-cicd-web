@@ -118,7 +118,7 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
           // -Dsonar.verbose=true --stacktrace --info -Dsonar.projectName=${APP_NAME} 
           // -Dsonar.branch=${GIT_BRANCH_NAME} -Dsonar.projectKey=org.sonarqube:${APP_NAME} 
           // -Dsonar.sources=src/ -Dsonar.tests=src/ -Dsonar.testExecutionReportPaths=src/tests-report-fake.xml"
-        }
+        // }
       } catch (error) {
         def attachment = [:]
         attachment.fallback = 'See build log for more details'
