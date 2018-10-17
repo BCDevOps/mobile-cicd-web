@@ -7,11 +7,13 @@ plugins {
 
 sonarqube {
     properties {
-        //property "sonar.host.url", "https://sonarqube<your project>.pathfinder.gov.bc.ca"        
-        property "sonar.projectName", "MyRA API"
-        property "sonar.projectKey", "org.sonarqube:bcgov-range-myra-api"
+        property "sonar.host.url", "https://sonarqube-devhub-tools.pathfinder.gov.bc.ca"       
+        property "sonar.projectName", "Devhub signing web"
+        property "sonar.projectKey", "org.sonarqube:signing-web:master"
         property "sonar.projectBaseDir", "../"
-        property "sonar.sources", "./"
+        property "sonar.sources", "src/"
+        property "sonar.tests", "tests/*.spec.js"
+        property "sonar.junit.reportPaths", "tests/"
         property "sonar.exclusions", "node_modules/**"
         property "sourceEncoding", "UTF-8"
     }
@@ -33,9 +35,9 @@ test {
   ignoreFailures = true
 }
 
-// dependencies {
-//     testCompile 'junit:junit:4.12'
-// }
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
 
 repositories {
   repositories {
