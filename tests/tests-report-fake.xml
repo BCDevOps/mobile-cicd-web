@@ -1,5 +1,5 @@
 <testExecutions version="1">
-  <file path="../tests/ClassOneTest.spec.js">
+  <file path="./ClassOneTest.spec.js">
     <testCase name="test1" duration="5"/>
     <testCase name="test2" duration="500">
       <skipped message="short message">other</skipped>
