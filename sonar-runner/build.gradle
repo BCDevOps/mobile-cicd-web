@@ -14,8 +14,6 @@ sonarqube {
         property "sonar.sources", "src/"
         property "sonar.exclusions", "node_modules/**"
         property "sourceEncoding", "UTF-8"
-
-
     }
 }
 
