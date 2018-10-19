@@ -190,9 +190,12 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
     stage('Build Image') {
       echo "Build: ${BUILD_ID}"
       // run the oc build to package the artifacts into a docker image
-      openshiftBuild bldCfg: "${APP_NAME}-${GIT_BRANCH_NAME}-build", showBuildLogs: 'true', verbose: 'true'
-
-      openshiftBuild bldCfg: "${CADDY_BUILD_CONFIG}-${GIT_BRANCH_NAME}-build", showBuildLogs: 'true', verbose: 'true'
+      // TODO: refering to the existing build configs:
+      // openshiftBuild bldCfg: "${APP_NAME}-${GIT_BRANCH_NAME}-build", showBuildLogs: 'true', verbose: 'true'
+      // openshiftBuild bldCfg: "${CADDY_BUILD_CONFIG}-${GIT_BRANCH_NAME}-build", showBuildLogs: 'true', verbose: 'true'
+      
+      openshiftBuild bldCfg: "${APP_NAME}-develop-build", showBuildLogs: 'true', verbose: 'true'
+      openshiftBuild bldCfg: "${CADDY_BUILD_CONFIG}-develop-build", showBuildLogs: 'true', verbose: 'true'
 
       // Don't tag with BUILD_ID so the pruner can do it's job; it won't delete tagged images.
       // Tag the images for deployment based on the image's hash
