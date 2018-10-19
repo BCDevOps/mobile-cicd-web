@@ -12,11 +12,6 @@ sonarqube {
         property "sonar.projectKey", "org.sonarqube:signing-web:master"
         property "sonar.projectBaseDir", "../"
         property "sonar.sources", "src/"
-        property "sonar.tests", "tests/"
-        property "sonar.test.inclusions","tests/*.spec.js"
-        property "sonar.testExecutionReportPaths", "tests/tests-report-fake.xml"
-        // property "sonar.genericcoverage.unitTestReportPaths", "tests/tests-report-fake.xml"
-        // property "sonar.junit.reportPaths", "tests/"
         property "sonar.exclusions", "node_modules/**"
         property "sourceEncoding", "UTF-8"
 
