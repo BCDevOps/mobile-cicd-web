@@ -114,6 +114,7 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
         dir('sonar-runner') {
           sh returnStdout: true, script: "./gradlew sonarqube -Dsonar.verbose=true"
         }
+        // TODO: update parameters
           // -Dsonar.host.url=${SONARQUBE_URL} 
           // -Dsonar.verbose=true --stacktrace --info -Dsonar.projectName=${APP_NAME} 
           // -Dsonar.branch=${GIT_BRANCH_NAME} -Dsonar.projectKey=org.sonarqube:${APP_NAME} 
@@ -127,7 +128,7 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
         attachment.text = "The SonarQube code quality check failed. look at ${SONARQUBE_URL} \ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
         // attachment.title_link = "${env.BUILD_URL}"
 
-        // notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
+        notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
       }
       
       //
@@ -163,28 +164,28 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
         attachment.color = '#FFA500' // Orange
         attachment.text = "There are security warnings related to some packages.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
 
-        // notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
+        notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
       }
 
       //
       // Run our unit tests et al.
       //
+      // TODO: add unit testing
+    //   try {
+    //     // Run our unit tests et al.
+    //     sh "CI=true SKIP_PREFLIGHT_CHECK=true npm test"
+    //   } catch (error) {
+    //     def attachment = [:]
+    //     attachment.fallback = 'See build log for more details'
+    //     attachment.title = "Web Build ${BUILD_ID} Failed :hankey: :face_with_head_bandage:"
+    //     attachment.color = '#CD0000' // Red
+    //     attachment.text = "There are issues with the unit tests.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
+    //     // attachment.title_link = "${env.BUILD_URL}"
 
-      try {
-        // Run our unit tests et al.
-        sh "CI=true SKIP_PREFLIGHT_CHECK=true npm test"
-      } catch (error) {
-        def attachment = [:]
-        attachment.fallback = 'See build log for more details'
-        attachment.title = "Web Build ${BUILD_ID} Failed :hankey: :face_with_head_bandage:"
-        attachment.color = '#CD0000' // Red
-        attachment.text = "There are issues with the unit tests.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
-        // attachment.title_link = "${env.BUILD_URL}"
-
-        // notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
-        sh "exit 1002"
-      }
-    }
+    //     notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
+    //     sh "exit 1002"
+    //   }
+    // }
 
     stage('Build Image') {
       echo "Build: ${BUILD_ID}"
