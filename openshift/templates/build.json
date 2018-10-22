@@ -282,14 +282,7 @@
       "displayName": "Resources CPU Limit",
       "description": "The resources CPU limit (in cores) for this build.",
       "required": true,
-      "value": "2"
-    },
-    {
-      "name": "MEMORY_LIMIT",
-      "displayName": "Resources Memory Limit",
-      "description": "The resources Memory limit (in Mi, Gi, etc) for this build.",
-      "required": true,
-      "value": "2Gi"
+      "value": "1"
     },
     {
       "name": "CPU_REQUEST",
@@ -297,6 +290,13 @@
       "description": "The resources CPU request (in cores) for this build.",
       "required": true,
       "value": "1"
+    },
+    {
+      "name": "MEMORY_LIMIT",
+      "displayName": "Resources Memory Limit",
+      "description": "The resources Memory limit (in Mi, Gi, etc) for this build.",
+      "required": true,
+      "value": "2Gi"
     },
     {
       "name": "MEMORY_REQUEST",
