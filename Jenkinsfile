@@ -194,8 +194,8 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
       // openshiftBuild bldCfg: "${APP_NAME}-${GIT_BRANCH_NAME}-build", showBuildLogs: 'true', verbose: 'true'
       // openshiftBuild bldCfg: "${CADDY_BUILD_CONFIG}-${GIT_BRANCH_NAME}-build", showBuildLogs: 'true', verbose: 'true'
       
-      openshiftBuild bldCfg: "${APP_NAME}-develop-build", showBuildLogs: 'true', verbose: 'true'
-      openshiftBuild bldCfg: "${CADDY_BUILD_CONFIG}-develop-build", showBuildLogs: 'true', verbose: 'true'
+      openshiftBuild bldCfg: "${APP_NAME}-master-build", showBuildLogs: 'true', verbose: 'true'
+      openshiftBuild bldCfg: "${CADDY_BUILD_CONFIG}-master-build", showBuildLogs: 'true', verbose: 'true'
 
       // Don't tag with BUILD_ID so the pruner can do it's job; it won't delete tagged images.
       // Tag the images for deployment based on the image's hash
@@ -219,16 +219,16 @@ podTemplate(label: "${APP_NAME}-node-build", name: "${APP_NAME}-node-build", ser
       }
     }
 
-    stage('Approval') {
-      timeout(time: 1, unit: 'DAYS') {
-        input message: "Deploy to test?", submitter: 'authenticated'
-      }
-      node ('master') {
-        stage('Promotion') {
-          openshiftTag destStream: CADDY_IMAGESTREAM_NAME, verbose: 'true', destTag: TAG_NAMES[1], srcStream: CADDY_IMAGESTREAM_NAME, srcTag: "${IMAGE_HASH}"
-          notifySlack("Promotion Completed\n Build #${BUILD_ID} was promoted to test.", "#range-web-caddy", "https://hooks.slack.com/services/${SLACK_TOKEN}", [], OPENSHIFT_ICO)
-        }
-      }
-    }   
+    // stage('Approval') {
+    //   timeout(time: 1, unit: 'DAYS') {
+    //     input message: "Deploy to test?", submitter: 'authenticated'
+    //   }
+    //   node ('master') {
+    //     stage('Promotion') {
+    //       openshiftTag destStream: CADDY_IMAGESTREAM_NAME, verbose: 'true', destTag: TAG_NAMES[1], srcStream: CADDY_IMAGESTREAM_NAME, srcTag: "${IMAGE_HASH}"
+    //       notifySlack("Promotion Completed\n Build #${BUILD_ID} was promoted to test.", "#range-web-caddy", "https://hooks.slack.com/services/${SLACK_TOKEN}", [], OPENSHIFT_ICO)
+    //     }
+    //   }
+    // }   
   }
 }
