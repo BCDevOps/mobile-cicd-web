@@ -20,8 +20,6 @@
 
 import { ImplicitAuthManager } from '@bcgov/common-web-utils';
 
-console.log('{{.Env.SSO_BASE_URL}}');
-
 const config = {
   baseURL: '{{.Env.SSO_BASE_URL}}',
   realmName: 'devhub',
