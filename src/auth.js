@@ -21,7 +21,7 @@
 import { ImplicitAuthManager } from '@bcgov/common-web-utils';
 
 const config = {
-  baseURL: 'https://sso-dev.pathfinder.gov.bc.ca',
+  baseURL: '{{.Env.SSO_BASE_URL}}',
   realmName: 'devhub',
   clientId: 'signing-web',
 };
