@@ -165,31 +165,6 @@
       }
     },
     {
-      "kind": "Route",
-      "apiVersion": "v1",
-      "metadata": {
-        "name": "${ROUTE_NAME}-api",
-        "labels": {
-          "app": "${NAME}"
-        }
-      },
-      "spec": {
-        "path": "/api",
-        "port": {
-          "targetPort": "8080-tcp"
-        },
-        "to": {
-          "kind": "Service",
-          "name": "${API_SERVICE_NAME}",
-          "weight": 100
-        },
-        "tls": {
-          "termination": "edge",
-          "insecureEdgeTerminationPolicy": "Redirect"
-        }
-      }
-    },
-    {
       "kind": "ConfigMap",
       "apiVersion": "v1",
       "metadata": {
@@ -230,7 +205,7 @@
       "displayName": "Application Route",
       "description": "The name of the default route use to access this service.",
       "required": true,
-      "value": "siging-web"
+      "value": "signing-web"
     },
     {
       "name": "VOLUMN_NAME",
