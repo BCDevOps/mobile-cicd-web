@@ -14,8 +14,7 @@
 /Dockerfile
 /Jenkinsfile
 /LICENSE
-README.md
-/devhub.md
+/README.md
 openshift/
 /package-lock.json
 /package.json
