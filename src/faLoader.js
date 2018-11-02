@@ -20,9 +20,9 @@
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFile, faCloudUploadAlt, faFileDownload } from '@fortawesome/free-solid-svg-icons';
+import { faFile, faCloudUploadAlt, faFileDownload, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 export default () => {
-  const iconsToUse = [faFile, faCloudUploadAlt, faFileDownload];
+  const iconsToUse = [faFile, faCloudUploadAlt, faFileDownload, faArrowDown];
   library.add.apply(library, iconsToUse);
 };
