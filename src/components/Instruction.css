@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'MyriadWebPro';
+  src: url('/font/MyriadWebPro.ttf') format('truetype');
+}
+
+.instructions .toggle {
+  height: 20px;
+}
+
+.instructions h3 {
+  font-size: 20px;
+  color: #00316b;
+  margin: 1.5em 0 1em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3em;
+}
+
+.instructions .instruction {
+  max-height: 20px;
+  overflow: hidden;
+}
+
+.instructions .instruction.on {
+  max-height: 100000px;
+}
+
+.instructions ol {
+  counter-reset: li;
+  list-style: none;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.instructions ol li {
+  padding: 5px 0 5px 60px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.instructions ol li::before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30px;
+  padding: 0 10px 0 0;
+  color: #999;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: right;
+  border-right: 1px solid #ddd;
+}
+
+.instructions p {
+  margin: 1em 0;
+}
+
+.instructions pre {
+  padding: 8px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-bottom-width: 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-font-smoothing: inherit;
+  overflow: auto;
+}
