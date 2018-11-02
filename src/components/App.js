@@ -9,6 +9,7 @@ import FileUpload from './FileUpload';
 import Footer from './Footer';
 import Header from './Header';
 import JobStatusIndicator from './JobStatusIndicator';
+import Instruction from './Instruction';
 
 class App extends Component {
   constructor(props) {
@@ -83,6 +84,9 @@ class App extends Component {
           </ul>
           {/* </form> */}
           <JobStatusIndicator job={this.props.job} />
+        </div>
+        <div className="container">
+          <Instruction />
         </div>
         <Footer />
       </div>
