@@ -22,8 +22,8 @@ class Toggle extends Component {
     return (
       <div className={`instruction ${toggleClass}`}>
         <div className="toggle-header">
-          <div className="toggle-title">{title}</div>
-          <div className="toggle-icon">{toggleIcon}</div>
+          <div>{title}</div>
+          <div>{toggleIcon}</div>
         </div>
         <div>{children}</div>
       </div>
