@@ -25,7 +25,7 @@ export class App extends Component {
       onAuthenticateFail: () => this.props.logout(),
       // onAuthLocalStorageCleared: () => this.props.logout(),
     });
-    // implicitAuthManager.handleOnPageLoad();
+    implicitAuthManager.handleOnPageLoad();
   };
 
   onPlatformChanged = e => {

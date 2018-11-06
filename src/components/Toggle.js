@@ -13,9 +13,21 @@ class Toggle extends Component {
   render() {
     const toggleClass = this.state.toggled ? 'on' : '';
     const toggleIcon = this.state.toggled ? (
-      <FontAwesomeIcon icon={faArrowUp} className="toggle-icon" onClick={() => {this.toggledHandler(false)}} /> 
+      <FontAwesomeIcon
+        icon={faArrowUp}
+        className="toggle-icon"
+        onClick={() => {
+          this.toggledHandler(false);
+        }}
+      />
     ) : (
-      <FontAwesomeIcon icon={faArrowDown} className="toggle-icon" onClick={() => {this.toggledHandler(true)}} />
+      <FontAwesomeIcon
+        icon={faArrowDown}
+        className="toggle-icon"
+        onClick={() => {
+          this.toggledHandler(true);
+        }}
+      />
     );
     const { children, title } = this.props;
 
