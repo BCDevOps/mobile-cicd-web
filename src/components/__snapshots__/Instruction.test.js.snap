@@ -1,0 +1,2853 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Instruction Component matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Instruction />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          Steps to Upload Your App
+        </h3>,
+        <Toggle
+          title="XcodeArchive"
+        >
+          <p>
+            To package up an xcarchive to submit for signing you need to:
+          </p>
+          <ol>
+            <li>
+              <p>
+                Create a folder to hold the xcarchive and options.plist
+              </p>
+            </li>
+            <li>
+              <p>
+                Copy the xcarchive from xcode into the folder from step 1
+              </p>
+            </li>
+            <li>
+              <p>
+                Create or copy your options.plist from step 1, you could update the content from below:
+              </p>
+              <SyntaxHighlighter
+                language="xml"
+                style={
+                  Object {
+                    ":not(pre) > code[class*=\\"language-\\"]": Object {
+                      "background": "#2d2d2d",
+                      "borderRadius": ".3em",
+                      "padding": ".1em",
+                      "whiteSpace": "normal",
+                    },
+                    "atrule": Object {
+                      "color": "#cc99cd",
+                    },
+                    "attr-name": Object {
+                      "color": "#e2777a",
+                    },
+                    "attr-value": Object {
+                      "color": "#7ec699",
+                    },
+                    "block-comment": Object {
+                      "color": "#999",
+                    },
+                    "bold": Object {
+                      "fontWeight": "bold",
+                    },
+                    "boolean": Object {
+                      "color": "#f08d49",
+                    },
+                    "builtin": Object {
+                      "color": "#cc99cd",
+                    },
+                    "cdata": Object {
+                      "color": "#999",
+                    },
+                    "char": Object {
+                      "color": "#7ec699",
+                    },
+                    "class-name": Object {
+                      "color": "#f8c555",
+                    },
+                    "code[class*=\\"language-\\"]": Object {
+                      "MozHyphens": "none",
+                      "MozTabSize": "4",
+                      "OTabSize": "4",
+                      "WebkitHyphens": "none",
+                      "background": "none",
+                      "color": "#ccc",
+                      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                      "hyphens": "none",
+                      "lineHeight": "1.5",
+                      "msHyphens": "none",
+                      "tabSize": "4",
+                      "textAlign": "left",
+                      "whiteSpace": "pre",
+                      "wordBreak": "normal",
+                      "wordSpacing": "normal",
+                      "wordWrap": "normal",
+                    },
+                    "comment": Object {
+                      "color": "#999",
+                    },
+                    "constant": Object {
+                      "color": "#f8c555",
+                    },
+                    "deleted": Object {
+                      "color": "#e2777a",
+                    },
+                    "doctype": Object {
+                      "color": "#999",
+                    },
+                    "entity": Object {
+                      "color": "#67cdcc",
+                      "cursor": "help",
+                    },
+                    "function": Object {
+                      "color": "#f08d49",
+                    },
+                    "function-name": Object {
+                      "color": "#6196cc",
+                    },
+                    "important": Object {
+                      "color": "#cc99cd",
+                      "fontWeight": "bold",
+                    },
+                    "inserted": Object {
+                      "color": "green",
+                    },
+                    "italic": Object {
+                      "fontStyle": "italic",
+                    },
+                    "keyword": Object {
+                      "color": "#cc99cd",
+                    },
+                    "namespace": Object {
+                      "color": "#e2777a",
+                    },
+                    "number": Object {
+                      "color": "#f08d49",
+                    },
+                    "operator": Object {
+                      "color": "#67cdcc",
+                    },
+                    "pre[class*=\\"language-\\"]": Object {
+                      "MozHyphens": "none",
+                      "MozTabSize": "4",
+                      "OTabSize": "4",
+                      "WebkitHyphens": "none",
+                      "background": "#2d2d2d",
+                      "color": "#ccc",
+                      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                      "hyphens": "none",
+                      "lineHeight": "1.5",
+                      "margin": ".5em 0",
+                      "msHyphens": "none",
+                      "overflow": "auto",
+                      "padding": "1em",
+                      "tabSize": "4",
+                      "textAlign": "left",
+                      "whiteSpace": "pre",
+                      "wordBreak": "normal",
+                      "wordSpacing": "normal",
+                      "wordWrap": "normal",
+                    },
+                    "prolog": Object {
+                      "color": "#999",
+                    },
+                    "property": Object {
+                      "color": "#f8c555",
+                    },
+                    "punctuation": Object {
+                      "color": "#ccc",
+                    },
+                    "regex": Object {
+                      "color": "#7ec699",
+                    },
+                    "selector": Object {
+                      "color": "#cc99cd",
+                    },
+                    "string": Object {
+                      "color": "#7ec699",
+                    },
+                    "symbol": Object {
+                      "color": "#f8c555",
+                    },
+                    "tag": Object {
+                      "color": "#e2777a",
+                    },
+                    "url": Object {
+                      "color": "#67cdcc",
+                    },
+                    "variable": Object {
+                      "color": "#7ec699",
+                    },
+                  }
+                }
+              >
+                
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+  &lt;plist version="1.0"&gt;
+    &lt;dict&gt;
+      &lt;key&gt;method&lt;/key&gt;
+      &lt;string&gt;app-store&lt;/string&gt;
+      &lt;key&gt;signingStyle&lt;/key&gt;
+      &lt;string&gt;automatic&lt;/string&gt;
+      &lt;key&gt;stripSwiftSymbols&lt;/key&gt;
+      &lt;true/&gt;
+      &lt;key&gt;uploadSymbols&lt;/key&gt;
+      &lt;true/&gt;
+    &lt;/dict&gt;
+  &lt;/plist&gt;
+              </SyntaxHighlighter>
+            </li>
+          </ol>
+        </Toggle>,
+        <Toggle
+          title="IPA"
+        >
+          <p>
+            To package up an xcarchive to submit for signing you need to:
+          </p>
+          <ol>
+            <li>
+              <p>
+                Create a folder to hold the xcarchive and options.plist
+              </p>
+            </li>
+            <li>
+              <p>
+                Copy the xcarchive from xcode into the folder from step 1
+              </p>
+            </li>
+            <li>
+              <p>
+                Create or copy your options.plist from step 1, you could update the content from below:
+              </p>
+            </li>
+          </ol>
+        </Toggle>,
+        <Toggle
+          title="APK"
+        >
+          <p>
+            To package up an xcarchive to submit for signing you need to:
+          </p>
+          <ol>
+            <li>
+              <p>
+                Create a folder to hold the xcarchive and options.plist
+              </p>
+            </li>
+            <li>
+              <p>
+                Copy the xcarchive from xcode into the folder from step 1
+              </p>
+            </li>
+            <li>
+              <p>
+                Create or copy your options.plist from step 1, you could update the content from below:
+              </p>
+            </li>
+          </ol>
+        </Toggle>,
+      ],
+      "className": "instructions",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Steps to Upload Your App",
+        },
+        "ref": null,
+        "rendered": "Steps to Upload Your App",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <p>
+              To package up an xcarchive to submit for signing you need to:
+            </p>,
+            <ol>
+              <li>
+                <p>
+                  Create a folder to hold the xcarchive and options.plist
+                </p>
+              </li>
+              <li>
+                <p>
+                  Copy the xcarchive from xcode into the folder from step 1
+                </p>
+              </li>
+              <li>
+                <p>
+                  Create or copy your options.plist from step 1, you could update the content from below:
+                </p>
+                <SyntaxHighlighter
+                  language="xml"
+                  style={
+                    Object {
+                      ":not(pre) > code[class*=\\"language-\\"]": Object {
+                        "background": "#2d2d2d",
+                        "borderRadius": ".3em",
+                        "padding": ".1em",
+                        "whiteSpace": "normal",
+                      },
+                      "atrule": Object {
+                        "color": "#cc99cd",
+                      },
+                      "attr-name": Object {
+                        "color": "#e2777a",
+                      },
+                      "attr-value": Object {
+                        "color": "#7ec699",
+                      },
+                      "block-comment": Object {
+                        "color": "#999",
+                      },
+                      "bold": Object {
+                        "fontWeight": "bold",
+                      },
+                      "boolean": Object {
+                        "color": "#f08d49",
+                      },
+                      "builtin": Object {
+                        "color": "#cc99cd",
+                      },
+                      "cdata": Object {
+                        "color": "#999",
+                      },
+                      "char": Object {
+                        "color": "#7ec699",
+                      },
+                      "class-name": Object {
+                        "color": "#f8c555",
+                      },
+                      "code[class*=\\"language-\\"]": Object {
+                        "MozHyphens": "none",
+                        "MozTabSize": "4",
+                        "OTabSize": "4",
+                        "WebkitHyphens": "none",
+                        "background": "none",
+                        "color": "#ccc",
+                        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                        "hyphens": "none",
+                        "lineHeight": "1.5",
+                        "msHyphens": "none",
+                        "tabSize": "4",
+                        "textAlign": "left",
+                        "whiteSpace": "pre",
+                        "wordBreak": "normal",
+                        "wordSpacing": "normal",
+                        "wordWrap": "normal",
+                      },
+                      "comment": Object {
+                        "color": "#999",
+                      },
+                      "constant": Object {
+                        "color": "#f8c555",
+                      },
+                      "deleted": Object {
+                        "color": "#e2777a",
+                      },
+                      "doctype": Object {
+                        "color": "#999",
+                      },
+                      "entity": Object {
+                        "color": "#67cdcc",
+                        "cursor": "help",
+                      },
+                      "function": Object {
+                        "color": "#f08d49",
+                      },
+                      "function-name": Object {
+                        "color": "#6196cc",
+                      },
+                      "important": Object {
+                        "color": "#cc99cd",
+                        "fontWeight": "bold",
+                      },
+                      "inserted": Object {
+                        "color": "green",
+                      },
+                      "italic": Object {
+                        "fontStyle": "italic",
+                      },
+                      "keyword": Object {
+                        "color": "#cc99cd",
+                      },
+                      "namespace": Object {
+                        "color": "#e2777a",
+                      },
+                      "number": Object {
+                        "color": "#f08d49",
+                      },
+                      "operator": Object {
+                        "color": "#67cdcc",
+                      },
+                      "pre[class*=\\"language-\\"]": Object {
+                        "MozHyphens": "none",
+                        "MozTabSize": "4",
+                        "OTabSize": "4",
+                        "WebkitHyphens": "none",
+                        "background": "#2d2d2d",
+                        "color": "#ccc",
+                        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                        "hyphens": "none",
+                        "lineHeight": "1.5",
+                        "margin": ".5em 0",
+                        "msHyphens": "none",
+                        "overflow": "auto",
+                        "padding": "1em",
+                        "tabSize": "4",
+                        "textAlign": "left",
+                        "whiteSpace": "pre",
+                        "wordBreak": "normal",
+                        "wordSpacing": "normal",
+                        "wordWrap": "normal",
+                      },
+                      "prolog": Object {
+                        "color": "#999",
+                      },
+                      "property": Object {
+                        "color": "#f8c555",
+                      },
+                      "punctuation": Object {
+                        "color": "#ccc",
+                      },
+                      "regex": Object {
+                        "color": "#7ec699",
+                      },
+                      "selector": Object {
+                        "color": "#cc99cd",
+                      },
+                      "string": Object {
+                        "color": "#7ec699",
+                      },
+                      "symbol": Object {
+                        "color": "#f8c555",
+                      },
+                      "tag": Object {
+                        "color": "#e2777a",
+                      },
+                      "url": Object {
+                        "color": "#67cdcc",
+                      },
+                      "variable": Object {
+                        "color": "#7ec699",
+                      },
+                    }
+                  }
+                >
+                  
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+  &lt;plist version="1.0"&gt;
+    &lt;dict&gt;
+      &lt;key&gt;method&lt;/key&gt;
+      &lt;string&gt;app-store&lt;/string&gt;
+      &lt;key&gt;signingStyle&lt;/key&gt;
+      &lt;string&gt;automatic&lt;/string&gt;
+      &lt;key&gt;stripSwiftSymbols&lt;/key&gt;
+      &lt;true/&gt;
+      &lt;key&gt;uploadSymbols&lt;/key&gt;
+      &lt;true/&gt;
+    &lt;/dict&gt;
+  &lt;/plist&gt;
+                </SyntaxHighlighter>
+              </li>
+            </ol>,
+          ],
+          "title": "XcodeArchive",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "To package up an xcarchive to submit for signing you need to:",
+            },
+            "ref": null,
+            "rendered": "To package up an xcarchive to submit for signing you need to:",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  <p>
+                    Create a folder to hold the xcarchive and options.plist
+                  </p>
+                </li>,
+                <li>
+                  <p>
+                    Copy the xcarchive from xcode into the folder from step 1
+                  </p>
+                </li>,
+                <li>
+                  <p>
+                    Create or copy your options.plist from step 1, you could update the content from below:
+                  </p>
+                  <SyntaxHighlighter
+                    language="xml"
+                    style={
+                      Object {
+                        ":not(pre) > code[class*=\\"language-\\"]": Object {
+                          "background": "#2d2d2d",
+                          "borderRadius": ".3em",
+                          "padding": ".1em",
+                          "whiteSpace": "normal",
+                        },
+                        "atrule": Object {
+                          "color": "#cc99cd",
+                        },
+                        "attr-name": Object {
+                          "color": "#e2777a",
+                        },
+                        "attr-value": Object {
+                          "color": "#7ec699",
+                        },
+                        "block-comment": Object {
+                          "color": "#999",
+                        },
+                        "bold": Object {
+                          "fontWeight": "bold",
+                        },
+                        "boolean": Object {
+                          "color": "#f08d49",
+                        },
+                        "builtin": Object {
+                          "color": "#cc99cd",
+                        },
+                        "cdata": Object {
+                          "color": "#999",
+                        },
+                        "char": Object {
+                          "color": "#7ec699",
+                        },
+                        "class-name": Object {
+                          "color": "#f8c555",
+                        },
+                        "code[class*=\\"language-\\"]": Object {
+                          "MozHyphens": "none",
+                          "MozTabSize": "4",
+                          "OTabSize": "4",
+                          "WebkitHyphens": "none",
+                          "background": "none",
+                          "color": "#ccc",
+                          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                          "hyphens": "none",
+                          "lineHeight": "1.5",
+                          "msHyphens": "none",
+                          "tabSize": "4",
+                          "textAlign": "left",
+                          "whiteSpace": "pre",
+                          "wordBreak": "normal",
+                          "wordSpacing": "normal",
+                          "wordWrap": "normal",
+                        },
+                        "comment": Object {
+                          "color": "#999",
+                        },
+                        "constant": Object {
+                          "color": "#f8c555",
+                        },
+                        "deleted": Object {
+                          "color": "#e2777a",
+                        },
+                        "doctype": Object {
+                          "color": "#999",
+                        },
+                        "entity": Object {
+                          "color": "#67cdcc",
+                          "cursor": "help",
+                        },
+                        "function": Object {
+                          "color": "#f08d49",
+                        },
+                        "function-name": Object {
+                          "color": "#6196cc",
+                        },
+                        "important": Object {
+                          "color": "#cc99cd",
+                          "fontWeight": "bold",
+                        },
+                        "inserted": Object {
+                          "color": "green",
+                        },
+                        "italic": Object {
+                          "fontStyle": "italic",
+                        },
+                        "keyword": Object {
+                          "color": "#cc99cd",
+                        },
+                        "namespace": Object {
+                          "color": "#e2777a",
+                        },
+                        "number": Object {
+                          "color": "#f08d49",
+                        },
+                        "operator": Object {
+                          "color": "#67cdcc",
+                        },
+                        "pre[class*=\\"language-\\"]": Object {
+                          "MozHyphens": "none",
+                          "MozTabSize": "4",
+                          "OTabSize": "4",
+                          "WebkitHyphens": "none",
+                          "background": "#2d2d2d",
+                          "color": "#ccc",
+                          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                          "hyphens": "none",
+                          "lineHeight": "1.5",
+                          "margin": ".5em 0",
+                          "msHyphens": "none",
+                          "overflow": "auto",
+                          "padding": "1em",
+                          "tabSize": "4",
+                          "textAlign": "left",
+                          "whiteSpace": "pre",
+                          "wordBreak": "normal",
+                          "wordSpacing": "normal",
+                          "wordWrap": "normal",
+                        },
+                        "prolog": Object {
+                          "color": "#999",
+                        },
+                        "property": Object {
+                          "color": "#f8c555",
+                        },
+                        "punctuation": Object {
+                          "color": "#ccc",
+                        },
+                        "regex": Object {
+                          "color": "#7ec699",
+                        },
+                        "selector": Object {
+                          "color": "#cc99cd",
+                        },
+                        "string": Object {
+                          "color": "#7ec699",
+                        },
+                        "symbol": Object {
+                          "color": "#f8c555",
+                        },
+                        "tag": Object {
+                          "color": "#e2777a",
+                        },
+                        "url": Object {
+                          "color": "#67cdcc",
+                        },
+                        "variable": Object {
+                          "color": "#7ec699",
+                        },
+                      }
+                    }
+                  >
+                    
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+  &lt;plist version="1.0"&gt;
+    &lt;dict&gt;
+      &lt;key&gt;method&lt;/key&gt;
+      &lt;string&gt;app-store&lt;/string&gt;
+      &lt;key&gt;signingStyle&lt;/key&gt;
+      &lt;string&gt;automatic&lt;/string&gt;
+      &lt;key&gt;stripSwiftSymbols&lt;/key&gt;
+      &lt;true/&gt;
+      &lt;key&gt;uploadSymbols&lt;/key&gt;
+      &lt;true/&gt;
+    &lt;/dict&gt;
+  &lt;/plist&gt;
+                  </SyntaxHighlighter>
+                </li>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Create a folder to hold the xcarchive and options.plist
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Create a folder to hold the xcarchive and options.plist",
+                  },
+                  "ref": null,
+                  "rendered": "Create a folder to hold the xcarchive and options.plist",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Copy the xcarchive from xcode into the folder from step 1
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Copy the xcarchive from xcode into the folder from step 1",
+                  },
+                  "ref": null,
+                  "rendered": "Copy the xcarchive from xcode into the folder from step 1",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p>
+                      Create or copy your options.plist from step 1, you could update the content from below:
+                    </p>,
+                    <SyntaxHighlighter
+                      language="xml"
+                      style={
+                        Object {
+                          ":not(pre) > code[class*=\\"language-\\"]": Object {
+                            "background": "#2d2d2d",
+                            "borderRadius": ".3em",
+                            "padding": ".1em",
+                            "whiteSpace": "normal",
+                          },
+                          "atrule": Object {
+                            "color": "#cc99cd",
+                          },
+                          "attr-name": Object {
+                            "color": "#e2777a",
+                          },
+                          "attr-value": Object {
+                            "color": "#7ec699",
+                          },
+                          "block-comment": Object {
+                            "color": "#999",
+                          },
+                          "bold": Object {
+                            "fontWeight": "bold",
+                          },
+                          "boolean": Object {
+                            "color": "#f08d49",
+                          },
+                          "builtin": Object {
+                            "color": "#cc99cd",
+                          },
+                          "cdata": Object {
+                            "color": "#999",
+                          },
+                          "char": Object {
+                            "color": "#7ec699",
+                          },
+                          "class-name": Object {
+                            "color": "#f8c555",
+                          },
+                          "code[class*=\\"language-\\"]": Object {
+                            "MozHyphens": "none",
+                            "MozTabSize": "4",
+                            "OTabSize": "4",
+                            "WebkitHyphens": "none",
+                            "background": "none",
+                            "color": "#ccc",
+                            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                            "hyphens": "none",
+                            "lineHeight": "1.5",
+                            "msHyphens": "none",
+                            "tabSize": "4",
+                            "textAlign": "left",
+                            "whiteSpace": "pre",
+                            "wordBreak": "normal",
+                            "wordSpacing": "normal",
+                            "wordWrap": "normal",
+                          },
+                          "comment": Object {
+                            "color": "#999",
+                          },
+                          "constant": Object {
+                            "color": "#f8c555",
+                          },
+                          "deleted": Object {
+                            "color": "#e2777a",
+                          },
+                          "doctype": Object {
+                            "color": "#999",
+                          },
+                          "entity": Object {
+                            "color": "#67cdcc",
+                            "cursor": "help",
+                          },
+                          "function": Object {
+                            "color": "#f08d49",
+                          },
+                          "function-name": Object {
+                            "color": "#6196cc",
+                          },
+                          "important": Object {
+                            "color": "#cc99cd",
+                            "fontWeight": "bold",
+                          },
+                          "inserted": Object {
+                            "color": "green",
+                          },
+                          "italic": Object {
+                            "fontStyle": "italic",
+                          },
+                          "keyword": Object {
+                            "color": "#cc99cd",
+                          },
+                          "namespace": Object {
+                            "color": "#e2777a",
+                          },
+                          "number": Object {
+                            "color": "#f08d49",
+                          },
+                          "operator": Object {
+                            "color": "#67cdcc",
+                          },
+                          "pre[class*=\\"language-\\"]": Object {
+                            "MozHyphens": "none",
+                            "MozTabSize": "4",
+                            "OTabSize": "4",
+                            "WebkitHyphens": "none",
+                            "background": "#2d2d2d",
+                            "color": "#ccc",
+                            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                            "hyphens": "none",
+                            "lineHeight": "1.5",
+                            "margin": ".5em 0",
+                            "msHyphens": "none",
+                            "overflow": "auto",
+                            "padding": "1em",
+                            "tabSize": "4",
+                            "textAlign": "left",
+                            "whiteSpace": "pre",
+                            "wordBreak": "normal",
+                            "wordSpacing": "normal",
+                            "wordWrap": "normal",
+                          },
+                          "prolog": Object {
+                            "color": "#999",
+                          },
+                          "property": Object {
+                            "color": "#f8c555",
+                          },
+                          "punctuation": Object {
+                            "color": "#ccc",
+                          },
+                          "regex": Object {
+                            "color": "#7ec699",
+                          },
+                          "selector": Object {
+                            "color": "#cc99cd",
+                          },
+                          "string": Object {
+                            "color": "#7ec699",
+                          },
+                          "symbol": Object {
+                            "color": "#f8c555",
+                          },
+                          "tag": Object {
+                            "color": "#e2777a",
+                          },
+                          "url": Object {
+                            "color": "#67cdcc",
+                          },
+                          "variable": Object {
+                            "color": "#7ec699",
+                          },
+                        }
+                      }
+                    >
+                      
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+  &lt;plist version="1.0"&gt;
+    &lt;dict&gt;
+      &lt;key&gt;method&lt;/key&gt;
+      &lt;string&gt;app-store&lt;/string&gt;
+      &lt;key&gt;signingStyle&lt;/key&gt;
+      &lt;string&gt;automatic&lt;/string&gt;
+      &lt;key&gt;stripSwiftSymbols&lt;/key&gt;
+      &lt;true/&gt;
+      &lt;key&gt;uploadSymbols&lt;/key&gt;
+      &lt;true/&gt;
+    &lt;/dict&gt;
+  &lt;/plist&gt;
+                    </SyntaxHighlighter>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Create or copy your options.plist from step 1, you could update the content from below:",
+                    },
+                    "ref": null,
+                    "rendered": "Create or copy your options.plist from step 1, you could update the content from below:",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "
+  <?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+  <!DOCTYPE plist PUBLIC \\"-//Apple//DTD PLIST 1.0//EN\\" \\"http://www.apple.com/DTDs/PropertyList-1.0.dtd\\">
+  <plist version=\\"1.0\\">
+    <dict>
+      <key>method</key>
+      <string>app-store</string>
+      <key>signingStyle</key>
+      <string>automatic</string>
+      <key>stripSwiftSymbols</key>
+      <true/>
+      <key>uploadSymbols</key>
+      <true/>
+    </dict>
+  </plist>",
+                      "language": "xml",
+                      "style": Object {
+                        ":not(pre) > code[class*=\\"language-\\"]": Object {
+                          "background": "#2d2d2d",
+                          "borderRadius": ".3em",
+                          "padding": ".1em",
+                          "whiteSpace": "normal",
+                        },
+                        "atrule": Object {
+                          "color": "#cc99cd",
+                        },
+                        "attr-name": Object {
+                          "color": "#e2777a",
+                        },
+                        "attr-value": Object {
+                          "color": "#7ec699",
+                        },
+                        "block-comment": Object {
+                          "color": "#999",
+                        },
+                        "bold": Object {
+                          "fontWeight": "bold",
+                        },
+                        "boolean": Object {
+                          "color": "#f08d49",
+                        },
+                        "builtin": Object {
+                          "color": "#cc99cd",
+                        },
+                        "cdata": Object {
+                          "color": "#999",
+                        },
+                        "char": Object {
+                          "color": "#7ec699",
+                        },
+                        "class-name": Object {
+                          "color": "#f8c555",
+                        },
+                        "code[class*=\\"language-\\"]": Object {
+                          "MozHyphens": "none",
+                          "MozTabSize": "4",
+                          "OTabSize": "4",
+                          "WebkitHyphens": "none",
+                          "background": "none",
+                          "color": "#ccc",
+                          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                          "hyphens": "none",
+                          "lineHeight": "1.5",
+                          "msHyphens": "none",
+                          "tabSize": "4",
+                          "textAlign": "left",
+                          "whiteSpace": "pre",
+                          "wordBreak": "normal",
+                          "wordSpacing": "normal",
+                          "wordWrap": "normal",
+                        },
+                        "comment": Object {
+                          "color": "#999",
+                        },
+                        "constant": Object {
+                          "color": "#f8c555",
+                        },
+                        "deleted": Object {
+                          "color": "#e2777a",
+                        },
+                        "doctype": Object {
+                          "color": "#999",
+                        },
+                        "entity": Object {
+                          "color": "#67cdcc",
+                          "cursor": "help",
+                        },
+                        "function": Object {
+                          "color": "#f08d49",
+                        },
+                        "function-name": Object {
+                          "color": "#6196cc",
+                        },
+                        "important": Object {
+                          "color": "#cc99cd",
+                          "fontWeight": "bold",
+                        },
+                        "inserted": Object {
+                          "color": "green",
+                        },
+                        "italic": Object {
+                          "fontStyle": "italic",
+                        },
+                        "keyword": Object {
+                          "color": "#cc99cd",
+                        },
+                        "namespace": Object {
+                          "color": "#e2777a",
+                        },
+                        "number": Object {
+                          "color": "#f08d49",
+                        },
+                        "operator": Object {
+                          "color": "#67cdcc",
+                        },
+                        "pre[class*=\\"language-\\"]": Object {
+                          "MozHyphens": "none",
+                          "MozTabSize": "4",
+                          "OTabSize": "4",
+                          "WebkitHyphens": "none",
+                          "background": "#2d2d2d",
+                          "color": "#ccc",
+                          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                          "hyphens": "none",
+                          "lineHeight": "1.5",
+                          "margin": ".5em 0",
+                          "msHyphens": "none",
+                          "overflow": "auto",
+                          "padding": "1em",
+                          "tabSize": "4",
+                          "textAlign": "left",
+                          "whiteSpace": "pre",
+                          "wordBreak": "normal",
+                          "wordSpacing": "normal",
+                          "wordWrap": "normal",
+                        },
+                        "prolog": Object {
+                          "color": "#999",
+                        },
+                        "property": Object {
+                          "color": "#f8c555",
+                        },
+                        "punctuation": Object {
+                          "color": "#ccc",
+                        },
+                        "regex": Object {
+                          "color": "#7ec699",
+                        },
+                        "selector": Object {
+                          "color": "#cc99cd",
+                        },
+                        "string": Object {
+                          "color": "#7ec699",
+                        },
+                        "symbol": Object {
+                          "color": "#f8c555",
+                        },
+                        "tag": Object {
+                          "color": "#e2777a",
+                        },
+                        "url": Object {
+                          "color": "#67cdcc",
+                        },
+                        "variable": Object {
+                          "color": "#7ec699",
+                        },
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "
+  <?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+  <!DOCTYPE plist PUBLIC \\"-//Apple//DTD PLIST 1.0//EN\\" \\"http://www.apple.com/DTDs/PropertyList-1.0.dtd\\">
+  <plist version=\\"1.0\\">
+    <dict>
+      <key>method</key>
+      <string>app-store</string>
+      <key>signingStyle</key>
+      <string>automatic</string>
+      <key>stripSwiftSymbols</key>
+      <true/>
+      <key>uploadSymbols</key>
+      <true/>
+    </dict>
+  </plist>",
+                    "type": [Function],
+                  },
+                ],
+                "type": "li",
+              },
+            ],
+            "type": "ol",
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <p>
+              To package up an xcarchive to submit for signing you need to:
+            </p>,
+            <ol>
+              <li>
+                <p>
+                  Create a folder to hold the xcarchive and options.plist
+                </p>
+              </li>
+              <li>
+                <p>
+                  Copy the xcarchive from xcode into the folder from step 1
+                </p>
+              </li>
+              <li>
+                <p>
+                  Create or copy your options.plist from step 1, you could update the content from below:
+                </p>
+              </li>
+            </ol>,
+          ],
+          "title": "IPA",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "To package up an xcarchive to submit for signing you need to:",
+            },
+            "ref": null,
+            "rendered": "To package up an xcarchive to submit for signing you need to:",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  <p>
+                    Create a folder to hold the xcarchive and options.plist
+                  </p>
+                </li>,
+                <li>
+                  <p>
+                    Copy the xcarchive from xcode into the folder from step 1
+                  </p>
+                </li>,
+                <li>
+                  <p>
+                    Create or copy your options.plist from step 1, you could update the content from below:
+                  </p>
+                </li>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Create a folder to hold the xcarchive and options.plist
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Create a folder to hold the xcarchive and options.plist",
+                  },
+                  "ref": null,
+                  "rendered": "Create a folder to hold the xcarchive and options.plist",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Copy the xcarchive from xcode into the folder from step 1
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Copy the xcarchive from xcode into the folder from step 1",
+                  },
+                  "ref": null,
+                  "rendered": "Copy the xcarchive from xcode into the folder from step 1",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Create or copy your options.plist from step 1, you could update the content from below:
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Create or copy your options.plist from step 1, you could update the content from below:",
+                  },
+                  "ref": null,
+                  "rendered": "Create or copy your options.plist from step 1, you could update the content from below:",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+            ],
+            "type": "ol",
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <p>
+              To package up an xcarchive to submit for signing you need to:
+            </p>,
+            <ol>
+              <li>
+                <p>
+                  Create a folder to hold the xcarchive and options.plist
+                </p>
+              </li>
+              <li>
+                <p>
+                  Copy the xcarchive from xcode into the folder from step 1
+                </p>
+              </li>
+              <li>
+                <p>
+                  Create or copy your options.plist from step 1, you could update the content from below:
+                </p>
+              </li>
+            </ol>,
+          ],
+          "title": "APK",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "To package up an xcarchive to submit for signing you need to:",
+            },
+            "ref": null,
+            "rendered": "To package up an xcarchive to submit for signing you need to:",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  <p>
+                    Create a folder to hold the xcarchive and options.plist
+                  </p>
+                </li>,
+                <li>
+                  <p>
+                    Copy the xcarchive from xcode into the folder from step 1
+                  </p>
+                </li>,
+                <li>
+                  <p>
+                    Create or copy your options.plist from step 1, you could update the content from below:
+                  </p>
+                </li>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Create a folder to hold the xcarchive and options.plist
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Create a folder to hold the xcarchive and options.plist",
+                  },
+                  "ref": null,
+                  "rendered": "Create a folder to hold the xcarchive and options.plist",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Copy the xcarchive from xcode into the folder from step 1
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Copy the xcarchive from xcode into the folder from step 1",
+                  },
+                  "ref": null,
+                  "rendered": "Copy the xcarchive from xcode into the folder from step 1",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    Create or copy your options.plist from step 1, you could update the content from below:
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Create or copy your options.plist from step 1, you could update the content from below:",
+                  },
+                  "ref": null,
+                  "rendered": "Create or copy your options.plist from step 1, you could update the content from below:",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+            ],
+            "type": "ol",
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            Steps to Upload Your App
+          </h3>,
+          <Toggle
+            title="XcodeArchive"
+          >
+            <p>
+              To package up an xcarchive to submit for signing you need to:
+            </p>
+            <ol>
+              <li>
+                <p>
+                  Create a folder to hold the xcarchive and options.plist
+                </p>
+              </li>
+              <li>
+                <p>
+                  Copy the xcarchive from xcode into the folder from step 1
+                </p>
+              </li>
+              <li>
+                <p>
+                  Create or copy your options.plist from step 1, you could update the content from below:
+                </p>
+                <SyntaxHighlighter
+                  language="xml"
+                  style={
+                    Object {
+                      ":not(pre) > code[class*=\\"language-\\"]": Object {
+                        "background": "#2d2d2d",
+                        "borderRadius": ".3em",
+                        "padding": ".1em",
+                        "whiteSpace": "normal",
+                      },
+                      "atrule": Object {
+                        "color": "#cc99cd",
+                      },
+                      "attr-name": Object {
+                        "color": "#e2777a",
+                      },
+                      "attr-value": Object {
+                        "color": "#7ec699",
+                      },
+                      "block-comment": Object {
+                        "color": "#999",
+                      },
+                      "bold": Object {
+                        "fontWeight": "bold",
+                      },
+                      "boolean": Object {
+                        "color": "#f08d49",
+                      },
+                      "builtin": Object {
+                        "color": "#cc99cd",
+                      },
+                      "cdata": Object {
+                        "color": "#999",
+                      },
+                      "char": Object {
+                        "color": "#7ec699",
+                      },
+                      "class-name": Object {
+                        "color": "#f8c555",
+                      },
+                      "code[class*=\\"language-\\"]": Object {
+                        "MozHyphens": "none",
+                        "MozTabSize": "4",
+                        "OTabSize": "4",
+                        "WebkitHyphens": "none",
+                        "background": "none",
+                        "color": "#ccc",
+                        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                        "hyphens": "none",
+                        "lineHeight": "1.5",
+                        "msHyphens": "none",
+                        "tabSize": "4",
+                        "textAlign": "left",
+                        "whiteSpace": "pre",
+                        "wordBreak": "normal",
+                        "wordSpacing": "normal",
+                        "wordWrap": "normal",
+                      },
+                      "comment": Object {
+                        "color": "#999",
+                      },
+                      "constant": Object {
+                        "color": "#f8c555",
+                      },
+                      "deleted": Object {
+                        "color": "#e2777a",
+                      },
+                      "doctype": Object {
+                        "color": "#999",
+                      },
+                      "entity": Object {
+                        "color": "#67cdcc",
+                        "cursor": "help",
+                      },
+                      "function": Object {
+                        "color": "#f08d49",
+                      },
+                      "function-name": Object {
+                        "color": "#6196cc",
+                      },
+                      "important": Object {
+                        "color": "#cc99cd",
+                        "fontWeight": "bold",
+                      },
+                      "inserted": Object {
+                        "color": "green",
+                      },
+                      "italic": Object {
+                        "fontStyle": "italic",
+                      },
+                      "keyword": Object {
+                        "color": "#cc99cd",
+                      },
+                      "namespace": Object {
+                        "color": "#e2777a",
+                      },
+                      "number": Object {
+                        "color": "#f08d49",
+                      },
+                      "operator": Object {
+                        "color": "#67cdcc",
+                      },
+                      "pre[class*=\\"language-\\"]": Object {
+                        "MozHyphens": "none",
+                        "MozTabSize": "4",
+                        "OTabSize": "4",
+                        "WebkitHyphens": "none",
+                        "background": "#2d2d2d",
+                        "color": "#ccc",
+                        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                        "hyphens": "none",
+                        "lineHeight": "1.5",
+                        "margin": ".5em 0",
+                        "msHyphens": "none",
+                        "overflow": "auto",
+                        "padding": "1em",
+                        "tabSize": "4",
+                        "textAlign": "left",
+                        "whiteSpace": "pre",
+                        "wordBreak": "normal",
+                        "wordSpacing": "normal",
+                        "wordWrap": "normal",
+                      },
+                      "prolog": Object {
+                        "color": "#999",
+                      },
+                      "property": Object {
+                        "color": "#f8c555",
+                      },
+                      "punctuation": Object {
+                        "color": "#ccc",
+                      },
+                      "regex": Object {
+                        "color": "#7ec699",
+                      },
+                      "selector": Object {
+                        "color": "#cc99cd",
+                      },
+                      "string": Object {
+                        "color": "#7ec699",
+                      },
+                      "symbol": Object {
+                        "color": "#f8c555",
+                      },
+                      "tag": Object {
+                        "color": "#e2777a",
+                      },
+                      "url": Object {
+                        "color": "#67cdcc",
+                      },
+                      "variable": Object {
+                        "color": "#7ec699",
+                      },
+                    }
+                  }
+                >
+                  
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+  &lt;plist version="1.0"&gt;
+    &lt;dict&gt;
+      &lt;key&gt;method&lt;/key&gt;
+      &lt;string&gt;app-store&lt;/string&gt;
+      &lt;key&gt;signingStyle&lt;/key&gt;
+      &lt;string&gt;automatic&lt;/string&gt;
+      &lt;key&gt;stripSwiftSymbols&lt;/key&gt;
+      &lt;true/&gt;
+      &lt;key&gt;uploadSymbols&lt;/key&gt;
+      &lt;true/&gt;
+    &lt;/dict&gt;
+  &lt;/plist&gt;
+                </SyntaxHighlighter>
+              </li>
+            </ol>
+          </Toggle>,
+          <Toggle
+            title="IPA"
+          >
+            <p>
+              To package up an xcarchive to submit for signing you need to:
+            </p>
+            <ol>
+              <li>
+                <p>
+                  Create a folder to hold the xcarchive and options.plist
+                </p>
+              </li>
+              <li>
+                <p>
+                  Copy the xcarchive from xcode into the folder from step 1
+                </p>
+              </li>
+              <li>
+                <p>
+                  Create or copy your options.plist from step 1, you could update the content from below:
+                </p>
+              </li>
+            </ol>
+          </Toggle>,
+          <Toggle
+            title="APK"
+          >
+            <p>
+              To package up an xcarchive to submit for signing you need to:
+            </p>
+            <ol>
+              <li>
+                <p>
+                  Create a folder to hold the xcarchive and options.plist
+                </p>
+              </li>
+              <li>
+                <p>
+                  Copy the xcarchive from xcode into the folder from step 1
+                </p>
+              </li>
+              <li>
+                <p>
+                  Create or copy your options.plist from step 1, you could update the content from below:
+                </p>
+              </li>
+            </ol>
+          </Toggle>,
+        ],
+        "className": "instructions",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Steps to Upload Your App",
+          },
+          "ref": null,
+          "rendered": "Steps to Upload Your App",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <p>
+                To package up an xcarchive to submit for signing you need to:
+              </p>,
+              <ol>
+                <li>
+                  <p>
+                    Create a folder to hold the xcarchive and options.plist
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Copy the xcarchive from xcode into the folder from step 1
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Create or copy your options.plist from step 1, you could update the content from below:
+                  </p>
+                  <SyntaxHighlighter
+                    language="xml"
+                    style={
+                      Object {
+                        ":not(pre) > code[class*=\\"language-\\"]": Object {
+                          "background": "#2d2d2d",
+                          "borderRadius": ".3em",
+                          "padding": ".1em",
+                          "whiteSpace": "normal",
+                        },
+                        "atrule": Object {
+                          "color": "#cc99cd",
+                        },
+                        "attr-name": Object {
+                          "color": "#e2777a",
+                        },
+                        "attr-value": Object {
+                          "color": "#7ec699",
+                        },
+                        "block-comment": Object {
+                          "color": "#999",
+                        },
+                        "bold": Object {
+                          "fontWeight": "bold",
+                        },
+                        "boolean": Object {
+                          "color": "#f08d49",
+                        },
+                        "builtin": Object {
+                          "color": "#cc99cd",
+                        },
+                        "cdata": Object {
+                          "color": "#999",
+                        },
+                        "char": Object {
+                          "color": "#7ec699",
+                        },
+                        "class-name": Object {
+                          "color": "#f8c555",
+                        },
+                        "code[class*=\\"language-\\"]": Object {
+                          "MozHyphens": "none",
+                          "MozTabSize": "4",
+                          "OTabSize": "4",
+                          "WebkitHyphens": "none",
+                          "background": "none",
+                          "color": "#ccc",
+                          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                          "hyphens": "none",
+                          "lineHeight": "1.5",
+                          "msHyphens": "none",
+                          "tabSize": "4",
+                          "textAlign": "left",
+                          "whiteSpace": "pre",
+                          "wordBreak": "normal",
+                          "wordSpacing": "normal",
+                          "wordWrap": "normal",
+                        },
+                        "comment": Object {
+                          "color": "#999",
+                        },
+                        "constant": Object {
+                          "color": "#f8c555",
+                        },
+                        "deleted": Object {
+                          "color": "#e2777a",
+                        },
+                        "doctype": Object {
+                          "color": "#999",
+                        },
+                        "entity": Object {
+                          "color": "#67cdcc",
+                          "cursor": "help",
+                        },
+                        "function": Object {
+                          "color": "#f08d49",
+                        },
+                        "function-name": Object {
+                          "color": "#6196cc",
+                        },
+                        "important": Object {
+                          "color": "#cc99cd",
+                          "fontWeight": "bold",
+                        },
+                        "inserted": Object {
+                          "color": "green",
+                        },
+                        "italic": Object {
+                          "fontStyle": "italic",
+                        },
+                        "keyword": Object {
+                          "color": "#cc99cd",
+                        },
+                        "namespace": Object {
+                          "color": "#e2777a",
+                        },
+                        "number": Object {
+                          "color": "#f08d49",
+                        },
+                        "operator": Object {
+                          "color": "#67cdcc",
+                        },
+                        "pre[class*=\\"language-\\"]": Object {
+                          "MozHyphens": "none",
+                          "MozTabSize": "4",
+                          "OTabSize": "4",
+                          "WebkitHyphens": "none",
+                          "background": "#2d2d2d",
+                          "color": "#ccc",
+                          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                          "hyphens": "none",
+                          "lineHeight": "1.5",
+                          "margin": ".5em 0",
+                          "msHyphens": "none",
+                          "overflow": "auto",
+                          "padding": "1em",
+                          "tabSize": "4",
+                          "textAlign": "left",
+                          "whiteSpace": "pre",
+                          "wordBreak": "normal",
+                          "wordSpacing": "normal",
+                          "wordWrap": "normal",
+                        },
+                        "prolog": Object {
+                          "color": "#999",
+                        },
+                        "property": Object {
+                          "color": "#f8c555",
+                        },
+                        "punctuation": Object {
+                          "color": "#ccc",
+                        },
+                        "regex": Object {
+                          "color": "#7ec699",
+                        },
+                        "selector": Object {
+                          "color": "#cc99cd",
+                        },
+                        "string": Object {
+                          "color": "#7ec699",
+                        },
+                        "symbol": Object {
+                          "color": "#f8c555",
+                        },
+                        "tag": Object {
+                          "color": "#e2777a",
+                        },
+                        "url": Object {
+                          "color": "#67cdcc",
+                        },
+                        "variable": Object {
+                          "color": "#7ec699",
+                        },
+                      }
+                    }
+                  >
+                    
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+  &lt;plist version="1.0"&gt;
+    &lt;dict&gt;
+      &lt;key&gt;method&lt;/key&gt;
+      &lt;string&gt;app-store&lt;/string&gt;
+      &lt;key&gt;signingStyle&lt;/key&gt;
+      &lt;string&gt;automatic&lt;/string&gt;
+      &lt;key&gt;stripSwiftSymbols&lt;/key&gt;
+      &lt;true/&gt;
+      &lt;key&gt;uploadSymbols&lt;/key&gt;
+      &lt;true/&gt;
+    &lt;/dict&gt;
+  &lt;/plist&gt;
+                  </SyntaxHighlighter>
+                </li>
+              </ol>,
+            ],
+            "title": "XcodeArchive",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "To package up an xcarchive to submit for signing you need to:",
+              },
+              "ref": null,
+              "rendered": "To package up an xcarchive to submit for signing you need to:",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    <p>
+                      Create a folder to hold the xcarchive and options.plist
+                    </p>
+                  </li>,
+                  <li>
+                    <p>
+                      Copy the xcarchive from xcode into the folder from step 1
+                    </p>
+                  </li>,
+                  <li>
+                    <p>
+                      Create or copy your options.plist from step 1, you could update the content from below:
+                    </p>
+                    <SyntaxHighlighter
+                      language="xml"
+                      style={
+                        Object {
+                          ":not(pre) > code[class*=\\"language-\\"]": Object {
+                            "background": "#2d2d2d",
+                            "borderRadius": ".3em",
+                            "padding": ".1em",
+                            "whiteSpace": "normal",
+                          },
+                          "atrule": Object {
+                            "color": "#cc99cd",
+                          },
+                          "attr-name": Object {
+                            "color": "#e2777a",
+                          },
+                          "attr-value": Object {
+                            "color": "#7ec699",
+                          },
+                          "block-comment": Object {
+                            "color": "#999",
+                          },
+                          "bold": Object {
+                            "fontWeight": "bold",
+                          },
+                          "boolean": Object {
+                            "color": "#f08d49",
+                          },
+                          "builtin": Object {
+                            "color": "#cc99cd",
+                          },
+                          "cdata": Object {
+                            "color": "#999",
+                          },
+                          "char": Object {
+                            "color": "#7ec699",
+                          },
+                          "class-name": Object {
+                            "color": "#f8c555",
+                          },
+                          "code[class*=\\"language-\\"]": Object {
+                            "MozHyphens": "none",
+                            "MozTabSize": "4",
+                            "OTabSize": "4",
+                            "WebkitHyphens": "none",
+                            "background": "none",
+                            "color": "#ccc",
+                            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                            "hyphens": "none",
+                            "lineHeight": "1.5",
+                            "msHyphens": "none",
+                            "tabSize": "4",
+                            "textAlign": "left",
+                            "whiteSpace": "pre",
+                            "wordBreak": "normal",
+                            "wordSpacing": "normal",
+                            "wordWrap": "normal",
+                          },
+                          "comment": Object {
+                            "color": "#999",
+                          },
+                          "constant": Object {
+                            "color": "#f8c555",
+                          },
+                          "deleted": Object {
+                            "color": "#e2777a",
+                          },
+                          "doctype": Object {
+                            "color": "#999",
+                          },
+                          "entity": Object {
+                            "color": "#67cdcc",
+                            "cursor": "help",
+                          },
+                          "function": Object {
+                            "color": "#f08d49",
+                          },
+                          "function-name": Object {
+                            "color": "#6196cc",
+                          },
+                          "important": Object {
+                            "color": "#cc99cd",
+                            "fontWeight": "bold",
+                          },
+                          "inserted": Object {
+                            "color": "green",
+                          },
+                          "italic": Object {
+                            "fontStyle": "italic",
+                          },
+                          "keyword": Object {
+                            "color": "#cc99cd",
+                          },
+                          "namespace": Object {
+                            "color": "#e2777a",
+                          },
+                          "number": Object {
+                            "color": "#f08d49",
+                          },
+                          "operator": Object {
+                            "color": "#67cdcc",
+                          },
+                          "pre[class*=\\"language-\\"]": Object {
+                            "MozHyphens": "none",
+                            "MozTabSize": "4",
+                            "OTabSize": "4",
+                            "WebkitHyphens": "none",
+                            "background": "#2d2d2d",
+                            "color": "#ccc",
+                            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                            "hyphens": "none",
+                            "lineHeight": "1.5",
+                            "margin": ".5em 0",
+                            "msHyphens": "none",
+                            "overflow": "auto",
+                            "padding": "1em",
+                            "tabSize": "4",
+                            "textAlign": "left",
+                            "whiteSpace": "pre",
+                            "wordBreak": "normal",
+                            "wordSpacing": "normal",
+                            "wordWrap": "normal",
+                          },
+                          "prolog": Object {
+                            "color": "#999",
+                          },
+                          "property": Object {
+                            "color": "#f8c555",
+                          },
+                          "punctuation": Object {
+                            "color": "#ccc",
+                          },
+                          "regex": Object {
+                            "color": "#7ec699",
+                          },
+                          "selector": Object {
+                            "color": "#cc99cd",
+                          },
+                          "string": Object {
+                            "color": "#7ec699",
+                          },
+                          "symbol": Object {
+                            "color": "#f8c555",
+                          },
+                          "tag": Object {
+                            "color": "#e2777a",
+                          },
+                          "url": Object {
+                            "color": "#67cdcc",
+                          },
+                          "variable": Object {
+                            "color": "#7ec699",
+                          },
+                        }
+                      }
+                    >
+                      
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+  &lt;plist version="1.0"&gt;
+    &lt;dict&gt;
+      &lt;key&gt;method&lt;/key&gt;
+      &lt;string&gt;app-store&lt;/string&gt;
+      &lt;key&gt;signingStyle&lt;/key&gt;
+      &lt;string&gt;automatic&lt;/string&gt;
+      &lt;key&gt;stripSwiftSymbols&lt;/key&gt;
+      &lt;true/&gt;
+      &lt;key&gt;uploadSymbols&lt;/key&gt;
+      &lt;true/&gt;
+    &lt;/dict&gt;
+  &lt;/plist&gt;
+                    </SyntaxHighlighter>
+                  </li>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Create a folder to hold the xcarchive and options.plist
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Create a folder to hold the xcarchive and options.plist",
+                    },
+                    "ref": null,
+                    "rendered": "Create a folder to hold the xcarchive and options.plist",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Copy the xcarchive from xcode into the folder from step 1
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Copy the xcarchive from xcode into the folder from step 1",
+                    },
+                    "ref": null,
+                    "rendered": "Copy the xcarchive from xcode into the folder from step 1",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p>
+                        Create or copy your options.plist from step 1, you could update the content from below:
+                      </p>,
+                      <SyntaxHighlighter
+                        language="xml"
+                        style={
+                          Object {
+                            ":not(pre) > code[class*=\\"language-\\"]": Object {
+                              "background": "#2d2d2d",
+                              "borderRadius": ".3em",
+                              "padding": ".1em",
+                              "whiteSpace": "normal",
+                            },
+                            "atrule": Object {
+                              "color": "#cc99cd",
+                            },
+                            "attr-name": Object {
+                              "color": "#e2777a",
+                            },
+                            "attr-value": Object {
+                              "color": "#7ec699",
+                            },
+                            "block-comment": Object {
+                              "color": "#999",
+                            },
+                            "bold": Object {
+                              "fontWeight": "bold",
+                            },
+                            "boolean": Object {
+                              "color": "#f08d49",
+                            },
+                            "builtin": Object {
+                              "color": "#cc99cd",
+                            },
+                            "cdata": Object {
+                              "color": "#999",
+                            },
+                            "char": Object {
+                              "color": "#7ec699",
+                            },
+                            "class-name": Object {
+                              "color": "#f8c555",
+                            },
+                            "code[class*=\\"language-\\"]": Object {
+                              "MozHyphens": "none",
+                              "MozTabSize": "4",
+                              "OTabSize": "4",
+                              "WebkitHyphens": "none",
+                              "background": "none",
+                              "color": "#ccc",
+                              "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                              "hyphens": "none",
+                              "lineHeight": "1.5",
+                              "msHyphens": "none",
+                              "tabSize": "4",
+                              "textAlign": "left",
+                              "whiteSpace": "pre",
+                              "wordBreak": "normal",
+                              "wordSpacing": "normal",
+                              "wordWrap": "normal",
+                            },
+                            "comment": Object {
+                              "color": "#999",
+                            },
+                            "constant": Object {
+                              "color": "#f8c555",
+                            },
+                            "deleted": Object {
+                              "color": "#e2777a",
+                            },
+                            "doctype": Object {
+                              "color": "#999",
+                            },
+                            "entity": Object {
+                              "color": "#67cdcc",
+                              "cursor": "help",
+                            },
+                            "function": Object {
+                              "color": "#f08d49",
+                            },
+                            "function-name": Object {
+                              "color": "#6196cc",
+                            },
+                            "important": Object {
+                              "color": "#cc99cd",
+                              "fontWeight": "bold",
+                            },
+                            "inserted": Object {
+                              "color": "green",
+                            },
+                            "italic": Object {
+                              "fontStyle": "italic",
+                            },
+                            "keyword": Object {
+                              "color": "#cc99cd",
+                            },
+                            "namespace": Object {
+                              "color": "#e2777a",
+                            },
+                            "number": Object {
+                              "color": "#f08d49",
+                            },
+                            "operator": Object {
+                              "color": "#67cdcc",
+                            },
+                            "pre[class*=\\"language-\\"]": Object {
+                              "MozHyphens": "none",
+                              "MozTabSize": "4",
+                              "OTabSize": "4",
+                              "WebkitHyphens": "none",
+                              "background": "#2d2d2d",
+                              "color": "#ccc",
+                              "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                              "hyphens": "none",
+                              "lineHeight": "1.5",
+                              "margin": ".5em 0",
+                              "msHyphens": "none",
+                              "overflow": "auto",
+                              "padding": "1em",
+                              "tabSize": "4",
+                              "textAlign": "left",
+                              "whiteSpace": "pre",
+                              "wordBreak": "normal",
+                              "wordSpacing": "normal",
+                              "wordWrap": "normal",
+                            },
+                            "prolog": Object {
+                              "color": "#999",
+                            },
+                            "property": Object {
+                              "color": "#f8c555",
+                            },
+                            "punctuation": Object {
+                              "color": "#ccc",
+                            },
+                            "regex": Object {
+                              "color": "#7ec699",
+                            },
+                            "selector": Object {
+                              "color": "#cc99cd",
+                            },
+                            "string": Object {
+                              "color": "#7ec699",
+                            },
+                            "symbol": Object {
+                              "color": "#f8c555",
+                            },
+                            "tag": Object {
+                              "color": "#e2777a",
+                            },
+                            "url": Object {
+                              "color": "#67cdcc",
+                            },
+                            "variable": Object {
+                              "color": "#7ec699",
+                            },
+                          }
+                        }
+                      >
+                        
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+  &lt;plist version="1.0"&gt;
+    &lt;dict&gt;
+      &lt;key&gt;method&lt;/key&gt;
+      &lt;string&gt;app-store&lt;/string&gt;
+      &lt;key&gt;signingStyle&lt;/key&gt;
+      &lt;string&gt;automatic&lt;/string&gt;
+      &lt;key&gt;stripSwiftSymbols&lt;/key&gt;
+      &lt;true/&gt;
+      &lt;key&gt;uploadSymbols&lt;/key&gt;
+      &lt;true/&gt;
+    &lt;/dict&gt;
+  &lt;/plist&gt;
+                      </SyntaxHighlighter>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Create or copy your options.plist from step 1, you could update the content from below:",
+                      },
+                      "ref": null,
+                      "rendered": "Create or copy your options.plist from step 1, you could update the content from below:",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": "
+  <?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+  <!DOCTYPE plist PUBLIC \\"-//Apple//DTD PLIST 1.0//EN\\" \\"http://www.apple.com/DTDs/PropertyList-1.0.dtd\\">
+  <plist version=\\"1.0\\">
+    <dict>
+      <key>method</key>
+      <string>app-store</string>
+      <key>signingStyle</key>
+      <string>automatic</string>
+      <key>stripSwiftSymbols</key>
+      <true/>
+      <key>uploadSymbols</key>
+      <true/>
+    </dict>
+  </plist>",
+                        "language": "xml",
+                        "style": Object {
+                          ":not(pre) > code[class*=\\"language-\\"]": Object {
+                            "background": "#2d2d2d",
+                            "borderRadius": ".3em",
+                            "padding": ".1em",
+                            "whiteSpace": "normal",
+                          },
+                          "atrule": Object {
+                            "color": "#cc99cd",
+                          },
+                          "attr-name": Object {
+                            "color": "#e2777a",
+                          },
+                          "attr-value": Object {
+                            "color": "#7ec699",
+                          },
+                          "block-comment": Object {
+                            "color": "#999",
+                          },
+                          "bold": Object {
+                            "fontWeight": "bold",
+                          },
+                          "boolean": Object {
+                            "color": "#f08d49",
+                          },
+                          "builtin": Object {
+                            "color": "#cc99cd",
+                          },
+                          "cdata": Object {
+                            "color": "#999",
+                          },
+                          "char": Object {
+                            "color": "#7ec699",
+                          },
+                          "class-name": Object {
+                            "color": "#f8c555",
+                          },
+                          "code[class*=\\"language-\\"]": Object {
+                            "MozHyphens": "none",
+                            "MozTabSize": "4",
+                            "OTabSize": "4",
+                            "WebkitHyphens": "none",
+                            "background": "none",
+                            "color": "#ccc",
+                            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                            "hyphens": "none",
+                            "lineHeight": "1.5",
+                            "msHyphens": "none",
+                            "tabSize": "4",
+                            "textAlign": "left",
+                            "whiteSpace": "pre",
+                            "wordBreak": "normal",
+                            "wordSpacing": "normal",
+                            "wordWrap": "normal",
+                          },
+                          "comment": Object {
+                            "color": "#999",
+                          },
+                          "constant": Object {
+                            "color": "#f8c555",
+                          },
+                          "deleted": Object {
+                            "color": "#e2777a",
+                          },
+                          "doctype": Object {
+                            "color": "#999",
+                          },
+                          "entity": Object {
+                            "color": "#67cdcc",
+                            "cursor": "help",
+                          },
+                          "function": Object {
+                            "color": "#f08d49",
+                          },
+                          "function-name": Object {
+                            "color": "#6196cc",
+                          },
+                          "important": Object {
+                            "color": "#cc99cd",
+                            "fontWeight": "bold",
+                          },
+                          "inserted": Object {
+                            "color": "green",
+                          },
+                          "italic": Object {
+                            "fontStyle": "italic",
+                          },
+                          "keyword": Object {
+                            "color": "#cc99cd",
+                          },
+                          "namespace": Object {
+                            "color": "#e2777a",
+                          },
+                          "number": Object {
+                            "color": "#f08d49",
+                          },
+                          "operator": Object {
+                            "color": "#67cdcc",
+                          },
+                          "pre[class*=\\"language-\\"]": Object {
+                            "MozHyphens": "none",
+                            "MozTabSize": "4",
+                            "OTabSize": "4",
+                            "WebkitHyphens": "none",
+                            "background": "#2d2d2d",
+                            "color": "#ccc",
+                            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+                            "hyphens": "none",
+                            "lineHeight": "1.5",
+                            "margin": ".5em 0",
+                            "msHyphens": "none",
+                            "overflow": "auto",
+                            "padding": "1em",
+                            "tabSize": "4",
+                            "textAlign": "left",
+                            "whiteSpace": "pre",
+                            "wordBreak": "normal",
+                            "wordSpacing": "normal",
+                            "wordWrap": "normal",
+                          },
+                          "prolog": Object {
+                            "color": "#999",
+                          },
+                          "property": Object {
+                            "color": "#f8c555",
+                          },
+                          "punctuation": Object {
+                            "color": "#ccc",
+                          },
+                          "regex": Object {
+                            "color": "#7ec699",
+                          },
+                          "selector": Object {
+                            "color": "#cc99cd",
+                          },
+                          "string": Object {
+                            "color": "#7ec699",
+                          },
+                          "symbol": Object {
+                            "color": "#f8c555",
+                          },
+                          "tag": Object {
+                            "color": "#e2777a",
+                          },
+                          "url": Object {
+                            "color": "#67cdcc",
+                          },
+                          "variable": Object {
+                            "color": "#7ec699",
+                          },
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "
+  <?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+  <!DOCTYPE plist PUBLIC \\"-//Apple//DTD PLIST 1.0//EN\\" \\"http://www.apple.com/DTDs/PropertyList-1.0.dtd\\">
+  <plist version=\\"1.0\\">
+    <dict>
+      <key>method</key>
+      <string>app-store</string>
+      <key>signingStyle</key>
+      <string>automatic</string>
+      <key>stripSwiftSymbols</key>
+      <true/>
+      <key>uploadSymbols</key>
+      <true/>
+    </dict>
+  </plist>",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "li",
+                },
+              ],
+              "type": "ol",
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <p>
+                To package up an xcarchive to submit for signing you need to:
+              </p>,
+              <ol>
+                <li>
+                  <p>
+                    Create a folder to hold the xcarchive and options.plist
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Copy the xcarchive from xcode into the folder from step 1
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Create or copy your options.plist from step 1, you could update the content from below:
+                  </p>
+                </li>
+              </ol>,
+            ],
+            "title": "IPA",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "To package up an xcarchive to submit for signing you need to:",
+              },
+              "ref": null,
+              "rendered": "To package up an xcarchive to submit for signing you need to:",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    <p>
+                      Create a folder to hold the xcarchive and options.plist
+                    </p>
+                  </li>,
+                  <li>
+                    <p>
+                      Copy the xcarchive from xcode into the folder from step 1
+                    </p>
+                  </li>,
+                  <li>
+                    <p>
+                      Create or copy your options.plist from step 1, you could update the content from below:
+                    </p>
+                  </li>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Create a folder to hold the xcarchive and options.plist
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Create a folder to hold the xcarchive and options.plist",
+                    },
+                    "ref": null,
+                    "rendered": "Create a folder to hold the xcarchive and options.plist",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Copy the xcarchive from xcode into the folder from step 1
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Copy the xcarchive from xcode into the folder from step 1",
+                    },
+                    "ref": null,
+                    "rendered": "Copy the xcarchive from xcode into the folder from step 1",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Create or copy your options.plist from step 1, you could update the content from below:
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Create or copy your options.plist from step 1, you could update the content from below:",
+                    },
+                    "ref": null,
+                    "rendered": "Create or copy your options.plist from step 1, you could update the content from below:",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+              ],
+              "type": "ol",
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <p>
+                To package up an xcarchive to submit for signing you need to:
+              </p>,
+              <ol>
+                <li>
+                  <p>
+                    Create a folder to hold the xcarchive and options.plist
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Copy the xcarchive from xcode into the folder from step 1
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Create or copy your options.plist from step 1, you could update the content from below:
+                  </p>
+                </li>
+              </ol>,
+            ],
+            "title": "APK",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "To package up an xcarchive to submit for signing you need to:",
+              },
+              "ref": null,
+              "rendered": "To package up an xcarchive to submit for signing you need to:",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    <p>
+                      Create a folder to hold the xcarchive and options.plist
+                    </p>
+                  </li>,
+                  <li>
+                    <p>
+                      Copy the xcarchive from xcode into the folder from step 1
+                    </p>
+                  </li>,
+                  <li>
+                    <p>
+                      Create or copy your options.plist from step 1, you could update the content from below:
+                    </p>
+                  </li>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Create a folder to hold the xcarchive and options.plist
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Create a folder to hold the xcarchive and options.plist",
+                    },
+                    "ref": null,
+                    "rendered": "Create a folder to hold the xcarchive and options.plist",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Copy the xcarchive from xcode into the folder from step 1
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Copy the xcarchive from xcode into the folder from step 1",
+                    },
+                    "ref": null,
+                    "rendered": "Copy the xcarchive from xcode into the folder from step 1",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      Create or copy your options.plist from step 1, you could update the content from below:
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Create or copy your options.plist from step 1, you could update the content from below:",
+                    },
+                    "ref": null,
+                    "rendered": "Create or copy your options.plist from step 1, you could update the content from below:",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+              ],
+              "type": "ol",
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
