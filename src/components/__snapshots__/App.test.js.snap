@@ -9,6 +9,11 @@ ShallowWrapper {
         "isAuthenticated": true,
       }
     }
+    job={
+      Object {
+        "status": "testStatus",
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -91,7 +96,13 @@ ShallowWrapper {
               </button>
             </li>
           </ul>
-          <JobStatusIndicator />
+          <JobStatusIndicator
+            job={
+              Object {
+                "status": "testStatus",
+              }
+            }
+          />
         </div>,
         <div
           className="container"
@@ -179,7 +190,13 @@ ShallowWrapper {
                 </button>
               </li>
             </ul>,
-            <JobStatusIndicator />,
+            <JobStatusIndicator
+              job={
+                Object {
+                  "status": "testStatus",
+                }
+              }
+            />,
           ],
           "className": "container",
         },
@@ -531,7 +548,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "job": undefined,
+              "job": Object {
+                "status": "testStatus",
+              },
             },
             "ref": null,
             "rendered": null,
@@ -552,7 +571,7 @@ ShallowWrapper {
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {},
           "ref": null,
           "rendered": null,
@@ -646,7 +665,13 @@ ShallowWrapper {
                 </button>
               </li>
             </ul>
-            <JobStatusIndicator />
+            <JobStatusIndicator
+              job={
+                Object {
+                  "status": "testStatus",
+                }
+              }
+            />
           </div>,
           <div
             className="container"
@@ -734,7 +759,13 @@ ShallowWrapper {
                   </button>
                 </li>
               </ul>,
-              <JobStatusIndicator />,
+              <JobStatusIndicator
+                job={
+                  Object {
+                    "status": "testStatus",
+                  }
+                }
+              />,
             ],
             "className": "container",
           },
@@ -1086,7 +1117,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "job": undefined,
+                "job": Object {
+                  "status": "testStatus",
+                },
               },
               "ref": null,
               "rendered": null,
@@ -1107,7 +1140,7 @@ ShallowWrapper {
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {},
             "ref": null,
             "rendered": null,

@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import { App } from './App';
-import Header from './Header';
-import Footer from './Footer';
 
 describe('App Component', () => {
   // it('renders without crashing', () => {
@@ -13,7 +11,9 @@ describe('App Component', () => {
   // });
 
   it('renders without crashing', () => {
-    const wrapper = shallow(<App authentication={{ isAuthenticated: true }} />);
+    const wrapper = shallow(
+      <App authentication={{ isAuthenticated: true }} job={{ status: 'testStatus' }} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
