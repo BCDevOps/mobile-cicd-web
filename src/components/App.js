@@ -11,7 +11,7 @@ import Header from './Header';
 import JobStatusIndicator from './JobStatusIndicator';
 import Instruction from './Instruction';
 
-class App extends Component {
+export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
