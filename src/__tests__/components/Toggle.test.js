@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Toggle from './Toggle';
+import Toggle from '../../components/Toggle';
 import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 describe('Toggle Component', () => {
