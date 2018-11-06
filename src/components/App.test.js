@@ -6,7 +6,6 @@ import Header from './Header';
 import Footer from './Footer';
 
 describe('App Component', () => {
-  // TODO: (sh) Update this test case
   // it('renders without crashing', () => {
   //   const div = document.createElement('div');
   //   ReactDOM.render(<App />, div);
@@ -14,7 +13,7 @@ describe('App Component', () => {
   // });
 
   it('renders without crashing', () => {
-    const wrapper = shallow(<App><Header authentication={{ isAuthenticated: true }} /><Footer /></App>);
+    const wrapper = shallow(<App authentication={{ isAuthenticated: true }} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

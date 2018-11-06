@@ -3,16 +3,13 @@
 exports[`App Component renders without crashing 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App>
-    <Header
-      authentication={
-        Object {
-          "isAuthenticated": true,
-        }
+  Symbol(enzyme.__unrendered__): <App
+    authentication={
+      Object {
+        "isAuthenticated": true,
       }
-    />
-    <Footer />
-  </App>,
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -27,7 +24,13 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Header />,
+        <Header
+          authentication={
+            Object {
+              "isAuthenticated": true,
+            }
+          }
+        />,
         <div
           className="container"
         >
@@ -105,7 +108,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "authentication": undefined,
+          "authentication": Object {
+            "isAuthenticated": true,
+          },
         },
         "ref": null,
         "rendered": null,
@@ -574,7 +579,13 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Header />,
+          <Header
+            authentication={
+              Object {
+                "isAuthenticated": true,
+              }
+            }
+          />,
           <div
             className="container"
           >
@@ -652,7 +663,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "authentication": undefined,
+            "authentication": Object {
+              "isAuthenticated": true,
+            },
           },
           "ref": null,
           "rendered": null,
