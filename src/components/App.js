@@ -39,7 +39,7 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Header authentication={this.props.authenication} />
+        <Header authentication={this.props.authentication} />
         <div className="container">
           {/* <form> */}
           <ul className="flex-outer">
@@ -98,7 +98,7 @@ function mapStateToProps(state) {
   return {
     job: state.job,
     api: state.api,
-    authenication: state.authentication,
+    authentication: state.authentication,
   };
 }
 
