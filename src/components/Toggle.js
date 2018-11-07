@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
-import './Toggle.css';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import './Toggle.css';
 
+/**
+ * Toggle component
+ * This component has an arrow button to toggle the content open/collapse
+ * @prop title for the toggle content
+ * @prop children containing content
+ */
 class Toggle extends Component {
   state = {
     toggled: false,
@@ -42,5 +49,10 @@ class Toggle extends Component {
     );
   }
 }
+
+Toggle.propTypes = {
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+};
 
 export default Toggle;

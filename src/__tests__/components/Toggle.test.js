@@ -5,12 +5,12 @@ import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 describe('Toggle Component', () => {
   it('matches snapshot', () => {
-    const wrapper = shallow(<Toggle />);
+    const wrapper = shallow(<Toggle title="test toggle" children={<div>test toggle</div>} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('changes state', () => {
-    const wrapper = shallow(<Toggle />);
+    const wrapper = shallow(<Toggle title="test toggle" children={<div>test toggle</div>} />);
     expect(wrapper.state('toggled')).toBe(false);
     wrapper
       .find('.toggle-icon')
@@ -20,7 +20,7 @@ describe('Toggle Component', () => {
   });
 
   it('changes the arrow icon', () => {
-    const wrapper = shallow(<Toggle />);
+    const wrapper = shallow(<Toggle title="test toggle" children={<div>test toggle</div>} />);
     const button0 = wrapper.find('.toggle-icon').first();
     expect(button0.prop('icon')).toEqual(faArrowDown);
     button0.simulate('click');

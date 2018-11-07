@@ -3,7 +3,13 @@
 exports[`Toggle Component matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Toggle />,
+  Symbol(enzyme.__unrendered__): <Toggle
+    title="test toggle"
+  >
+    <div>
+      test toggle
+    </div>
+  </Toggle>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -21,7 +27,9 @@ ShallowWrapper {
         <div
           className="toggle-header"
         >
-          <div />
+          <div>
+            test toggle
+          </div>
           <div>
             <FontAwesomeIcon
               border={false}
@@ -56,7 +64,11 @@ ShallowWrapper {
             />
           </div>
         </div>,
-        <div />,
+        <div>
+          <div>
+            test toggle
+          </div>
+        </div>,
       ],
       "className": "instruction ",
     },
@@ -68,7 +80,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <div />,
+            <div>
+              test toggle
+            </div>,
             <div>
               <FontAwesomeIcon
                 border={false}
@@ -112,10 +126,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "test toggle",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "test toggle",
             "type": "div",
           },
           Object {
@@ -203,10 +217,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": <div>
+            test toggle
+          </div>,
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "test toggle",
+          },
+          "ref": null,
+          "rendered": "test toggle",
+          "type": "div",
+        },
         "type": "div",
       },
     ],
@@ -222,7 +248,9 @@ ShallowWrapper {
           <div
             className="toggle-header"
           >
-            <div />
+            <div>
+              test toggle
+            </div>
             <div>
               <FontAwesomeIcon
                 border={false}
@@ -257,7 +285,11 @@ ShallowWrapper {
               />
             </div>
           </div>,
-          <div />,
+          <div>
+            <div>
+              test toggle
+            </div>
+          </div>,
         ],
         "className": "instruction ",
       },
@@ -269,7 +301,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <div />,
+              <div>
+                test toggle
+              </div>,
               <div>
                 <FontAwesomeIcon
                   border={false}
@@ -313,10 +347,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "test toggle",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "test toggle",
               "type": "div",
             },
             Object {
@@ -404,10 +438,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": <div>
+              test toggle
+            </div>,
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "test toggle",
+            },
+            "ref": null,
+            "rendered": "test toggle",
+            "type": "div",
+          },
           "type": "div",
         },
       ],
