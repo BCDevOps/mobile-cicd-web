@@ -210,8 +210,8 @@ podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkin
       try {
         def attachment = [:]
         attachment.fallback = 'See build log for more details'
-        attachment.text = "Another huge sucess for the Range Team.\n A freshly minted build is being deployed. You should see the results shortly.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
-        attachment.title = "WEB Build ${BUILD_ID} OK! :raised_hands: :clap:"
+        attachment.text = "Another huge success for the Signing Web Team.\n A freshly minted build is being deployed. You should see the results shortly.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
+        attachment.title = "WEB Build ${BUILD_ID} OK! :raised_hands: :clap: woot!"
         attachment.color = '#00FF00' // Lime Green
 
         notifySlack("${APP_NAME}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
