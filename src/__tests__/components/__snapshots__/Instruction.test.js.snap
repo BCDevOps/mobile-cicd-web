@@ -40,9 +40,10 @@ ShallowWrapper {
             </li>
             <li>
               <p>
-                Create or copy your options.plist from step 1, you could update the content from below:
+                Create or copy your options.plist from step 1, you could update the content from sample below:
               </p>
               <SyntaxHighlighter
+                className="SyntaxHighlighter"
                 language="xml"
                 style={
                   Object {
@@ -215,52 +216,35 @@ ShallowWrapper {
   &lt;/plist&gt;
               </SyntaxHighlighter>
             </li>
+            <li>
+              <p>
+                ZIP up the folder for submission
+              </p>
+            </li>
           </ol>
         </Toggle>,
         <Toggle
           title="IPA"
         >
           <p>
-            To package up an xcarchive to submit for signing you need to:
+            To be documented.
           </p>
-          <ol>
-            <li>
-              <p>
-                Create a folder to hold the xcarchive and options.plist
-              </p>
-            </li>
-            <li>
-              <p>
-                Copy the xcarchive from xcode into the folder from step 1
-              </p>
-            </li>
-            <li>
-              <p>
-                Create or copy your options.plist from step 1, you could update the content from below:
-              </p>
-            </li>
-          </ol>
         </Toggle>,
         <Toggle
           title="APK"
         >
           <p>
-            To package up an xcarchive to submit for signing you need to:
+            To package up an android package to submit for signing you need to:
           </p>
           <ol>
             <li>
               <p>
-                Create a folder to hold the xcarchive and options.plist
+                Select RELEASE mode in the Build Variant, and build APK
               </p>
             </li>
             <li>
               <p>
-                Copy the xcarchive from xcode into the folder from step 1
-              </p>
-            </li>
-            <li>
-              <p>
-                Create or copy your options.plist from step 1, you could update the content from below:
+                Drag and drop the apk
               </p>
             </li>
           </ol>
@@ -303,9 +287,10 @@ ShallowWrapper {
               </li>
               <li>
                 <p>
-                  Create or copy your options.plist from step 1, you could update the content from below:
+                  Create or copy your options.plist from step 1, you could update the content from sample below:
                 </p>
                 <SyntaxHighlighter
+                  className="SyntaxHighlighter"
                   language="xml"
                   style={
                     Object {
@@ -478,6 +463,11 @@ ShallowWrapper {
   &lt;/plist&gt;
                 </SyntaxHighlighter>
               </li>
+              <li>
+                <p>
+                  ZIP up the folder for submission
+                </p>
+              </li>
             </ol>,
           ],
           "title": "XcodeArchive",
@@ -513,9 +503,10 @@ ShallowWrapper {
                 </li>,
                 <li>
                   <p>
-                    Create or copy your options.plist from step 1, you could update the content from below:
+                    Create or copy your options.plist from step 1, you could update the content from sample below:
                   </p>
                   <SyntaxHighlighter
+                    className="SyntaxHighlighter"
                     language="xml"
                     style={
                       Object {
@@ -688,6 +679,11 @@ ShallowWrapper {
   &lt;/plist&gt;
                   </SyntaxHighlighter>
                 </li>,
+                <li>
+                  <p>
+                    ZIP up the folder for submission
+                  </p>
+                </li>,
               ],
             },
             "ref": null,
@@ -745,9 +741,10 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <p>
-                      Create or copy your options.plist from step 1, you could update the content from below:
+                      Create or copy your options.plist from step 1, you could update the content from sample below:
                     </p>,
                     <SyntaxHighlighter
+                      className="SyntaxHighlighter"
                       language="xml"
                       style={
                         Object {
@@ -928,10 +925,10 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Create or copy your options.plist from step 1, you could update the content from below:",
+                      "children": "Create or copy your options.plist from step 1, you could update the content from sample below:",
                     },
                     "ref": null,
-                    "rendered": "Create or copy your options.plist from step 1, you could update the content from below:",
+                    "rendered": "Create or copy your options.plist from step 1, you could update the content from sample below:",
                     "type": "p",
                   },
                   Object {
@@ -954,6 +951,7 @@ ShallowWrapper {
       <true/>
     </dict>
   </plist>",
+                      "className": "SyntaxHighlighter",
                       "language": "xml",
                       "style": Object {
                         ":not(pre) > code[class*=\\"language-\\"]": Object {
@@ -1128,6 +1126,29 @@ ShallowWrapper {
                 ],
                 "type": "li",
               },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p>
+                    ZIP up the folder for submission
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "ZIP up the folder for submission",
+                  },
+                  "ref": null,
+                  "rendered": "ZIP up the folder for submission",
+                  "type": "p",
+                },
+                "type": "li",
+              },
             ],
             "type": "ol",
           },
@@ -1139,141 +1160,23 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": Array [
-            <p>
-              To package up an xcarchive to submit for signing you need to:
-            </p>,
-            <ol>
-              <li>
-                <p>
-                  Create a folder to hold the xcarchive and options.plist
-                </p>
-              </li>
-              <li>
-                <p>
-                  Copy the xcarchive from xcode into the folder from step 1
-                </p>
-              </li>
-              <li>
-                <p>
-                  Create or copy your options.plist from step 1, you could update the content from below:
-                </p>
-              </li>
-            </ol>,
-          ],
+          "children": <p>
+            To be documented.
+          </p>,
           "title": "IPA",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "To package up an xcarchive to submit for signing you need to:",
-            },
-            "ref": null,
-            "rendered": "To package up an xcarchive to submit for signing you need to:",
-            "type": "p",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "To be documented.",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <li>
-                  <p>
-                    Create a folder to hold the xcarchive and options.plist
-                  </p>
-                </li>,
-                <li>
-                  <p>
-                    Copy the xcarchive from xcode into the folder from step 1
-                  </p>
-                </li>,
-                <li>
-                  <p>
-                    Create or copy your options.plist from step 1, you could update the content from below:
-                  </p>
-                </li>,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <p>
-                    Create a folder to hold the xcarchive and options.plist
-                  </p>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Create a folder to hold the xcarchive and options.plist",
-                  },
-                  "ref": null,
-                  "rendered": "Create a folder to hold the xcarchive and options.plist",
-                  "type": "p",
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <p>
-                    Copy the xcarchive from xcode into the folder from step 1
-                  </p>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Copy the xcarchive from xcode into the folder from step 1",
-                  },
-                  "ref": null,
-                  "rendered": "Copy the xcarchive from xcode into the folder from step 1",
-                  "type": "p",
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <p>
-                    Create or copy your options.plist from step 1, you could update the content from below:
-                  </p>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Create or copy your options.plist from step 1, you could update the content from below:",
-                  },
-                  "ref": null,
-                  "rendered": "Create or copy your options.plist from step 1, you could update the content from below:",
-                  "type": "p",
-                },
-                "type": "li",
-              },
-            ],
-            "type": "ol",
-          },
-        ],
+          "ref": null,
+          "rendered": "To be documented.",
+          "type": "p",
+        },
         "type": [Function],
       },
       Object {
@@ -1283,22 +1186,17 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <p>
-              To package up an xcarchive to submit for signing you need to:
+              To package up an android package to submit for signing you need to:
             </p>,
             <ol>
               <li>
                 <p>
-                  Create a folder to hold the xcarchive and options.plist
+                  Select RELEASE mode in the Build Variant, and build APK
                 </p>
               </li>
               <li>
                 <p>
-                  Copy the xcarchive from xcode into the folder from step 1
-                </p>
-              </li>
-              <li>
-                <p>
-                  Create or copy your options.plist from step 1, you could update the content from below:
+                  Drag and drop the apk
                 </p>
               </li>
             </ol>,
@@ -1312,10 +1210,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "To package up an xcarchive to submit for signing you need to:",
+              "children": "To package up an android package to submit for signing you need to:",
             },
             "ref": null,
-            "rendered": "To package up an xcarchive to submit for signing you need to:",
+            "rendered": "To package up an android package to submit for signing you need to:",
             "type": "p",
           },
           Object {
@@ -1326,17 +1224,12 @@ ShallowWrapper {
               "children": Array [
                 <li>
                   <p>
-                    Create a folder to hold the xcarchive and options.plist
+                    Select RELEASE mode in the Build Variant, and build APK
                   </p>
                 </li>,
                 <li>
                   <p>
-                    Copy the xcarchive from xcode into the folder from step 1
-                  </p>
-                </li>,
-                <li>
-                  <p>
-                    Create or copy your options.plist from step 1, you could update the content from below:
+                    Drag and drop the apk
                   </p>
                 </li>,
               ],
@@ -1349,7 +1242,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <p>
-                    Create a folder to hold the xcarchive and options.plist
+                    Select RELEASE mode in the Build Variant, and build APK
                   </p>,
                 },
                 "ref": null,
@@ -1358,10 +1251,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Create a folder to hold the xcarchive and options.plist",
+                    "children": "Select RELEASE mode in the Build Variant, and build APK",
                   },
                   "ref": null,
-                  "rendered": "Create a folder to hold the xcarchive and options.plist",
+                  "rendered": "Select RELEASE mode in the Build Variant, and build APK",
                   "type": "p",
                 },
                 "type": "li",
@@ -1372,7 +1265,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <p>
-                    Copy the xcarchive from xcode into the folder from step 1
+                    Drag and drop the apk
                   </p>,
                 },
                 "ref": null,
@@ -1381,33 +1274,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Copy the xcarchive from xcode into the folder from step 1",
+                    "children": "Drag and drop the apk",
                   },
                   "ref": null,
-                  "rendered": "Copy the xcarchive from xcode into the folder from step 1",
-                  "type": "p",
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <p>
-                    Create or copy your options.plist from step 1, you could update the content from below:
-                  </p>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Create or copy your options.plist from step 1, you could update the content from below:",
-                  },
-                  "ref": null,
-                  "rendered": "Create or copy your options.plist from step 1, you could update the content from below:",
+                  "rendered": "Drag and drop the apk",
                   "type": "p",
                 },
                 "type": "li",
@@ -1450,9 +1320,10 @@ ShallowWrapper {
               </li>
               <li>
                 <p>
-                  Create or copy your options.plist from step 1, you could update the content from below:
+                  Create or copy your options.plist from step 1, you could update the content from sample below:
                 </p>
                 <SyntaxHighlighter
+                  className="SyntaxHighlighter"
                   language="xml"
                   style={
                     Object {
@@ -1625,52 +1496,35 @@ ShallowWrapper {
   &lt;/plist&gt;
                 </SyntaxHighlighter>
               </li>
+              <li>
+                <p>
+                  ZIP up the folder for submission
+                </p>
+              </li>
             </ol>
           </Toggle>,
           <Toggle
             title="IPA"
           >
             <p>
-              To package up an xcarchive to submit for signing you need to:
+              To be documented.
             </p>
-            <ol>
-              <li>
-                <p>
-                  Create a folder to hold the xcarchive and options.plist
-                </p>
-              </li>
-              <li>
-                <p>
-                  Copy the xcarchive from xcode into the folder from step 1
-                </p>
-              </li>
-              <li>
-                <p>
-                  Create or copy your options.plist from step 1, you could update the content from below:
-                </p>
-              </li>
-            </ol>
           </Toggle>,
           <Toggle
             title="APK"
           >
             <p>
-              To package up an xcarchive to submit for signing you need to:
+              To package up an android package to submit for signing you need to:
             </p>
             <ol>
               <li>
                 <p>
-                  Create a folder to hold the xcarchive and options.plist
+                  Select RELEASE mode in the Build Variant, and build APK
                 </p>
               </li>
               <li>
                 <p>
-                  Copy the xcarchive from xcode into the folder from step 1
-                </p>
-              </li>
-              <li>
-                <p>
-                  Create or copy your options.plist from step 1, you could update the content from below:
+                  Drag and drop the apk
                 </p>
               </li>
             </ol>
@@ -1713,9 +1567,10 @@ ShallowWrapper {
                 </li>
                 <li>
                   <p>
-                    Create or copy your options.plist from step 1, you could update the content from below:
+                    Create or copy your options.plist from step 1, you could update the content from sample below:
                   </p>
                   <SyntaxHighlighter
+                    className="SyntaxHighlighter"
                     language="xml"
                     style={
                       Object {
@@ -1888,6 +1743,11 @@ ShallowWrapper {
   &lt;/plist&gt;
                   </SyntaxHighlighter>
                 </li>
+                <li>
+                  <p>
+                    ZIP up the folder for submission
+                  </p>
+                </li>
               </ol>,
             ],
             "title": "XcodeArchive",
@@ -1923,9 +1783,10 @@ ShallowWrapper {
                   </li>,
                   <li>
                     <p>
-                      Create or copy your options.plist from step 1, you could update the content from below:
+                      Create or copy your options.plist from step 1, you could update the content from sample below:
                     </p>
                     <SyntaxHighlighter
+                      className="SyntaxHighlighter"
                       language="xml"
                       style={
                         Object {
@@ -2098,6 +1959,11 @@ ShallowWrapper {
   &lt;/plist&gt;
                     </SyntaxHighlighter>
                   </li>,
+                  <li>
+                    <p>
+                      ZIP up the folder for submission
+                    </p>
+                  </li>,
                 ],
               },
               "ref": null,
@@ -2155,9 +2021,10 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <p>
-                        Create or copy your options.plist from step 1, you could update the content from below:
+                        Create or copy your options.plist from step 1, you could update the content from sample below:
                       </p>,
                       <SyntaxHighlighter
+                        className="SyntaxHighlighter"
                         language="xml"
                         style={
                           Object {
@@ -2338,10 +2205,10 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "Create or copy your options.plist from step 1, you could update the content from below:",
+                        "children": "Create or copy your options.plist from step 1, you could update the content from sample below:",
                       },
                       "ref": null,
-                      "rendered": "Create or copy your options.plist from step 1, you could update the content from below:",
+                      "rendered": "Create or copy your options.plist from step 1, you could update the content from sample below:",
                       "type": "p",
                     },
                     Object {
@@ -2364,6 +2231,7 @@ ShallowWrapper {
       <true/>
     </dict>
   </plist>",
+                        "className": "SyntaxHighlighter",
                         "language": "xml",
                         "style": Object {
                           ":not(pre) > code[class*=\\"language-\\"]": Object {
@@ -2538,6 +2406,29 @@ ShallowWrapper {
                   ],
                   "type": "li",
                 },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p>
+                      ZIP up the folder for submission
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "ZIP up the folder for submission",
+                    },
+                    "ref": null,
+                    "rendered": "ZIP up the folder for submission",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
               ],
               "type": "ol",
             },
@@ -2549,141 +2440,23 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": Array [
-              <p>
-                To package up an xcarchive to submit for signing you need to:
-              </p>,
-              <ol>
-                <li>
-                  <p>
-                    Create a folder to hold the xcarchive and options.plist
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Copy the xcarchive from xcode into the folder from step 1
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Create or copy your options.plist from step 1, you could update the content from below:
-                  </p>
-                </li>
-              </ol>,
-            ],
+            "children": <p>
+              To be documented.
+            </p>,
             "title": "IPA",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "To package up an xcarchive to submit for signing you need to:",
-              },
-              "ref": null,
-              "rendered": "To package up an xcarchive to submit for signing you need to:",
-              "type": "p",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "To be documented.",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <li>
-                    <p>
-                      Create a folder to hold the xcarchive and options.plist
-                    </p>
-                  </li>,
-                  <li>
-                    <p>
-                      Copy the xcarchive from xcode into the folder from step 1
-                    </p>
-                  </li>,
-                  <li>
-                    <p>
-                      Create or copy your options.plist from step 1, you could update the content from below:
-                    </p>
-                  </li>,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <p>
-                      Create a folder to hold the xcarchive and options.plist
-                    </p>,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Create a folder to hold the xcarchive and options.plist",
-                    },
-                    "ref": null,
-                    "rendered": "Create a folder to hold the xcarchive and options.plist",
-                    "type": "p",
-                  },
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <p>
-                      Copy the xcarchive from xcode into the folder from step 1
-                    </p>,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Copy the xcarchive from xcode into the folder from step 1",
-                    },
-                    "ref": null,
-                    "rendered": "Copy the xcarchive from xcode into the folder from step 1",
-                    "type": "p",
-                  },
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <p>
-                      Create or copy your options.plist from step 1, you could update the content from below:
-                    </p>,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Create or copy your options.plist from step 1, you could update the content from below:",
-                    },
-                    "ref": null,
-                    "rendered": "Create or copy your options.plist from step 1, you could update the content from below:",
-                    "type": "p",
-                  },
-                  "type": "li",
-                },
-              ],
-              "type": "ol",
-            },
-          ],
+            "ref": null,
+            "rendered": "To be documented.",
+            "type": "p",
+          },
           "type": [Function],
         },
         Object {
@@ -2693,22 +2466,17 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <p>
-                To package up an xcarchive to submit for signing you need to:
+                To package up an android package to submit for signing you need to:
               </p>,
               <ol>
                 <li>
                   <p>
-                    Create a folder to hold the xcarchive and options.plist
+                    Select RELEASE mode in the Build Variant, and build APK
                   </p>
                 </li>
                 <li>
                   <p>
-                    Copy the xcarchive from xcode into the folder from step 1
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Create or copy your options.plist from step 1, you could update the content from below:
+                    Drag and drop the apk
                   </p>
                 </li>
               </ol>,
@@ -2722,10 +2490,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "To package up an xcarchive to submit for signing you need to:",
+                "children": "To package up an android package to submit for signing you need to:",
               },
               "ref": null,
-              "rendered": "To package up an xcarchive to submit for signing you need to:",
+              "rendered": "To package up an android package to submit for signing you need to:",
               "type": "p",
             },
             Object {
@@ -2736,17 +2504,12 @@ ShallowWrapper {
                 "children": Array [
                   <li>
                     <p>
-                      Create a folder to hold the xcarchive and options.plist
+                      Select RELEASE mode in the Build Variant, and build APK
                     </p>
                   </li>,
                   <li>
                     <p>
-                      Copy the xcarchive from xcode into the folder from step 1
-                    </p>
-                  </li>,
-                  <li>
-                    <p>
-                      Create or copy your options.plist from step 1, you could update the content from below:
+                      Drag and drop the apk
                     </p>
                   </li>,
                 ],
@@ -2759,7 +2522,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <p>
-                      Create a folder to hold the xcarchive and options.plist
+                      Select RELEASE mode in the Build Variant, and build APK
                     </p>,
                   },
                   "ref": null,
@@ -2768,10 +2531,10 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Create a folder to hold the xcarchive and options.plist",
+                      "children": "Select RELEASE mode in the Build Variant, and build APK",
                     },
                     "ref": null,
-                    "rendered": "Create a folder to hold the xcarchive and options.plist",
+                    "rendered": "Select RELEASE mode in the Build Variant, and build APK",
                     "type": "p",
                   },
                   "type": "li",
@@ -2782,7 +2545,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <p>
-                      Copy the xcarchive from xcode into the folder from step 1
+                      Drag and drop the apk
                     </p>,
                   },
                   "ref": null,
@@ -2791,33 +2554,10 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Copy the xcarchive from xcode into the folder from step 1",
+                      "children": "Drag and drop the apk",
                     },
                     "ref": null,
-                    "rendered": "Copy the xcarchive from xcode into the folder from step 1",
-                    "type": "p",
-                  },
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <p>
-                      Create or copy your options.plist from step 1, you could update the content from below:
-                    </p>,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Create or copy your options.plist from step 1, you could update the content from below:",
-                    },
-                    "ref": null,
-                    "rendered": "Create or copy your options.plist from step 1, you could update the content from below:",
+                    "rendered": "Drag and drop the apk",
                     "type": "p",
                   },
                   "type": "li",
