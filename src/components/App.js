@@ -9,8 +9,9 @@ import FileUpload from './FileUpload';
 import Footer from './Footer';
 import Header from './Header';
 import JobStatusIndicator from './JobStatusIndicator';
+import Instruction from './Instruction';
 
-class App extends Component {
+export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,7 +39,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header authentication={this.props.authenication} />
+        <Header authentication={this.props.authentication} />
         <div className="container">
           {/* <form> */}
           <ul className="flex-outer">
@@ -84,6 +85,9 @@ class App extends Component {
           {/* </form> */}
           <JobStatusIndicator job={this.props.job} />
         </div>
+        <div className="container">
+          <Instruction />
+        </div>
         <Footer />
       </div>
     );
@@ -94,7 +98,7 @@ function mapStateToProps(state) {
   return {
     job: state.job,
     api: state.api,
-    authenication: state.authentication,
+    authentication: state.authentication,
   };
 }
 

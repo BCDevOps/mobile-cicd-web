@@ -40,3 +40,21 @@ export const API = {
 export const API_ERROR = {
   JOB_STATUS_CHECK_FAILED: 'JOB_STATUS_CHECK_FAILED',
 };
+
+export const XML_SAMPLES = {
+  PLIST: `
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+  <plist version="1.0">
+    <dict>
+      <key>method</key>
+      <string>app-store</string>
+      <key>signingStyle</key>
+      <string>automatic</string>
+      <key>stripSwiftSymbols</key>
+      <true/>
+      <key>uploadSymbols</key>
+      <true/>
+    </dict>
+  </plist>`,
+};

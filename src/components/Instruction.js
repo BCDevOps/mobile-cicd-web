@@ -1,0 +1,52 @@
+import React from 'react';
+import './Instruction.css';
+import { XML_SAMPLES } from '../constants';
+import Toggle from './Toggle';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism';
+
+const Instruction = () => {
+  return (
+    <div className="instructions">
+      <h3>Steps to Upload Your App</h3>
+      <Toggle title="XcodeArchive">
+        <p>To package up an xcarchive to submit for signing you need to:</p>
+        <ol>
+          <li>
+            <p>Create a folder to hold the xcarchive and options.plist</p>
+          </li>
+          <li>
+            <p>Copy the xcarchive from xcode into the folder from step 1</p>
+          </li>
+          <li>
+            <p>
+              Create or copy your options.plist from step 1, you could update the content from sample below:
+            </p>
+            <SyntaxHighlighter language="xml" style={tomorrow} className="SyntaxHighlighter">
+              {XML_SAMPLES.PLIST}
+            </SyntaxHighlighter>
+          </li>
+          <li>
+            <p>ZIP up the folder for submission</p>
+          </li>
+        </ol>
+      </Toggle>
+      <Toggle title="IPA">
+        <p>To be documented.</p>
+      </Toggle>
+      <Toggle title="APK">
+        <p>To package up an android package to submit for signing you need to:</p>
+        <ol>
+          <li>
+            <p>Select RELEASE mode in the Build Variant, and build APK</p>
+          </li>
+          <li>
+            <p>Drag and drop the apk</p>
+          </li>
+        </ol>
+      </Toggle>
+    </div>
+  );
+};
+
+export default Instruction;
