@@ -44,3 +44,8 @@
 .instructions p {
   margin: 5px 1em 15px;
 }
+
+.instructions pre {
+  color: white;
+  background-color: #494848;
+}

@@ -56,5 +56,6 @@ export const XML_SAMPLES = {
       <key>uploadSymbols</key>
       <true/>
     </dict>
-  </plist>`,
+  </plist>
+  `,
 };

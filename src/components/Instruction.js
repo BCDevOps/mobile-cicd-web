@@ -2,8 +2,6 @@ import React from 'react';
 import './Instruction.css';
 import { XML_SAMPLES } from '../constants';
 import Toggle from './Toggle';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism';
 
 const Instruction = () => {
   return (
@@ -22,9 +20,7 @@ const Instruction = () => {
             <p>
               Create or copy your options.plist from step 1, you could update the content from sample below:
             </p>
-            <SyntaxHighlighter language="xml" style={tomorrow} className="SyntaxHighlighter">
-              {XML_SAMPLES.PLIST}
-            </SyntaxHighlighter>
+            <pre>{XML_SAMPLES.PLIST}</pre>
           </li>
           <li>
             <p>ZIP up the folder for submission</p>
