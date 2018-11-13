@@ -8,8 +8,8 @@ import './App.css';
 import FileUpload from './FileUpload';
 import Footer from './Footer';
 import Header from './Header';
-import JobStatusIndicator from './JobStatusIndicator';
 import Instruction from './Instruction';
+import JobStatusIndicator from './JobStatusIndicator';
 
 export class App extends Component {
   constructor(props) {
@@ -75,6 +75,11 @@ export class App extends Component {
             <li>
               <button
                 onClick={() => {
+                  if (!implicitAuthManager.isAuthenticated()) {
+                    alert('You need to login before you can submit signing jobs.');
+                    return;
+                  }
+
                   this.props.createSigningJob(this.state.files, this.state.platform);
                 }}
               >
