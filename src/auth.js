@@ -27,6 +27,7 @@ const config = {
       : 'https://sso-dev.pathfinder.gov.bc.ca',
   realmName: 'devhub',
   clientId: 'signing-web',
+  kcIDPHint: 'idir',
 };
 
 const iam = new ImplicitAuthManager(config);
