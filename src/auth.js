@@ -27,7 +27,7 @@ const config = {
       : 'https://sso-dev.pathfinder.gov.bc.ca',
   realmName: 'devhub',
   clientId: 'signing-web',
-  kcIDPHint: 'IDIR', // Skip SSO, go directly to IDIR auth.
+  kcIDPHint: 'idir', // Skip SSO, go directly to IDIR auth.
 };
 
 const iam = new ImplicitAuthManager(config);
