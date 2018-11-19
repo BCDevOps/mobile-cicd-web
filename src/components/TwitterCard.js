@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Aux from '../../hoc/auxillary';
+import Aux from '../hoc/auxillary';
 
 const TwitterCard = () => (
   <Aux>
