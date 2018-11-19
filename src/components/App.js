@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { createSigningJob } from '../actionCreators';
+import { Helmet } from 'react-helmet';
 import { authenticateFailed, authenticateSuccess } from '../actions';
 import implicitAuthManager from '../auth';
 import './App.css';
 import Aux from '../hoc/auxillary';
+import TwitterCard from './TwitterCard';
 import FileUpload from './FileUpload';
 import Footer from './Footer';
 import Header from './Header';
@@ -40,7 +42,9 @@ export class App extends Component {
   render() {
     return (
       <Aux>
-
+        <Helmet>
+          <TwitterCard />
+        </Helmet>
         <div>
           <Header authentication={this.props.authentication} />
           <div className="container">
