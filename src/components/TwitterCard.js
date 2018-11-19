@@ -16,11 +16,10 @@ limitations under the License.
 Created by Patrick Simonian
 */
 import React from 'react';
-
-import Aux from '../hoc/auxillary';
+import { Helmet } from 'react-helmet';
 
 const TwitterCard = () => (
-  <Aux>
+  <Helmet>
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Mobile Signing" />
     <meta
@@ -28,7 +27,7 @@ const TwitterCard = () => (
       content="Sign iOS or Android applications for public or enterprise distribution"
     />
     <meta name="twitter:image" content="" />
-  </Aux>
+  </Helmet>
 );
 
 export default TwitterCard;

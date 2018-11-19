@@ -45,9 +45,7 @@ export class App extends Component {
   render() {
     return (
       <Aux>
-        <Helmet>
-          <TwitterCard />
-        </Helmet>
+        <TwitterCard />
         <div>
           <Header authentication={this.props.authentication} />
           <div className="container">
