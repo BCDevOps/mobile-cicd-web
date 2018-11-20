@@ -42,163 +42,7 @@ ShallowWrapper {
               <p>
                 Create or copy your options.plist from step 1, you could update the content from sample below:
               </p>
-              <SyntaxHighlighter
-                className="SyntaxHighlighter"
-                language="xml"
-                style={
-                  Object {
-                    ":not(pre) > code[class*=\\"language-\\"]": Object {
-                      "background": "#2d2d2d",
-                      "borderRadius": ".3em",
-                      "padding": ".1em",
-                      "whiteSpace": "normal",
-                    },
-                    "atrule": Object {
-                      "color": "#cc99cd",
-                    },
-                    "attr-name": Object {
-                      "color": "#e2777a",
-                    },
-                    "attr-value": Object {
-                      "color": "#7ec699",
-                    },
-                    "block-comment": Object {
-                      "color": "#999",
-                    },
-                    "bold": Object {
-                      "fontWeight": "bold",
-                    },
-                    "boolean": Object {
-                      "color": "#f08d49",
-                    },
-                    "builtin": Object {
-                      "color": "#cc99cd",
-                    },
-                    "cdata": Object {
-                      "color": "#999",
-                    },
-                    "char": Object {
-                      "color": "#7ec699",
-                    },
-                    "class-name": Object {
-                      "color": "#f8c555",
-                    },
-                    "code[class*=\\"language-\\"]": Object {
-                      "MozHyphens": "none",
-                      "MozTabSize": "4",
-                      "OTabSize": "4",
-                      "WebkitHyphens": "none",
-                      "background": "none",
-                      "color": "#ccc",
-                      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                      "hyphens": "none",
-                      "lineHeight": "1.5",
-                      "msHyphens": "none",
-                      "tabSize": "4",
-                      "textAlign": "left",
-                      "whiteSpace": "pre",
-                      "wordBreak": "normal",
-                      "wordSpacing": "normal",
-                      "wordWrap": "normal",
-                    },
-                    "comment": Object {
-                      "color": "#999",
-                    },
-                    "constant": Object {
-                      "color": "#f8c555",
-                    },
-                    "deleted": Object {
-                      "color": "#e2777a",
-                    },
-                    "doctype": Object {
-                      "color": "#999",
-                    },
-                    "entity": Object {
-                      "color": "#67cdcc",
-                      "cursor": "help",
-                    },
-                    "function": Object {
-                      "color": "#f08d49",
-                    },
-                    "function-name": Object {
-                      "color": "#6196cc",
-                    },
-                    "important": Object {
-                      "color": "#cc99cd",
-                      "fontWeight": "bold",
-                    },
-                    "inserted": Object {
-                      "color": "green",
-                    },
-                    "italic": Object {
-                      "fontStyle": "italic",
-                    },
-                    "keyword": Object {
-                      "color": "#cc99cd",
-                    },
-                    "namespace": Object {
-                      "color": "#e2777a",
-                    },
-                    "number": Object {
-                      "color": "#f08d49",
-                    },
-                    "operator": Object {
-                      "color": "#67cdcc",
-                    },
-                    "pre[class*=\\"language-\\"]": Object {
-                      "MozHyphens": "none",
-                      "MozTabSize": "4",
-                      "OTabSize": "4",
-                      "WebkitHyphens": "none",
-                      "background": "#2d2d2d",
-                      "color": "#ccc",
-                      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                      "hyphens": "none",
-                      "lineHeight": "1.5",
-                      "margin": ".5em 0",
-                      "msHyphens": "none",
-                      "overflow": "auto",
-                      "padding": "1em",
-                      "tabSize": "4",
-                      "textAlign": "left",
-                      "whiteSpace": "pre",
-                      "wordBreak": "normal",
-                      "wordSpacing": "normal",
-                      "wordWrap": "normal",
-                    },
-                    "prolog": Object {
-                      "color": "#999",
-                    },
-                    "property": Object {
-                      "color": "#f8c555",
-                    },
-                    "punctuation": Object {
-                      "color": "#ccc",
-                    },
-                    "regex": Object {
-                      "color": "#7ec699",
-                    },
-                    "selector": Object {
-                      "color": "#cc99cd",
-                    },
-                    "string": Object {
-                      "color": "#7ec699",
-                    },
-                    "symbol": Object {
-                      "color": "#f8c555",
-                    },
-                    "tag": Object {
-                      "color": "#e2777a",
-                    },
-                    "url": Object {
-                      "color": "#67cdcc",
-                    },
-                    "variable": Object {
-                      "color": "#7ec699",
-                    },
-                  }
-                }
-              >
+              <pre>
                 
   &lt;?xml version="1.0" encoding="UTF-8"?&gt;
   &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
@@ -214,7 +58,8 @@ ShallowWrapper {
       &lt;true/&gt;
     &lt;/dict&gt;
   &lt;/plist&gt;
-              </SyntaxHighlighter>
+  
+              </pre>
             </li>
             <li>
               <p>
@@ -289,163 +134,7 @@ ShallowWrapper {
                 <p>
                   Create or copy your options.plist from step 1, you could update the content from sample below:
                 </p>
-                <SyntaxHighlighter
-                  className="SyntaxHighlighter"
-                  language="xml"
-                  style={
-                    Object {
-                      ":not(pre) > code[class*=\\"language-\\"]": Object {
-                        "background": "#2d2d2d",
-                        "borderRadius": ".3em",
-                        "padding": ".1em",
-                        "whiteSpace": "normal",
-                      },
-                      "atrule": Object {
-                        "color": "#cc99cd",
-                      },
-                      "attr-name": Object {
-                        "color": "#e2777a",
-                      },
-                      "attr-value": Object {
-                        "color": "#7ec699",
-                      },
-                      "block-comment": Object {
-                        "color": "#999",
-                      },
-                      "bold": Object {
-                        "fontWeight": "bold",
-                      },
-                      "boolean": Object {
-                        "color": "#f08d49",
-                      },
-                      "builtin": Object {
-                        "color": "#cc99cd",
-                      },
-                      "cdata": Object {
-                        "color": "#999",
-                      },
-                      "char": Object {
-                        "color": "#7ec699",
-                      },
-                      "class-name": Object {
-                        "color": "#f8c555",
-                      },
-                      "code[class*=\\"language-\\"]": Object {
-                        "MozHyphens": "none",
-                        "MozTabSize": "4",
-                        "OTabSize": "4",
-                        "WebkitHyphens": "none",
-                        "background": "none",
-                        "color": "#ccc",
-                        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                        "hyphens": "none",
-                        "lineHeight": "1.5",
-                        "msHyphens": "none",
-                        "tabSize": "4",
-                        "textAlign": "left",
-                        "whiteSpace": "pre",
-                        "wordBreak": "normal",
-                        "wordSpacing": "normal",
-                        "wordWrap": "normal",
-                      },
-                      "comment": Object {
-                        "color": "#999",
-                      },
-                      "constant": Object {
-                        "color": "#f8c555",
-                      },
-                      "deleted": Object {
-                        "color": "#e2777a",
-                      },
-                      "doctype": Object {
-                        "color": "#999",
-                      },
-                      "entity": Object {
-                        "color": "#67cdcc",
-                        "cursor": "help",
-                      },
-                      "function": Object {
-                        "color": "#f08d49",
-                      },
-                      "function-name": Object {
-                        "color": "#6196cc",
-                      },
-                      "important": Object {
-                        "color": "#cc99cd",
-                        "fontWeight": "bold",
-                      },
-                      "inserted": Object {
-                        "color": "green",
-                      },
-                      "italic": Object {
-                        "fontStyle": "italic",
-                      },
-                      "keyword": Object {
-                        "color": "#cc99cd",
-                      },
-                      "namespace": Object {
-                        "color": "#e2777a",
-                      },
-                      "number": Object {
-                        "color": "#f08d49",
-                      },
-                      "operator": Object {
-                        "color": "#67cdcc",
-                      },
-                      "pre[class*=\\"language-\\"]": Object {
-                        "MozHyphens": "none",
-                        "MozTabSize": "4",
-                        "OTabSize": "4",
-                        "WebkitHyphens": "none",
-                        "background": "#2d2d2d",
-                        "color": "#ccc",
-                        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                        "hyphens": "none",
-                        "lineHeight": "1.5",
-                        "margin": ".5em 0",
-                        "msHyphens": "none",
-                        "overflow": "auto",
-                        "padding": "1em",
-                        "tabSize": "4",
-                        "textAlign": "left",
-                        "whiteSpace": "pre",
-                        "wordBreak": "normal",
-                        "wordSpacing": "normal",
-                        "wordWrap": "normal",
-                      },
-                      "prolog": Object {
-                        "color": "#999",
-                      },
-                      "property": Object {
-                        "color": "#f8c555",
-                      },
-                      "punctuation": Object {
-                        "color": "#ccc",
-                      },
-                      "regex": Object {
-                        "color": "#7ec699",
-                      },
-                      "selector": Object {
-                        "color": "#cc99cd",
-                      },
-                      "string": Object {
-                        "color": "#7ec699",
-                      },
-                      "symbol": Object {
-                        "color": "#f8c555",
-                      },
-                      "tag": Object {
-                        "color": "#e2777a",
-                      },
-                      "url": Object {
-                        "color": "#67cdcc",
-                      },
-                      "variable": Object {
-                        "color": "#7ec699",
-                      },
-                    }
-                  }
-                >
+                <pre>
                   
   &lt;?xml version="1.0" encoding="UTF-8"?&gt;
   &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
@@ -461,7 +150,8 @@ ShallowWrapper {
       &lt;true/&gt;
     &lt;/dict&gt;
   &lt;/plist&gt;
-                </SyntaxHighlighter>
+  
+                </pre>
               </li>
               <li>
                 <p>
@@ -505,163 +195,7 @@ ShallowWrapper {
                   <p>
                     Create or copy your options.plist from step 1, you could update the content from sample below:
                   </p>
-                  <SyntaxHighlighter
-                    className="SyntaxHighlighter"
-                    language="xml"
-                    style={
-                      Object {
-                        ":not(pre) > code[class*=\\"language-\\"]": Object {
-                          "background": "#2d2d2d",
-                          "borderRadius": ".3em",
-                          "padding": ".1em",
-                          "whiteSpace": "normal",
-                        },
-                        "atrule": Object {
-                          "color": "#cc99cd",
-                        },
-                        "attr-name": Object {
-                          "color": "#e2777a",
-                        },
-                        "attr-value": Object {
-                          "color": "#7ec699",
-                        },
-                        "block-comment": Object {
-                          "color": "#999",
-                        },
-                        "bold": Object {
-                          "fontWeight": "bold",
-                        },
-                        "boolean": Object {
-                          "color": "#f08d49",
-                        },
-                        "builtin": Object {
-                          "color": "#cc99cd",
-                        },
-                        "cdata": Object {
-                          "color": "#999",
-                        },
-                        "char": Object {
-                          "color": "#7ec699",
-                        },
-                        "class-name": Object {
-                          "color": "#f8c555",
-                        },
-                        "code[class*=\\"language-\\"]": Object {
-                          "MozHyphens": "none",
-                          "MozTabSize": "4",
-                          "OTabSize": "4",
-                          "WebkitHyphens": "none",
-                          "background": "none",
-                          "color": "#ccc",
-                          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                          "hyphens": "none",
-                          "lineHeight": "1.5",
-                          "msHyphens": "none",
-                          "tabSize": "4",
-                          "textAlign": "left",
-                          "whiteSpace": "pre",
-                          "wordBreak": "normal",
-                          "wordSpacing": "normal",
-                          "wordWrap": "normal",
-                        },
-                        "comment": Object {
-                          "color": "#999",
-                        },
-                        "constant": Object {
-                          "color": "#f8c555",
-                        },
-                        "deleted": Object {
-                          "color": "#e2777a",
-                        },
-                        "doctype": Object {
-                          "color": "#999",
-                        },
-                        "entity": Object {
-                          "color": "#67cdcc",
-                          "cursor": "help",
-                        },
-                        "function": Object {
-                          "color": "#f08d49",
-                        },
-                        "function-name": Object {
-                          "color": "#6196cc",
-                        },
-                        "important": Object {
-                          "color": "#cc99cd",
-                          "fontWeight": "bold",
-                        },
-                        "inserted": Object {
-                          "color": "green",
-                        },
-                        "italic": Object {
-                          "fontStyle": "italic",
-                        },
-                        "keyword": Object {
-                          "color": "#cc99cd",
-                        },
-                        "namespace": Object {
-                          "color": "#e2777a",
-                        },
-                        "number": Object {
-                          "color": "#f08d49",
-                        },
-                        "operator": Object {
-                          "color": "#67cdcc",
-                        },
-                        "pre[class*=\\"language-\\"]": Object {
-                          "MozHyphens": "none",
-                          "MozTabSize": "4",
-                          "OTabSize": "4",
-                          "WebkitHyphens": "none",
-                          "background": "#2d2d2d",
-                          "color": "#ccc",
-                          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                          "hyphens": "none",
-                          "lineHeight": "1.5",
-                          "margin": ".5em 0",
-                          "msHyphens": "none",
-                          "overflow": "auto",
-                          "padding": "1em",
-                          "tabSize": "4",
-                          "textAlign": "left",
-                          "whiteSpace": "pre",
-                          "wordBreak": "normal",
-                          "wordSpacing": "normal",
-                          "wordWrap": "normal",
-                        },
-                        "prolog": Object {
-                          "color": "#999",
-                        },
-                        "property": Object {
-                          "color": "#f8c555",
-                        },
-                        "punctuation": Object {
-                          "color": "#ccc",
-                        },
-                        "regex": Object {
-                          "color": "#7ec699",
-                        },
-                        "selector": Object {
-                          "color": "#cc99cd",
-                        },
-                        "string": Object {
-                          "color": "#7ec699",
-                        },
-                        "symbol": Object {
-                          "color": "#f8c555",
-                        },
-                        "tag": Object {
-                          "color": "#e2777a",
-                        },
-                        "url": Object {
-                          "color": "#67cdcc",
-                        },
-                        "variable": Object {
-                          "color": "#7ec699",
-                        },
-                      }
-                    }
-                  >
+                  <pre>
                     
   &lt;?xml version="1.0" encoding="UTF-8"?&gt;
   &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
@@ -677,7 +211,8 @@ ShallowWrapper {
       &lt;true/&gt;
     &lt;/dict&gt;
   &lt;/plist&gt;
-                  </SyntaxHighlighter>
+  
+                  </pre>
                 </li>,
                 <li>
                   <p>
@@ -743,163 +278,7 @@ ShallowWrapper {
                     <p>
                       Create or copy your options.plist from step 1, you could update the content from sample below:
                     </p>,
-                    <SyntaxHighlighter
-                      className="SyntaxHighlighter"
-                      language="xml"
-                      style={
-                        Object {
-                          ":not(pre) > code[class*=\\"language-\\"]": Object {
-                            "background": "#2d2d2d",
-                            "borderRadius": ".3em",
-                            "padding": ".1em",
-                            "whiteSpace": "normal",
-                          },
-                          "atrule": Object {
-                            "color": "#cc99cd",
-                          },
-                          "attr-name": Object {
-                            "color": "#e2777a",
-                          },
-                          "attr-value": Object {
-                            "color": "#7ec699",
-                          },
-                          "block-comment": Object {
-                            "color": "#999",
-                          },
-                          "bold": Object {
-                            "fontWeight": "bold",
-                          },
-                          "boolean": Object {
-                            "color": "#f08d49",
-                          },
-                          "builtin": Object {
-                            "color": "#cc99cd",
-                          },
-                          "cdata": Object {
-                            "color": "#999",
-                          },
-                          "char": Object {
-                            "color": "#7ec699",
-                          },
-                          "class-name": Object {
-                            "color": "#f8c555",
-                          },
-                          "code[class*=\\"language-\\"]": Object {
-                            "MozHyphens": "none",
-                            "MozTabSize": "4",
-                            "OTabSize": "4",
-                            "WebkitHyphens": "none",
-                            "background": "none",
-                            "color": "#ccc",
-                            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                            "hyphens": "none",
-                            "lineHeight": "1.5",
-                            "msHyphens": "none",
-                            "tabSize": "4",
-                            "textAlign": "left",
-                            "whiteSpace": "pre",
-                            "wordBreak": "normal",
-                            "wordSpacing": "normal",
-                            "wordWrap": "normal",
-                          },
-                          "comment": Object {
-                            "color": "#999",
-                          },
-                          "constant": Object {
-                            "color": "#f8c555",
-                          },
-                          "deleted": Object {
-                            "color": "#e2777a",
-                          },
-                          "doctype": Object {
-                            "color": "#999",
-                          },
-                          "entity": Object {
-                            "color": "#67cdcc",
-                            "cursor": "help",
-                          },
-                          "function": Object {
-                            "color": "#f08d49",
-                          },
-                          "function-name": Object {
-                            "color": "#6196cc",
-                          },
-                          "important": Object {
-                            "color": "#cc99cd",
-                            "fontWeight": "bold",
-                          },
-                          "inserted": Object {
-                            "color": "green",
-                          },
-                          "italic": Object {
-                            "fontStyle": "italic",
-                          },
-                          "keyword": Object {
-                            "color": "#cc99cd",
-                          },
-                          "namespace": Object {
-                            "color": "#e2777a",
-                          },
-                          "number": Object {
-                            "color": "#f08d49",
-                          },
-                          "operator": Object {
-                            "color": "#67cdcc",
-                          },
-                          "pre[class*=\\"language-\\"]": Object {
-                            "MozHyphens": "none",
-                            "MozTabSize": "4",
-                            "OTabSize": "4",
-                            "WebkitHyphens": "none",
-                            "background": "#2d2d2d",
-                            "color": "#ccc",
-                            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                            "hyphens": "none",
-                            "lineHeight": "1.5",
-                            "margin": ".5em 0",
-                            "msHyphens": "none",
-                            "overflow": "auto",
-                            "padding": "1em",
-                            "tabSize": "4",
-                            "textAlign": "left",
-                            "whiteSpace": "pre",
-                            "wordBreak": "normal",
-                            "wordSpacing": "normal",
-                            "wordWrap": "normal",
-                          },
-                          "prolog": Object {
-                            "color": "#999",
-                          },
-                          "property": Object {
-                            "color": "#f8c555",
-                          },
-                          "punctuation": Object {
-                            "color": "#ccc",
-                          },
-                          "regex": Object {
-                            "color": "#7ec699",
-                          },
-                          "selector": Object {
-                            "color": "#cc99cd",
-                          },
-                          "string": Object {
-                            "color": "#7ec699",
-                          },
-                          "symbol": Object {
-                            "color": "#f8c555",
-                          },
-                          "tag": Object {
-                            "color": "#e2777a",
-                          },
-                          "url": Object {
-                            "color": "#67cdcc",
-                          },
-                          "variable": Object {
-                            "color": "#7ec699",
-                          },
-                        }
-                      }
-                    >
+                    <pre>
                       
   &lt;?xml version="1.0" encoding="UTF-8"?&gt;
   &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
@@ -915,7 +294,8 @@ ShallowWrapper {
       &lt;true/&gt;
     &lt;/dict&gt;
   &lt;/plist&gt;
-                    </SyntaxHighlighter>,
+  
+                    </pre>,
                   ],
                 },
                 "ref": null,
@@ -934,7 +314,7 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "host",
                     "props": Object {
                       "children": "
   <?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
@@ -950,160 +330,8 @@ ShallowWrapper {
       <key>uploadSymbols</key>
       <true/>
     </dict>
-  </plist>",
-                      "className": "SyntaxHighlighter",
-                      "language": "xml",
-                      "style": Object {
-                        ":not(pre) > code[class*=\\"language-\\"]": Object {
-                          "background": "#2d2d2d",
-                          "borderRadius": ".3em",
-                          "padding": ".1em",
-                          "whiteSpace": "normal",
-                        },
-                        "atrule": Object {
-                          "color": "#cc99cd",
-                        },
-                        "attr-name": Object {
-                          "color": "#e2777a",
-                        },
-                        "attr-value": Object {
-                          "color": "#7ec699",
-                        },
-                        "block-comment": Object {
-                          "color": "#999",
-                        },
-                        "bold": Object {
-                          "fontWeight": "bold",
-                        },
-                        "boolean": Object {
-                          "color": "#f08d49",
-                        },
-                        "builtin": Object {
-                          "color": "#cc99cd",
-                        },
-                        "cdata": Object {
-                          "color": "#999",
-                        },
-                        "char": Object {
-                          "color": "#7ec699",
-                        },
-                        "class-name": Object {
-                          "color": "#f8c555",
-                        },
-                        "code[class*=\\"language-\\"]": Object {
-                          "MozHyphens": "none",
-                          "MozTabSize": "4",
-                          "OTabSize": "4",
-                          "WebkitHyphens": "none",
-                          "background": "none",
-                          "color": "#ccc",
-                          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                          "hyphens": "none",
-                          "lineHeight": "1.5",
-                          "msHyphens": "none",
-                          "tabSize": "4",
-                          "textAlign": "left",
-                          "whiteSpace": "pre",
-                          "wordBreak": "normal",
-                          "wordSpacing": "normal",
-                          "wordWrap": "normal",
-                        },
-                        "comment": Object {
-                          "color": "#999",
-                        },
-                        "constant": Object {
-                          "color": "#f8c555",
-                        },
-                        "deleted": Object {
-                          "color": "#e2777a",
-                        },
-                        "doctype": Object {
-                          "color": "#999",
-                        },
-                        "entity": Object {
-                          "color": "#67cdcc",
-                          "cursor": "help",
-                        },
-                        "function": Object {
-                          "color": "#f08d49",
-                        },
-                        "function-name": Object {
-                          "color": "#6196cc",
-                        },
-                        "important": Object {
-                          "color": "#cc99cd",
-                          "fontWeight": "bold",
-                        },
-                        "inserted": Object {
-                          "color": "green",
-                        },
-                        "italic": Object {
-                          "fontStyle": "italic",
-                        },
-                        "keyword": Object {
-                          "color": "#cc99cd",
-                        },
-                        "namespace": Object {
-                          "color": "#e2777a",
-                        },
-                        "number": Object {
-                          "color": "#f08d49",
-                        },
-                        "operator": Object {
-                          "color": "#67cdcc",
-                        },
-                        "pre[class*=\\"language-\\"]": Object {
-                          "MozHyphens": "none",
-                          "MozTabSize": "4",
-                          "OTabSize": "4",
-                          "WebkitHyphens": "none",
-                          "background": "#2d2d2d",
-                          "color": "#ccc",
-                          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                          "hyphens": "none",
-                          "lineHeight": "1.5",
-                          "margin": ".5em 0",
-                          "msHyphens": "none",
-                          "overflow": "auto",
-                          "padding": "1em",
-                          "tabSize": "4",
-                          "textAlign": "left",
-                          "whiteSpace": "pre",
-                          "wordBreak": "normal",
-                          "wordSpacing": "normal",
-                          "wordWrap": "normal",
-                        },
-                        "prolog": Object {
-                          "color": "#999",
-                        },
-                        "property": Object {
-                          "color": "#f8c555",
-                        },
-                        "punctuation": Object {
-                          "color": "#ccc",
-                        },
-                        "regex": Object {
-                          "color": "#7ec699",
-                        },
-                        "selector": Object {
-                          "color": "#cc99cd",
-                        },
-                        "string": Object {
-                          "color": "#7ec699",
-                        },
-                        "symbol": Object {
-                          "color": "#f8c555",
-                        },
-                        "tag": Object {
-                          "color": "#e2777a",
-                        },
-                        "url": Object {
-                          "color": "#67cdcc",
-                        },
-                        "variable": Object {
-                          "color": "#7ec699",
-                        },
-                      },
+  </plist>
+  ",
                     },
                     "ref": null,
                     "rendered": "
@@ -1120,8 +348,9 @@ ShallowWrapper {
       <key>uploadSymbols</key>
       <true/>
     </dict>
-  </plist>",
-                    "type": [Function],
+  </plist>
+  ",
+                    "type": "pre",
                   },
                 ],
                 "type": "li",
@@ -1322,163 +551,7 @@ ShallowWrapper {
                 <p>
                   Create or copy your options.plist from step 1, you could update the content from sample below:
                 </p>
-                <SyntaxHighlighter
-                  className="SyntaxHighlighter"
-                  language="xml"
-                  style={
-                    Object {
-                      ":not(pre) > code[class*=\\"language-\\"]": Object {
-                        "background": "#2d2d2d",
-                        "borderRadius": ".3em",
-                        "padding": ".1em",
-                        "whiteSpace": "normal",
-                      },
-                      "atrule": Object {
-                        "color": "#cc99cd",
-                      },
-                      "attr-name": Object {
-                        "color": "#e2777a",
-                      },
-                      "attr-value": Object {
-                        "color": "#7ec699",
-                      },
-                      "block-comment": Object {
-                        "color": "#999",
-                      },
-                      "bold": Object {
-                        "fontWeight": "bold",
-                      },
-                      "boolean": Object {
-                        "color": "#f08d49",
-                      },
-                      "builtin": Object {
-                        "color": "#cc99cd",
-                      },
-                      "cdata": Object {
-                        "color": "#999",
-                      },
-                      "char": Object {
-                        "color": "#7ec699",
-                      },
-                      "class-name": Object {
-                        "color": "#f8c555",
-                      },
-                      "code[class*=\\"language-\\"]": Object {
-                        "MozHyphens": "none",
-                        "MozTabSize": "4",
-                        "OTabSize": "4",
-                        "WebkitHyphens": "none",
-                        "background": "none",
-                        "color": "#ccc",
-                        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                        "hyphens": "none",
-                        "lineHeight": "1.5",
-                        "msHyphens": "none",
-                        "tabSize": "4",
-                        "textAlign": "left",
-                        "whiteSpace": "pre",
-                        "wordBreak": "normal",
-                        "wordSpacing": "normal",
-                        "wordWrap": "normal",
-                      },
-                      "comment": Object {
-                        "color": "#999",
-                      },
-                      "constant": Object {
-                        "color": "#f8c555",
-                      },
-                      "deleted": Object {
-                        "color": "#e2777a",
-                      },
-                      "doctype": Object {
-                        "color": "#999",
-                      },
-                      "entity": Object {
-                        "color": "#67cdcc",
-                        "cursor": "help",
-                      },
-                      "function": Object {
-                        "color": "#f08d49",
-                      },
-                      "function-name": Object {
-                        "color": "#6196cc",
-                      },
-                      "important": Object {
-                        "color": "#cc99cd",
-                        "fontWeight": "bold",
-                      },
-                      "inserted": Object {
-                        "color": "green",
-                      },
-                      "italic": Object {
-                        "fontStyle": "italic",
-                      },
-                      "keyword": Object {
-                        "color": "#cc99cd",
-                      },
-                      "namespace": Object {
-                        "color": "#e2777a",
-                      },
-                      "number": Object {
-                        "color": "#f08d49",
-                      },
-                      "operator": Object {
-                        "color": "#67cdcc",
-                      },
-                      "pre[class*=\\"language-\\"]": Object {
-                        "MozHyphens": "none",
-                        "MozTabSize": "4",
-                        "OTabSize": "4",
-                        "WebkitHyphens": "none",
-                        "background": "#2d2d2d",
-                        "color": "#ccc",
-                        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                        "hyphens": "none",
-                        "lineHeight": "1.5",
-                        "margin": ".5em 0",
-                        "msHyphens": "none",
-                        "overflow": "auto",
-                        "padding": "1em",
-                        "tabSize": "4",
-                        "textAlign": "left",
-                        "whiteSpace": "pre",
-                        "wordBreak": "normal",
-                        "wordSpacing": "normal",
-                        "wordWrap": "normal",
-                      },
-                      "prolog": Object {
-                        "color": "#999",
-                      },
-                      "property": Object {
-                        "color": "#f8c555",
-                      },
-                      "punctuation": Object {
-                        "color": "#ccc",
-                      },
-                      "regex": Object {
-                        "color": "#7ec699",
-                      },
-                      "selector": Object {
-                        "color": "#cc99cd",
-                      },
-                      "string": Object {
-                        "color": "#7ec699",
-                      },
-                      "symbol": Object {
-                        "color": "#f8c555",
-                      },
-                      "tag": Object {
-                        "color": "#e2777a",
-                      },
-                      "url": Object {
-                        "color": "#67cdcc",
-                      },
-                      "variable": Object {
-                        "color": "#7ec699",
-                      },
-                    }
-                  }
-                >
+                <pre>
                   
   &lt;?xml version="1.0" encoding="UTF-8"?&gt;
   &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
@@ -1494,7 +567,8 @@ ShallowWrapper {
       &lt;true/&gt;
     &lt;/dict&gt;
   &lt;/plist&gt;
-                </SyntaxHighlighter>
+  
+                </pre>
               </li>
               <li>
                 <p>
@@ -1569,163 +643,7 @@ ShallowWrapper {
                   <p>
                     Create or copy your options.plist from step 1, you could update the content from sample below:
                   </p>
-                  <SyntaxHighlighter
-                    className="SyntaxHighlighter"
-                    language="xml"
-                    style={
-                      Object {
-                        ":not(pre) > code[class*=\\"language-\\"]": Object {
-                          "background": "#2d2d2d",
-                          "borderRadius": ".3em",
-                          "padding": ".1em",
-                          "whiteSpace": "normal",
-                        },
-                        "atrule": Object {
-                          "color": "#cc99cd",
-                        },
-                        "attr-name": Object {
-                          "color": "#e2777a",
-                        },
-                        "attr-value": Object {
-                          "color": "#7ec699",
-                        },
-                        "block-comment": Object {
-                          "color": "#999",
-                        },
-                        "bold": Object {
-                          "fontWeight": "bold",
-                        },
-                        "boolean": Object {
-                          "color": "#f08d49",
-                        },
-                        "builtin": Object {
-                          "color": "#cc99cd",
-                        },
-                        "cdata": Object {
-                          "color": "#999",
-                        },
-                        "char": Object {
-                          "color": "#7ec699",
-                        },
-                        "class-name": Object {
-                          "color": "#f8c555",
-                        },
-                        "code[class*=\\"language-\\"]": Object {
-                          "MozHyphens": "none",
-                          "MozTabSize": "4",
-                          "OTabSize": "4",
-                          "WebkitHyphens": "none",
-                          "background": "none",
-                          "color": "#ccc",
-                          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                          "hyphens": "none",
-                          "lineHeight": "1.5",
-                          "msHyphens": "none",
-                          "tabSize": "4",
-                          "textAlign": "left",
-                          "whiteSpace": "pre",
-                          "wordBreak": "normal",
-                          "wordSpacing": "normal",
-                          "wordWrap": "normal",
-                        },
-                        "comment": Object {
-                          "color": "#999",
-                        },
-                        "constant": Object {
-                          "color": "#f8c555",
-                        },
-                        "deleted": Object {
-                          "color": "#e2777a",
-                        },
-                        "doctype": Object {
-                          "color": "#999",
-                        },
-                        "entity": Object {
-                          "color": "#67cdcc",
-                          "cursor": "help",
-                        },
-                        "function": Object {
-                          "color": "#f08d49",
-                        },
-                        "function-name": Object {
-                          "color": "#6196cc",
-                        },
-                        "important": Object {
-                          "color": "#cc99cd",
-                          "fontWeight": "bold",
-                        },
-                        "inserted": Object {
-                          "color": "green",
-                        },
-                        "italic": Object {
-                          "fontStyle": "italic",
-                        },
-                        "keyword": Object {
-                          "color": "#cc99cd",
-                        },
-                        "namespace": Object {
-                          "color": "#e2777a",
-                        },
-                        "number": Object {
-                          "color": "#f08d49",
-                        },
-                        "operator": Object {
-                          "color": "#67cdcc",
-                        },
-                        "pre[class*=\\"language-\\"]": Object {
-                          "MozHyphens": "none",
-                          "MozTabSize": "4",
-                          "OTabSize": "4",
-                          "WebkitHyphens": "none",
-                          "background": "#2d2d2d",
-                          "color": "#ccc",
-                          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                          "hyphens": "none",
-                          "lineHeight": "1.5",
-                          "margin": ".5em 0",
-                          "msHyphens": "none",
-                          "overflow": "auto",
-                          "padding": "1em",
-                          "tabSize": "4",
-                          "textAlign": "left",
-                          "whiteSpace": "pre",
-                          "wordBreak": "normal",
-                          "wordSpacing": "normal",
-                          "wordWrap": "normal",
-                        },
-                        "prolog": Object {
-                          "color": "#999",
-                        },
-                        "property": Object {
-                          "color": "#f8c555",
-                        },
-                        "punctuation": Object {
-                          "color": "#ccc",
-                        },
-                        "regex": Object {
-                          "color": "#7ec699",
-                        },
-                        "selector": Object {
-                          "color": "#cc99cd",
-                        },
-                        "string": Object {
-                          "color": "#7ec699",
-                        },
-                        "symbol": Object {
-                          "color": "#f8c555",
-                        },
-                        "tag": Object {
-                          "color": "#e2777a",
-                        },
-                        "url": Object {
-                          "color": "#67cdcc",
-                        },
-                        "variable": Object {
-                          "color": "#7ec699",
-                        },
-                      }
-                    }
-                  >
+                  <pre>
                     
   &lt;?xml version="1.0" encoding="UTF-8"?&gt;
   &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
@@ -1741,7 +659,8 @@ ShallowWrapper {
       &lt;true/&gt;
     &lt;/dict&gt;
   &lt;/plist&gt;
-                  </SyntaxHighlighter>
+  
+                  </pre>
                 </li>
                 <li>
                   <p>
@@ -1785,163 +704,7 @@ ShallowWrapper {
                     <p>
                       Create or copy your options.plist from step 1, you could update the content from sample below:
                     </p>
-                    <SyntaxHighlighter
-                      className="SyntaxHighlighter"
-                      language="xml"
-                      style={
-                        Object {
-                          ":not(pre) > code[class*=\\"language-\\"]": Object {
-                            "background": "#2d2d2d",
-                            "borderRadius": ".3em",
-                            "padding": ".1em",
-                            "whiteSpace": "normal",
-                          },
-                          "atrule": Object {
-                            "color": "#cc99cd",
-                          },
-                          "attr-name": Object {
-                            "color": "#e2777a",
-                          },
-                          "attr-value": Object {
-                            "color": "#7ec699",
-                          },
-                          "block-comment": Object {
-                            "color": "#999",
-                          },
-                          "bold": Object {
-                            "fontWeight": "bold",
-                          },
-                          "boolean": Object {
-                            "color": "#f08d49",
-                          },
-                          "builtin": Object {
-                            "color": "#cc99cd",
-                          },
-                          "cdata": Object {
-                            "color": "#999",
-                          },
-                          "char": Object {
-                            "color": "#7ec699",
-                          },
-                          "class-name": Object {
-                            "color": "#f8c555",
-                          },
-                          "code[class*=\\"language-\\"]": Object {
-                            "MozHyphens": "none",
-                            "MozTabSize": "4",
-                            "OTabSize": "4",
-                            "WebkitHyphens": "none",
-                            "background": "none",
-                            "color": "#ccc",
-                            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                            "hyphens": "none",
-                            "lineHeight": "1.5",
-                            "msHyphens": "none",
-                            "tabSize": "4",
-                            "textAlign": "left",
-                            "whiteSpace": "pre",
-                            "wordBreak": "normal",
-                            "wordSpacing": "normal",
-                            "wordWrap": "normal",
-                          },
-                          "comment": Object {
-                            "color": "#999",
-                          },
-                          "constant": Object {
-                            "color": "#f8c555",
-                          },
-                          "deleted": Object {
-                            "color": "#e2777a",
-                          },
-                          "doctype": Object {
-                            "color": "#999",
-                          },
-                          "entity": Object {
-                            "color": "#67cdcc",
-                            "cursor": "help",
-                          },
-                          "function": Object {
-                            "color": "#f08d49",
-                          },
-                          "function-name": Object {
-                            "color": "#6196cc",
-                          },
-                          "important": Object {
-                            "color": "#cc99cd",
-                            "fontWeight": "bold",
-                          },
-                          "inserted": Object {
-                            "color": "green",
-                          },
-                          "italic": Object {
-                            "fontStyle": "italic",
-                          },
-                          "keyword": Object {
-                            "color": "#cc99cd",
-                          },
-                          "namespace": Object {
-                            "color": "#e2777a",
-                          },
-                          "number": Object {
-                            "color": "#f08d49",
-                          },
-                          "operator": Object {
-                            "color": "#67cdcc",
-                          },
-                          "pre[class*=\\"language-\\"]": Object {
-                            "MozHyphens": "none",
-                            "MozTabSize": "4",
-                            "OTabSize": "4",
-                            "WebkitHyphens": "none",
-                            "background": "#2d2d2d",
-                            "color": "#ccc",
-                            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                            "hyphens": "none",
-                            "lineHeight": "1.5",
-                            "margin": ".5em 0",
-                            "msHyphens": "none",
-                            "overflow": "auto",
-                            "padding": "1em",
-                            "tabSize": "4",
-                            "textAlign": "left",
-                            "whiteSpace": "pre",
-                            "wordBreak": "normal",
-                            "wordSpacing": "normal",
-                            "wordWrap": "normal",
-                          },
-                          "prolog": Object {
-                            "color": "#999",
-                          },
-                          "property": Object {
-                            "color": "#f8c555",
-                          },
-                          "punctuation": Object {
-                            "color": "#ccc",
-                          },
-                          "regex": Object {
-                            "color": "#7ec699",
-                          },
-                          "selector": Object {
-                            "color": "#cc99cd",
-                          },
-                          "string": Object {
-                            "color": "#7ec699",
-                          },
-                          "symbol": Object {
-                            "color": "#f8c555",
-                          },
-                          "tag": Object {
-                            "color": "#e2777a",
-                          },
-                          "url": Object {
-                            "color": "#67cdcc",
-                          },
-                          "variable": Object {
-                            "color": "#7ec699",
-                          },
-                        }
-                      }
-                    >
+                    <pre>
                       
   &lt;?xml version="1.0" encoding="UTF-8"?&gt;
   &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
@@ -1957,7 +720,8 @@ ShallowWrapper {
       &lt;true/&gt;
     &lt;/dict&gt;
   &lt;/plist&gt;
-                    </SyntaxHighlighter>
+  
+                    </pre>
                   </li>,
                   <li>
                     <p>
@@ -2023,163 +787,7 @@ ShallowWrapper {
                       <p>
                         Create or copy your options.plist from step 1, you could update the content from sample below:
                       </p>,
-                      <SyntaxHighlighter
-                        className="SyntaxHighlighter"
-                        language="xml"
-                        style={
-                          Object {
-                            ":not(pre) > code[class*=\\"language-\\"]": Object {
-                              "background": "#2d2d2d",
-                              "borderRadius": ".3em",
-                              "padding": ".1em",
-                              "whiteSpace": "normal",
-                            },
-                            "atrule": Object {
-                              "color": "#cc99cd",
-                            },
-                            "attr-name": Object {
-                              "color": "#e2777a",
-                            },
-                            "attr-value": Object {
-                              "color": "#7ec699",
-                            },
-                            "block-comment": Object {
-                              "color": "#999",
-                            },
-                            "bold": Object {
-                              "fontWeight": "bold",
-                            },
-                            "boolean": Object {
-                              "color": "#f08d49",
-                            },
-                            "builtin": Object {
-                              "color": "#cc99cd",
-                            },
-                            "cdata": Object {
-                              "color": "#999",
-                            },
-                            "char": Object {
-                              "color": "#7ec699",
-                            },
-                            "class-name": Object {
-                              "color": "#f8c555",
-                            },
-                            "code[class*=\\"language-\\"]": Object {
-                              "MozHyphens": "none",
-                              "MozTabSize": "4",
-                              "OTabSize": "4",
-                              "WebkitHyphens": "none",
-                              "background": "none",
-                              "color": "#ccc",
-                              "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                              "hyphens": "none",
-                              "lineHeight": "1.5",
-                              "msHyphens": "none",
-                              "tabSize": "4",
-                              "textAlign": "left",
-                              "whiteSpace": "pre",
-                              "wordBreak": "normal",
-                              "wordSpacing": "normal",
-                              "wordWrap": "normal",
-                            },
-                            "comment": Object {
-                              "color": "#999",
-                            },
-                            "constant": Object {
-                              "color": "#f8c555",
-                            },
-                            "deleted": Object {
-                              "color": "#e2777a",
-                            },
-                            "doctype": Object {
-                              "color": "#999",
-                            },
-                            "entity": Object {
-                              "color": "#67cdcc",
-                              "cursor": "help",
-                            },
-                            "function": Object {
-                              "color": "#f08d49",
-                            },
-                            "function-name": Object {
-                              "color": "#6196cc",
-                            },
-                            "important": Object {
-                              "color": "#cc99cd",
-                              "fontWeight": "bold",
-                            },
-                            "inserted": Object {
-                              "color": "green",
-                            },
-                            "italic": Object {
-                              "fontStyle": "italic",
-                            },
-                            "keyword": Object {
-                              "color": "#cc99cd",
-                            },
-                            "namespace": Object {
-                              "color": "#e2777a",
-                            },
-                            "number": Object {
-                              "color": "#f08d49",
-                            },
-                            "operator": Object {
-                              "color": "#67cdcc",
-                            },
-                            "pre[class*=\\"language-\\"]": Object {
-                              "MozHyphens": "none",
-                              "MozTabSize": "4",
-                              "OTabSize": "4",
-                              "WebkitHyphens": "none",
-                              "background": "#2d2d2d",
-                              "color": "#ccc",
-                              "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                              "hyphens": "none",
-                              "lineHeight": "1.5",
-                              "margin": ".5em 0",
-                              "msHyphens": "none",
-                              "overflow": "auto",
-                              "padding": "1em",
-                              "tabSize": "4",
-                              "textAlign": "left",
-                              "whiteSpace": "pre",
-                              "wordBreak": "normal",
-                              "wordSpacing": "normal",
-                              "wordWrap": "normal",
-                            },
-                            "prolog": Object {
-                              "color": "#999",
-                            },
-                            "property": Object {
-                              "color": "#f8c555",
-                            },
-                            "punctuation": Object {
-                              "color": "#ccc",
-                            },
-                            "regex": Object {
-                              "color": "#7ec699",
-                            },
-                            "selector": Object {
-                              "color": "#cc99cd",
-                            },
-                            "string": Object {
-                              "color": "#7ec699",
-                            },
-                            "symbol": Object {
-                              "color": "#f8c555",
-                            },
-                            "tag": Object {
-                              "color": "#e2777a",
-                            },
-                            "url": Object {
-                              "color": "#67cdcc",
-                            },
-                            "variable": Object {
-                              "color": "#7ec699",
-                            },
-                          }
-                        }
-                      >
+                      <pre>
                         
   &lt;?xml version="1.0" encoding="UTF-8"?&gt;
   &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
@@ -2195,7 +803,8 @@ ShallowWrapper {
       &lt;true/&gt;
     &lt;/dict&gt;
   &lt;/plist&gt;
-                      </SyntaxHighlighter>,
+  
+                      </pre>,
                     ],
                   },
                   "ref": null,
@@ -2214,7 +823,7 @@ ShallowWrapper {
                     Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "function",
+                      "nodeType": "host",
                       "props": Object {
                         "children": "
   <?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
@@ -2230,160 +839,8 @@ ShallowWrapper {
       <key>uploadSymbols</key>
       <true/>
     </dict>
-  </plist>",
-                        "className": "SyntaxHighlighter",
-                        "language": "xml",
-                        "style": Object {
-                          ":not(pre) > code[class*=\\"language-\\"]": Object {
-                            "background": "#2d2d2d",
-                            "borderRadius": ".3em",
-                            "padding": ".1em",
-                            "whiteSpace": "normal",
-                          },
-                          "atrule": Object {
-                            "color": "#cc99cd",
-                          },
-                          "attr-name": Object {
-                            "color": "#e2777a",
-                          },
-                          "attr-value": Object {
-                            "color": "#7ec699",
-                          },
-                          "block-comment": Object {
-                            "color": "#999",
-                          },
-                          "bold": Object {
-                            "fontWeight": "bold",
-                          },
-                          "boolean": Object {
-                            "color": "#f08d49",
-                          },
-                          "builtin": Object {
-                            "color": "#cc99cd",
-                          },
-                          "cdata": Object {
-                            "color": "#999",
-                          },
-                          "char": Object {
-                            "color": "#7ec699",
-                          },
-                          "class-name": Object {
-                            "color": "#f8c555",
-                          },
-                          "code[class*=\\"language-\\"]": Object {
-                            "MozHyphens": "none",
-                            "MozTabSize": "4",
-                            "OTabSize": "4",
-                            "WebkitHyphens": "none",
-                            "background": "none",
-                            "color": "#ccc",
-                            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                            "hyphens": "none",
-                            "lineHeight": "1.5",
-                            "msHyphens": "none",
-                            "tabSize": "4",
-                            "textAlign": "left",
-                            "whiteSpace": "pre",
-                            "wordBreak": "normal",
-                            "wordSpacing": "normal",
-                            "wordWrap": "normal",
-                          },
-                          "comment": Object {
-                            "color": "#999",
-                          },
-                          "constant": Object {
-                            "color": "#f8c555",
-                          },
-                          "deleted": Object {
-                            "color": "#e2777a",
-                          },
-                          "doctype": Object {
-                            "color": "#999",
-                          },
-                          "entity": Object {
-                            "color": "#67cdcc",
-                            "cursor": "help",
-                          },
-                          "function": Object {
-                            "color": "#f08d49",
-                          },
-                          "function-name": Object {
-                            "color": "#6196cc",
-                          },
-                          "important": Object {
-                            "color": "#cc99cd",
-                            "fontWeight": "bold",
-                          },
-                          "inserted": Object {
-                            "color": "green",
-                          },
-                          "italic": Object {
-                            "fontStyle": "italic",
-                          },
-                          "keyword": Object {
-                            "color": "#cc99cd",
-                          },
-                          "namespace": Object {
-                            "color": "#e2777a",
-                          },
-                          "number": Object {
-                            "color": "#f08d49",
-                          },
-                          "operator": Object {
-                            "color": "#67cdcc",
-                          },
-                          "pre[class*=\\"language-\\"]": Object {
-                            "MozHyphens": "none",
-                            "MozTabSize": "4",
-                            "OTabSize": "4",
-                            "WebkitHyphens": "none",
-                            "background": "#2d2d2d",
-                            "color": "#ccc",
-                            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-                            "hyphens": "none",
-                            "lineHeight": "1.5",
-                            "margin": ".5em 0",
-                            "msHyphens": "none",
-                            "overflow": "auto",
-                            "padding": "1em",
-                            "tabSize": "4",
-                            "textAlign": "left",
-                            "whiteSpace": "pre",
-                            "wordBreak": "normal",
-                            "wordSpacing": "normal",
-                            "wordWrap": "normal",
-                          },
-                          "prolog": Object {
-                            "color": "#999",
-                          },
-                          "property": Object {
-                            "color": "#f8c555",
-                          },
-                          "punctuation": Object {
-                            "color": "#ccc",
-                          },
-                          "regex": Object {
-                            "color": "#7ec699",
-                          },
-                          "selector": Object {
-                            "color": "#cc99cd",
-                          },
-                          "string": Object {
-                            "color": "#7ec699",
-                          },
-                          "symbol": Object {
-                            "color": "#f8c555",
-                          },
-                          "tag": Object {
-                            "color": "#e2777a",
-                          },
-                          "url": Object {
-                            "color": "#67cdcc",
-                          },
-                          "variable": Object {
-                            "color": "#7ec699",
-                          },
-                        },
+  </plist>
+  ",
                       },
                       "ref": null,
                       "rendered": "
@@ -2400,8 +857,9 @@ ShallowWrapper {
       <key>uploadSymbols</key>
       <true/>
     </dict>
-  </plist>",
-                      "type": [Function],
+  </plist>
+  ",
+                      "type": "pre",
                     },
                   ],
                   "type": "li",

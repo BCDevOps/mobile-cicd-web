@@ -26,585 +26,23 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Header
-          authentication={
-            Object {
-              "isAuthenticated": true,
-            }
-          }
-        />,
-        <div
-          className="container"
+        <HelmetWrapper
+          defer={true}
+          encodeSpecialCharacters={true}
         >
-          <ul
-            className="flex-outer"
-          >
-            <li>
-              <label>
-                Drag and drop the archive you with to sign onto this area.
-              </label>
-              <FileUpload
-                files={Array []}
-                onFileAccepted={[Function]}
-              />
-            </li>
-            <li>
-              <p>
-                What is the deployment platform this archive is meant for?
-              </p>
-              <ul
-                className="flex-inner"
-              >
-                <li>
-                  <input
-                    id="platform-ios"
-                    name="platform"
-                    onChange={[Function]}
-                    type="radio"
-                    value="ios"
-                  />
-                  <label
-                    htmlFor="platform-ios"
-                  >
-                    iOS
-                  </label>
-                </li>
-                <li>
-                  <input
-                    id="platform-android"
-                    name="platform"
-                    onChange={[Function]}
-                    type="radio"
-                    value="android"
-                  />
-                  <label
-                    htmlFor="platform-android"
-                  >
-                    Android
-                  </label>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <button
-                onClick={[Function]}
-              >
-                Start
-              </button>
-            </li>
-          </ul>
-          <JobStatusIndicator
-            job={
-              Object {
-                "status": "testStatus",
-              }
-            }
-          />
-        </div>,
-        <div
-          className="container"
-        >
-          <Instruction />
-        </div>,
-        <Footer />,
-      ],
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "authentication": Object {
-            "isAuthenticated": true,
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <ul
-              className="flex-outer"
-            >
-              <li>
-                <label>
-                  Drag and drop the archive you with to sign onto this area.
-                </label>
-                <FileUpload
-                  files={Array []}
-                  onFileAccepted={[Function]}
-                />
-              </li>
-              <li>
-                <p>
-                  What is the deployment platform this archive is meant for?
-                </p>
-                <ul
-                  className="flex-inner"
-                >
-                  <li>
-                    <input
-                      id="platform-ios"
-                      name="platform"
-                      onChange={[Function]}
-                      type="radio"
-                      value="ios"
-                    />
-                    <label
-                      htmlFor="platform-ios"
-                    >
-                      iOS
-                    </label>
-                  </li>
-                  <li>
-                    <input
-                      id="platform-android"
-                      name="platform"
-                      onChange={[Function]}
-                      type="radio"
-                      value="android"
-                    />
-                    <label
-                      htmlFor="platform-android"
-                    >
-                      Android
-                    </label>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <button
-                  onClick={[Function]}
-                >
-                  Start
-                </button>
-              </li>
-            </ul>,
-            <JobStatusIndicator
-              job={
-                Object {
-                  "status": "testStatus",
-                }
-              }
-            />,
-          ],
-          "className": "container",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <li>
-                  <label>
-                    Drag and drop the archive you with to sign onto this area.
-                  </label>
-                  <FileUpload
-                    files={Array []}
-                    onFileAccepted={[Function]}
-                  />
-                </li>,
-                <li>
-                  <p>
-                    What is the deployment platform this archive is meant for?
-                  </p>
-                  <ul
-                    className="flex-inner"
-                  >
-                    <li>
-                      <input
-                        id="platform-ios"
-                        name="platform"
-                        onChange={[Function]}
-                        type="radio"
-                        value="ios"
-                      />
-                      <label
-                        htmlFor="platform-ios"
-                      >
-                        iOS
-                      </label>
-                    </li>
-                    <li>
-                      <input
-                        id="platform-android"
-                        name="platform"
-                        onChange={[Function]}
-                        type="radio"
-                        value="android"
-                      />
-                      <label
-                        htmlFor="platform-android"
-                      >
-                        Android
-                      </label>
-                    </li>
-                  </ul>
-                </li>,
-                <li>
-                  <button
-                    onClick={[Function]}
-                  >
-                    Start
-                  </button>
-                </li>,
-              ],
-              "className": "flex-outer",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <label>
-                      Drag and drop the archive you with to sign onto this area.
-                    </label>,
-                    <FileUpload
-                      files={Array []}
-                      onFileAccepted={[Function]}
-                    />,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Drag and drop the archive you with to sign onto this area.",
-                    },
-                    "ref": null,
-                    "rendered": "Drag and drop the archive you with to sign onto this area.",
-                    "type": "label",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "files": Array [],
-                      "onFileAccepted": [Function],
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                ],
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <p>
-                      What is the deployment platform this archive is meant for?
-                    </p>,
-                    <ul
-                      className="flex-inner"
-                    >
-                      <li>
-                        <input
-                          id="platform-ios"
-                          name="platform"
-                          onChange={[Function]}
-                          type="radio"
-                          value="ios"
-                        />
-                        <label
-                          htmlFor="platform-ios"
-                        >
-                          iOS
-                        </label>
-                      </li>
-                      <li>
-                        <input
-                          id="platform-android"
-                          name="platform"
-                          onChange={[Function]}
-                          type="radio"
-                          value="android"
-                        />
-                        <label
-                          htmlFor="platform-android"
-                        >
-                          Android
-                        </label>
-                      </li>
-                    </ul>,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "What is the deployment platform this archive is meant for?",
-                    },
-                    "ref": null,
-                    "rendered": "What is the deployment platform this archive is meant for?",
-                    "type": "p",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": Array [
-                        <li>
-                          <input
-                            id="platform-ios"
-                            name="platform"
-                            onChange={[Function]}
-                            type="radio"
-                            value="ios"
-                          />
-                          <label
-                            htmlFor="platform-ios"
-                          >
-                            iOS
-                          </label>
-                        </li>,
-                        <li>
-                          <input
-                            id="platform-android"
-                            name="platform"
-                            onChange={[Function]}
-                            type="radio"
-                            value="android"
-                          />
-                          <label
-                            htmlFor="platform-android"
-                          >
-                            Android
-                          </label>
-                        </li>,
-                      ],
-                      "className": "flex-inner",
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": Array [
-                            <input
-                              id="platform-ios"
-                              name="platform"
-                              onChange={[Function]}
-                              type="radio"
-                              value="ios"
-                            />,
-                            <label
-                              htmlFor="platform-ios"
-                            >
-                              iOS
-                            </label>,
-                          ],
-                        },
-                        "ref": null,
-                        "rendered": Array [
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "host",
-                            "props": Object {
-                              "id": "platform-ios",
-                              "name": "platform",
-                              "onChange": [Function],
-                              "type": "radio",
-                              "value": "ios",
-                            },
-                            "ref": null,
-                            "rendered": null,
-                            "type": "input",
-                          },
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "host",
-                            "props": Object {
-                              "children": "iOS",
-                              "htmlFor": "platform-ios",
-                            },
-                            "ref": null,
-                            "rendered": "iOS",
-                            "type": "label",
-                          },
-                        ],
-                        "type": "li",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": Array [
-                            <input
-                              id="platform-android"
-                              name="platform"
-                              onChange={[Function]}
-                              type="radio"
-                              value="android"
-                            />,
-                            <label
-                              htmlFor="platform-android"
-                            >
-                              Android
-                            </label>,
-                          ],
-                        },
-                        "ref": null,
-                        "rendered": Array [
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "host",
-                            "props": Object {
-                              "id": "platform-android",
-                              "name": "platform",
-                              "onChange": [Function],
-                              "type": "radio",
-                              "value": "android",
-                            },
-                            "ref": null,
-                            "rendered": null,
-                            "type": "input",
-                          },
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "host",
-                            "props": Object {
-                              "children": "Android",
-                              "htmlFor": "platform-android",
-                            },
-                            "ref": null,
-                            "rendered": "Android",
-                            "type": "label",
-                          },
-                        ],
-                        "type": "li",
-                      },
-                    ],
-                    "type": "ul",
-                  },
-                ],
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <button
-                    onClick={[Function]}
-                  >
-                    Start
-                  </button>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Start",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "Start",
-                  "type": "button",
-                },
-                "type": "li",
-              },
-            ],
-            "type": "ul",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "job": Object {
-                "status": "testStatus",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <Instruction />,
-          "className": "container",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
+          <TwitterCard />
+        </HelmetWrapper>,
+        <div>
           <Header
             authentication={
               Object {
                 "isAuthenticated": true,
               }
             }
-          />,
+          />
           <div
             className="container"
           >
@@ -672,36 +110,55 @@ ShallowWrapper {
                 }
               }
             />
-          </div>,
+          </div>
           <div
             className="container"
           >
             <Instruction />
-          </div>,
-          <Footer />,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
+          </div>
+          <Footer />
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <TwitterCard />,
+          "defer": true,
+          "encodeSpecialCharacters": true,
+        },
+        "ref": null,
+        "rendered": Object {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {
-            "authentication": Object {
-              "isAuthenticated": true,
-            },
-          },
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Header
+              authentication={
+                Object {
+                  "isAuthenticated": true,
+                }
+              }
+            />,
+            <div
+              className="container"
+            >
               <ul
                 className="flex-outer"
               >
@@ -758,25 +215,47 @@ ShallowWrapper {
                     Start
                   </button>
                 </li>
-              </ul>,
+              </ul>
               <JobStatusIndicator
                 job={
                   Object {
                     "status": "testStatus",
                   }
                 }
-              />,
-            ],
-            "className": "container",
+              />
+            </div>,
+            <div
+              className="container"
+            >
+              <Instruction />
+            </div>,
+            <Footer />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "authentication": Object {
+                "isAuthenticated": true,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <ul
+                  className="flex-outer"
+                >
                   <li>
                     <label>
                       Drag and drop the archive you with to sign onto this area.
@@ -785,7 +264,7 @@ ShallowWrapper {
                       files={Array []}
                       onFileAccepted={[Function]}
                     />
-                  </li>,
+                  </li>
                   <li>
                     <p>
                       What is the deployment platform this archive is meant for?
@@ -822,71 +301,46 @@ ShallowWrapper {
                         </label>
                       </li>
                     </ul>
-                  </li>,
+                  </li>
                   <li>
                     <button
                       onClick={[Function]}
                     >
                       Start
                     </button>
-                  </li>,
-                ],
-                "className": "flex-outer",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
+                  </li>
+                </ul>,
+                <JobStatusIndicator
+                  job={
+                    Object {
+                      "status": "testStatus",
+                    }
+                  }
+                />,
+              ],
+              "className": "container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li>
                       <label>
                         Drag and drop the archive you with to sign onto this area.
-                      </label>,
+                      </label>
                       <FileUpload
                         files={Array []}
                         onFileAccepted={[Function]}
-                      />,
-                    ],
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Drag and drop the archive you with to sign onto this area.",
-                      },
-                      "ref": null,
-                      "rendered": "Drag and drop the archive you with to sign onto this area.",
-                      "type": "label",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "files": Array [],
-                        "onFileAccepted": [Function],
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
-                    },
-                  ],
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
+                      />
+                    </li>,
+                    <li>
                       <p>
                         What is the deployment platform this archive is meant for?
-                      </p>,
+                      </p>
                       <ul
                         className="flex-inner"
                       >
@@ -918,28 +372,75 @@ ShallowWrapper {
                             Android
                           </label>
                         </li>
-                      </ul>,
-                    ],
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "What is the deployment platform this archive is meant for?",
-                      },
-                      "ref": null,
-                      "rendered": "What is the deployment platform this archive is meant for?",
-                      "type": "p",
+                      </ul>
+                    </li>,
+                    <li>
+                      <button
+                        onClick={[Function]}
+                      >
+                        Start
+                      </button>
+                    </li>,
+                  ],
+                  "className": "flex-outer",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <label>
+                          Drag and drop the archive you with to sign onto this area.
+                        </label>,
+                        <FileUpload
+                          files={Array []}
+                          onFileAccepted={[Function]}
+                        />,
+                      ],
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": Array [
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Drag and drop the archive you with to sign onto this area.",
+                        },
+                        "ref": null,
+                        "rendered": "Drag and drop the archive you with to sign onto this area.",
+                        "type": "label",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "files": Array [],
+                          "onFileAccepted": [Function],
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <p>
+                          What is the deployment platform this archive is meant for?
+                        </p>,
+                        <ul
+                          className="flex-inner"
+                        >
                           <li>
                             <input
                               id="platform-ios"
@@ -953,7 +454,7 @@ ShallowWrapper {
                             >
                               iOS
                             </label>
-                          </li>,
+                          </li>
                           <li>
                             <input
                               id="platform-android"
@@ -967,174 +468,360 @@ ShallowWrapper {
                             >
                               Android
                             </label>
-                          </li>,
-                        ],
-                        "className": "flex-inner",
+                          </li>
+                        </ul>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "What is the deployment platform this archive is meant for?",
+                        },
+                        "ref": null,
+                        "rendered": "What is the deployment platform this archive is meant for?",
+                        "type": "p",
                       },
-                      "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <li>
                               <input
                                 id="platform-ios"
                                 name="platform"
                                 onChange={[Function]}
                                 type="radio"
                                 value="ios"
-                              />,
+                              />
                               <label
                                 htmlFor="platform-ios"
                               >
                                 iOS
-                              </label>,
-                            ],
-                          },
-                          "ref": null,
-                          "rendered": Array [
-                            Object {
-                              "instance": null,
-                              "key": undefined,
-                              "nodeType": "host",
-                              "props": Object {
-                                "id": "platform-ios",
-                                "name": "platform",
-                                "onChange": [Function],
-                                "type": "radio",
-                                "value": "ios",
-                              },
-                              "ref": null,
-                              "rendered": null,
-                              "type": "input",
-                            },
-                            Object {
-                              "instance": null,
-                              "key": undefined,
-                              "nodeType": "host",
-                              "props": Object {
-                                "children": "iOS",
-                                "htmlFor": "platform-ios",
-                              },
-                              "ref": null,
-                              "rendered": "iOS",
-                              "type": "label",
-                            },
-                          ],
-                          "type": "li",
-                        },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": Array [
+                              </label>
+                            </li>,
+                            <li>
                               <input
                                 id="platform-android"
                                 name="platform"
                                 onChange={[Function]}
                                 type="radio"
                                 value="android"
-                              />,
+                              />
                               <label
                                 htmlFor="platform-android"
                               >
                                 Android
-                              </label>,
-                            ],
-                          },
-                          "ref": null,
-                          "rendered": Array [
-                            Object {
-                              "instance": null,
-                              "key": undefined,
-                              "nodeType": "host",
-                              "props": Object {
-                                "id": "platform-android",
-                                "name": "platform",
-                                "onChange": [Function],
-                                "type": "radio",
-                                "value": "android",
-                              },
-                              "ref": null,
-                              "rendered": null,
-                              "type": "input",
-                            },
-                            Object {
-                              "instance": null,
-                              "key": undefined,
-                              "nodeType": "host",
-                              "props": Object {
-                                "children": "Android",
-                                "htmlFor": "platform-android",
-                              },
-                              "ref": null,
-                              "rendered": "Android",
-                              "type": "label",
-                            },
+                              </label>
+                            </li>,
                           ],
-                          "type": "li",
+                          "className": "flex-inner",
                         },
-                      ],
-                      "type": "ul",
-                    },
-                  ],
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <button
-                      onClick={[Function]}
-                    >
-                      Start
-                    </button>,
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <input
+                                  id="platform-ios"
+                                  name="platform"
+                                  onChange={[Function]}
+                                  type="radio"
+                                  value="ios"
+                                />,
+                                <label
+                                  htmlFor="platform-ios"
+                                >
+                                  iOS
+                                </label>,
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "id": "platform-ios",
+                                  "name": "platform",
+                                  "onChange": [Function],
+                                  "type": "radio",
+                                  "value": "ios",
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": "input",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "iOS",
+                                  "htmlFor": "platform-ios",
+                                },
+                                "ref": null,
+                                "rendered": "iOS",
+                                "type": "label",
+                              },
+                            ],
+                            "type": "li",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <input
+                                  id="platform-android"
+                                  name="platform"
+                                  onChange={[Function]}
+                                  type="radio"
+                                  value="android"
+                                />,
+                                <label
+                                  htmlFor="platform-android"
+                                >
+                                  Android
+                                </label>,
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "id": "platform-android",
+                                  "name": "platform",
+                                  "onChange": [Function],
+                                  "type": "radio",
+                                  "value": "android",
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": "input",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "Android",
+                                  "htmlFor": "platform-android",
+                                },
+                                "ref": null,
+                                "rendered": "Android",
+                                "type": "label",
+                              },
+                            ],
+                            "type": "li",
+                          },
+                        ],
+                        "type": "ul",
+                      },
+                    ],
+                    "type": "li",
                   },
-                  "ref": null,
-                  "rendered": Object {
+                  Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Start",
-                      "onClick": [Function],
+                      "children": <button
+                        onClick={[Function]}
+                      >
+                        Start
+                      </button>,
                     },
                     "ref": null,
-                    "rendered": "Start",
-                    "type": "button",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Start",
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "Start",
+                      "type": "button",
+                    },
+                    "type": "li",
                   },
-                  "type": "li",
+                ],
+                "type": "ul",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "job": Object {
+                    "status": "testStatus",
+                  },
                 },
-              ],
-              "type": "ul",
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Instruction />,
+              "className": "container",
             },
-            Object {
+            "ref": null,
+            "rendered": Object {
               "instance": null,
               "key": undefined,
               "nodeType": "function",
-              "props": Object {
-                "job": Object {
-                  "status": "testStatus",
-                },
-              },
+              "props": Object {},
               "ref": null,
               "rendered": null,
               "type": [Function],
             },
-          ],
-          "type": "div",
-        },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <HelmetWrapper
+            defer={true}
+            encodeSpecialCharacters={true}
+          >
+            <TwitterCard />
+          </HelmetWrapper>,
+          <div>
+            <Header
+              authentication={
+                Object {
+                  "isAuthenticated": true,
+                }
+              }
+            />
+            <div
+              className="container"
+            >
+              <ul
+                className="flex-outer"
+              >
+                <li>
+                  <label>
+                    Drag and drop the archive you with to sign onto this area.
+                  </label>
+                  <FileUpload
+                    files={Array []}
+                    onFileAccepted={[Function]}
+                  />
+                </li>
+                <li>
+                  <p>
+                    What is the deployment platform this archive is meant for?
+                  </p>
+                  <ul
+                    className="flex-inner"
+                  >
+                    <li>
+                      <input
+                        id="platform-ios"
+                        name="platform"
+                        onChange={[Function]}
+                        type="radio"
+                        value="ios"
+                      />
+                      <label
+                        htmlFor="platform-ios"
+                      >
+                        iOS
+                      </label>
+                    </li>
+                    <li>
+                      <input
+                        id="platform-android"
+                        name="platform"
+                        onChange={[Function]}
+                        type="radio"
+                        value="android"
+                      />
+                      <label
+                        htmlFor="platform-android"
+                      >
+                        Android
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <button
+                    onClick={[Function]}
+                  >
+                    Start
+                  </button>
+                </li>
+              </ul>
+              <JobStatusIndicator
+                job={
+                  Object {
+                    "status": "testStatus",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="container"
+            >
+              <Instruction />
+            </div>
+            <Footer />
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": <Instruction />,
-            "className": "container",
+            "children": <TwitterCard />,
+            "defer": true,
+            "encodeSpecialCharacters": true,
           },
           "ref": null,
           "rendered": Object {
@@ -1146,19 +833,578 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
-          "type": "div",
+          "type": [Function],
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Header
+                authentication={
+                  Object {
+                    "isAuthenticated": true,
+                  }
+                }
+              />,
+              <div
+                className="container"
+              >
+                <ul
+                  className="flex-outer"
+                >
+                  <li>
+                    <label>
+                      Drag and drop the archive you with to sign onto this area.
+                    </label>
+                    <FileUpload
+                      files={Array []}
+                      onFileAccepted={[Function]}
+                    />
+                  </li>
+                  <li>
+                    <p>
+                      What is the deployment platform this archive is meant for?
+                    </p>
+                    <ul
+                      className="flex-inner"
+                    >
+                      <li>
+                        <input
+                          id="platform-ios"
+                          name="platform"
+                          onChange={[Function]}
+                          type="radio"
+                          value="ios"
+                        />
+                        <label
+                          htmlFor="platform-ios"
+                        >
+                          iOS
+                        </label>
+                      </li>
+                      <li>
+                        <input
+                          id="platform-android"
+                          name="platform"
+                          onChange={[Function]}
+                          type="radio"
+                          value="android"
+                        />
+                        <label
+                          htmlFor="platform-android"
+                        >
+                          Android
+                        </label>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <button
+                      onClick={[Function]}
+                    >
+                      Start
+                    </button>
+                  </li>
+                </ul>
+                <JobStatusIndicator
+                  job={
+                    Object {
+                      "status": "testStatus",
+                    }
+                  }
+                />
+              </div>,
+              <div
+                className="container"
+              >
+                <Instruction />
+              </div>,
+              <Footer />,
+            ],
+          },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "authentication": Object {
+                  "isAuthenticated": true,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <ul
+                    className="flex-outer"
+                  >
+                    <li>
+                      <label>
+                        Drag and drop the archive you with to sign onto this area.
+                      </label>
+                      <FileUpload
+                        files={Array []}
+                        onFileAccepted={[Function]}
+                      />
+                    </li>
+                    <li>
+                      <p>
+                        What is the deployment platform this archive is meant for?
+                      </p>
+                      <ul
+                        className="flex-inner"
+                      >
+                        <li>
+                          <input
+                            id="platform-ios"
+                            name="platform"
+                            onChange={[Function]}
+                            type="radio"
+                            value="ios"
+                          />
+                          <label
+                            htmlFor="platform-ios"
+                          >
+                            iOS
+                          </label>
+                        </li>
+                        <li>
+                          <input
+                            id="platform-android"
+                            name="platform"
+                            onChange={[Function]}
+                            type="radio"
+                            value="android"
+                          />
+                          <label
+                            htmlFor="platform-android"
+                          >
+                            Android
+                          </label>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <button
+                        onClick={[Function]}
+                      >
+                        Start
+                      </button>
+                    </li>
+                  </ul>,
+                  <JobStatusIndicator
+                    job={
+                      Object {
+                        "status": "testStatus",
+                      }
+                    }
+                  />,
+                ],
+                "className": "container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li>
+                        <label>
+                          Drag and drop the archive you with to sign onto this area.
+                        </label>
+                        <FileUpload
+                          files={Array []}
+                          onFileAccepted={[Function]}
+                        />
+                      </li>,
+                      <li>
+                        <p>
+                          What is the deployment platform this archive is meant for?
+                        </p>
+                        <ul
+                          className="flex-inner"
+                        >
+                          <li>
+                            <input
+                              id="platform-ios"
+                              name="platform"
+                              onChange={[Function]}
+                              type="radio"
+                              value="ios"
+                            />
+                            <label
+                              htmlFor="platform-ios"
+                            >
+                              iOS
+                            </label>
+                          </li>
+                          <li>
+                            <input
+                              id="platform-android"
+                              name="platform"
+                              onChange={[Function]}
+                              type="radio"
+                              value="android"
+                            />
+                            <label
+                              htmlFor="platform-android"
+                            >
+                              Android
+                            </label>
+                          </li>
+                        </ul>
+                      </li>,
+                      <li>
+                        <button
+                          onClick={[Function]}
+                        >
+                          Start
+                        </button>
+                      </li>,
+                    ],
+                    "className": "flex-outer",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <label>
+                            Drag and drop the archive you with to sign onto this area.
+                          </label>,
+                          <FileUpload
+                            files={Array []}
+                            onFileAccepted={[Function]}
+                          />,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Drag and drop the archive you with to sign onto this area.",
+                          },
+                          "ref": null,
+                          "rendered": "Drag and drop the archive you with to sign onto this area.",
+                          "type": "label",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {
+                            "files": Array [],
+                            "onFileAccepted": [Function],
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <p>
+                            What is the deployment platform this archive is meant for?
+                          </p>,
+                          <ul
+                            className="flex-inner"
+                          >
+                            <li>
+                              <input
+                                id="platform-ios"
+                                name="platform"
+                                onChange={[Function]}
+                                type="radio"
+                                value="ios"
+                              />
+                              <label
+                                htmlFor="platform-ios"
+                              >
+                                iOS
+                              </label>
+                            </li>
+                            <li>
+                              <input
+                                id="platform-android"
+                                name="platform"
+                                onChange={[Function]}
+                                type="radio"
+                                value="android"
+                              />
+                              <label
+                                htmlFor="platform-android"
+                              >
+                                Android
+                              </label>
+                            </li>
+                          </ul>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "What is the deployment platform this archive is meant for?",
+                          },
+                          "ref": null,
+                          "rendered": "What is the deployment platform this archive is meant for?",
+                          "type": "p",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <li>
+                                <input
+                                  id="platform-ios"
+                                  name="platform"
+                                  onChange={[Function]}
+                                  type="radio"
+                                  value="ios"
+                                />
+                                <label
+                                  htmlFor="platform-ios"
+                                >
+                                  iOS
+                                </label>
+                              </li>,
+                              <li>
+                                <input
+                                  id="platform-android"
+                                  name="platform"
+                                  onChange={[Function]}
+                                  type="radio"
+                                  value="android"
+                                />
+                                <label
+                                  htmlFor="platform-android"
+                                >
+                                  Android
+                                </label>
+                              </li>,
+                            ],
+                            "className": "flex-inner",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": Array [
+                                  <input
+                                    id="platform-ios"
+                                    name="platform"
+                                    onChange={[Function]}
+                                    type="radio"
+                                    value="ios"
+                                  />,
+                                  <label
+                                    htmlFor="platform-ios"
+                                  >
+                                    iOS
+                                  </label>,
+                                ],
+                              },
+                              "ref": null,
+                              "rendered": Array [
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "id": "platform-ios",
+                                    "name": "platform",
+                                    "onChange": [Function],
+                                    "type": "radio",
+                                    "value": "ios",
+                                  },
+                                  "ref": null,
+                                  "rendered": null,
+                                  "type": "input",
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": "iOS",
+                                    "htmlFor": "platform-ios",
+                                  },
+                                  "ref": null,
+                                  "rendered": "iOS",
+                                  "type": "label",
+                                },
+                              ],
+                              "type": "li",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": Array [
+                                  <input
+                                    id="platform-android"
+                                    name="platform"
+                                    onChange={[Function]}
+                                    type="radio"
+                                    value="android"
+                                  />,
+                                  <label
+                                    htmlFor="platform-android"
+                                  >
+                                    Android
+                                  </label>,
+                                ],
+                              },
+                              "ref": null,
+                              "rendered": Array [
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "id": "platform-android",
+                                    "name": "platform",
+                                    "onChange": [Function],
+                                    "type": "radio",
+                                    "value": "android",
+                                  },
+                                  "ref": null,
+                                  "rendered": null,
+                                  "type": "input",
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": "Android",
+                                    "htmlFor": "platform-android",
+                                  },
+                                  "ref": null,
+                                  "rendered": "Android",
+                                  "type": "label",
+                                },
+                              ],
+                              "type": "li",
+                            },
+                          ],
+                          "type": "ul",
+                        },
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <button
+                          onClick={[Function]}
+                        >
+                          Start
+                        </button>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Start",
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "rendered": "Start",
+                        "type": "button",
+                      },
+                      "type": "li",
+                    },
+                  ],
+                  "type": "ul",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "job": Object {
+                      "status": "testStatus",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Instruction />,
+                "className": "container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
       ],
-      "type": "div",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
