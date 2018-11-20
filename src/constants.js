@@ -59,3 +59,10 @@ export const XML_SAMPLES = {
   </plist>
   `,
 };
+// used by twitter and open graph
+export const UNFURL_DATA = {
+  DESCRIPTION: 'Sign iOS or Android applications for public or enterprise distribution',
+  TITLE: 'Mobile Signing',
+  CARD: 'Summary',
+  IMAGE: '',
+};

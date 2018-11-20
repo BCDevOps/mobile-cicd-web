@@ -17,16 +17,14 @@ Created by Patrick Simonian
 */
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { UNFURL_DATA } from '../constants';
 
 const TwitterCard = () => (
   <Helmet>
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Mobile Signing" />
-    <meta
-      name="twitter:description"
-      content="Sign iOS or Android applications for public or enterprise distribution"
-    />
-    <meta name="twitter:image" content="" />
+    <meta name="twitter:card" content={UNFURL_DATA.CARD} />
+    <meta name="twitter:title" content={UNFURL_DATA.TITLE} />
+    <meta name="twitter:description" content={UNFURL_DATA.DESCRIPTION} />
+    <meta name="twitter:image" content={UNFURL_DATA.IMAGE} />
   </Helmet>
 );
 

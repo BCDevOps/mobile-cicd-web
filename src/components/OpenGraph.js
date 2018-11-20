@@ -17,16 +17,13 @@ Created by Patrick Simonian
 */
 import React from 'react';
 import { Helmet } from 'react-helmet';
-
+import { UNFURL_DATA } from '../constants';
 const OpenGraph = () => (
   <Helmet>
-    <meta name="og:card" content="summary" />
-    <meta name="og:title" content="Mobile Signing" />
-    <meta
-      name="og:description"
-      content="Sign iOS or Android applications for public or enterprise distribution"
-    />
-    <meta name="og:image" content="" />
+    <meta name="og:card" content={UNFURL_DATA.CARD} />
+    <meta name="og:title" content={UNFURL_DATA.TITLE} />
+    <meta name="og:description" content={UNFURL_DATA.DESCRIPTION} />
+    <meta name="og:image" content={UNFURL_DATA.IMAGE} />
   </Helmet>
 );
 
