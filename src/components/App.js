@@ -8,6 +8,7 @@ import implicitAuthManager from '../auth';
 import './App.css';
 import Aux from '../hoc/auxillary';
 import TwitterCard from './TwitterCard';
+import OpenGraph from './OpenGraph';
 import FileUpload from './FileUpload';
 import Footer from './Footer';
 import Header from './Header';
@@ -46,6 +47,7 @@ export class App extends Component {
     return (
       <Aux>
         <TwitterCard />
+        <OpenGraph />
         <div>
           <Header authentication={this.props.authentication} />
           <div className="container">

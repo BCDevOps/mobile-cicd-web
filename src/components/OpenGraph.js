@@ -18,14 +18,13 @@ Created by Patrick Simonian
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { UNFURL_DATA } from '../constants';
-
-const TwitterCard = () => (
+const OpenGraph = () => (
   <Helmet>
-    <meta name="twitter:card" content={UNFURL_DATA.CARD} />
-    <meta name="twitter:title" content={UNFURL_DATA.TITLE} />
-    <meta name="twitter:description" content={UNFURL_DATA.DESCRIPTION} />
-    <meta name="twitter:image" content={UNFURL_DATA.IMAGE} />
+    <meta name="og:card" content={UNFURL_DATA.CARD} />
+    <meta name="og:title" content={UNFURL_DATA.TITLE} />
+    <meta name="og:description" content={UNFURL_DATA.DESCRIPTION} />
+    <meta name="og:image" content={UNFURL_DATA.IMAGE} />
   </Helmet>
 );
 
-export default TwitterCard;
+export default OpenGraph;
