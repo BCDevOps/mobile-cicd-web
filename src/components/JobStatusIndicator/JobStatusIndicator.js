@@ -23,7 +23,7 @@ import PropTypes from 'prop-types';
 import { MoonLoader } from 'react-spinners';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { css } from 'react-emotion';
-import { JOB_STATUS } from '../constants';
+import { JOB_STATUS } from '../../constants';
 import './JobStatusIndicator.css';
 
 const override = css`

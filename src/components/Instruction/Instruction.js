@@ -1,7 +1,7 @@
 import React from 'react';
 import './Instruction.css';
-import { XML_SAMPLES } from '../constants';
-import Toggle from './Toggle';
+import { XML_SAMPLES } from '../../constants';
+import Toggle from '../Toggle/Toggle';
 
 const Instruction = () => {
   return (

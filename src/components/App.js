@@ -5,11 +5,11 @@ import { createSigningJob } from '../actionCreators';
 import { authenticateFailed, authenticateSuccess } from '../actions';
 import implicitAuthManager from '../auth';
 import './App.css';
-import FileUpload from './FileUpload';
-import Footer from './Footer';
-import Header from './Header';
-import Instruction from './Instruction';
-import JobStatusIndicator from './JobStatusIndicator';
+import FileUpload from './FileUpload/FileUpload';
+import Footer from './UI/Footer';
+import Header from './UI/Header';
+import Instruction from './Instruction/Instruction';
+import JobStatusIndicator from './JobStatusIndicator/JobStatusIndicator';
 
 export class App extends Component {
   constructor(props) {
