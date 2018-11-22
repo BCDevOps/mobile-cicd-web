@@ -20,7 +20,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import AuthButton from './AuthButton';
+import AuthButton from '../AuthButton/AuthButton';
 import logo from './bcgovlogo.svg';
 import './Header.css';
 

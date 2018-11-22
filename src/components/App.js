@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { createSigningJob } from '../actionCreators';
-import { Helmet } from 'react-helmet';
 import { authenticateFailed, authenticateSuccess } from '../actions';
 import implicitAuthManager from '../auth';
 import './App.css';
 import Aux from '../hoc/auxillary';
 import TwitterCard from './TwitterCard';
 import OpenGraph from './OpenGraph';
-import FileUpload from './FileUpload';
-import Footer from './Footer';
-import Header from './Header';
-import Instruction from './Instruction';
-import JobStatusIndicator from './JobStatusIndicator';
+import FileUpload from './FileUpload/FileUpload';
+import Footer from './UI/Footer';
+import Header from './UI/Header';
+import Instruction from './Instruction/Instruction';
+import JobStatusIndicator from './JobStatusIndicator/JobStatusIndicator';
 
 export class App extends Component {
   constructor(props) {

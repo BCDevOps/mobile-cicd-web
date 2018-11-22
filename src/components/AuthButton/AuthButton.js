@@ -20,7 +20,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import implicitAuthManager from '../auth';
+import implicitAuthManager from '../../auth';
 import './AuthButton.css';
 
 const titleForAuthenticationState = isAuthenticated => {
