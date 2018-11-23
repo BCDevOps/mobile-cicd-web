@@ -35,11 +35,6 @@ podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkin
     command: '',
     args: '${computer.jnlpmac} ${computer.name}',
     alwaysPullImage: false
-    // envVars: [
-    //     secretEnvVar(key: 'BDD_DEVICE_FARM_USER', secretName: 'bdd-credentials', secretKey: 'username'),
-    //     secretEnvVar(key: 'BDD_DEVICE_FARM_PASSWD', secretName: 'bdd-credentials', secretKey: 'password'),
-    //     secretEnvVar(key: 'ANDROID_DECRYPT_KEY', secretName: 'android-decrypt-key', secretKey: 'decryptKey')
-    //   ]
   )
 ])
 {
@@ -85,7 +80,6 @@ podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkin
       //
       // Check the code builds
       //
-
       try {
         echo "Checking Build"
         sh "SKIP_PREFLIGHT_CHECK=true npm run build" //TODO: ignore the react-scripts issue for now. Please remove SKIP_PREFLIGHT_CHECK after major version update
@@ -95,8 +89,6 @@ podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkin
         attachment.title = "Web Build ${BUILD_ID} FAILED! :face_with_head_bandage: :hankey:"
         attachment.color = '#CD0000' // Red
         attachment.text = "The code does not build.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
-        // attachment.title_link = "${env.BUILD_URL}"
-
         // notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
         sh "exit 1001"
       }
@@ -104,7 +96,6 @@ podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkin
       //
       // Check code quality
       //
-
       try {
         echo "Checking code quality with SonarQube"
         SONARQUBE_URL = sh (
@@ -127,15 +118,12 @@ podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkin
         attachment.title = "Web Build ${BUILD_ID} WARNING! :unamused: :zany_face: :facepalm:"
         attachment.color = '#FFA500' // Orange
         attachment.text = "The SonarQube code quality check failed. look at ${SONARQUBE_URL} \ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
-        // attachment.title_link = "${env.BUILD_URL}"
-
         notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
       }
       
       //
       // Check code quality with a LINTer
       //
-
       try {
         echo "Checking code quality with LINTer"
         sh "npx eslint --ext .js,.jsx src"
@@ -145,44 +133,34 @@ podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkin
         attachment.title = "Web Build ${BUILD_ID} WARNING! :unamused: :zany_face: :facepalm:"
         attachment.color = '#FFA500' // Orange
         attachment.text = "There LINTer code quality check failed.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
-        // attachment.title_link = "${env.BUILD_URL}"
-
         // notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
       }
 
       //
       // Run a security check on our packages
       //
-
       // NSP is shutting down. Replace with `npm audit`
 
       //
       // Run our unit tests et al.
       //
-      // TODO: add unit testing
-      // try {
-      //   // Run our unit tests et al.
-      //   sh "CI=true SKIP_PREFLIGHT_CHECK=true npm test"
-      // } catch (error) {
-      //   def attachment = [:]
-      //   attachment.fallback = 'See build log for more details'
-      //   attachment.title = "Web Build ${BUILD_ID} Failed :hankey: :face_with_head_bandage:"
-      //   attachment.color = '#CD0000' // Red
-      //   attachment.text = "There are issues with the unit tests.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
-      //   // attachment.title_link = "${env.BUILD_URL}"
-
-      //   notifySlack("${APP_NAME}, Build #${BUILD_ID}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
-      //   sh "exit 1002"
-      // }
+      try {
+        echo "Run Jest unit tests"
+        sh "CI=true SKIP_PREFLIGHT_CHECK=true npm run test"
+      } catch (error) {
+        def attachment = [:]
+        attachment.fallback = 'See build log for more details'
+        attachment.title = "Web Build ${BUILD_ID} Failed :hankey: :face_with_head_bandage:"
+        attachment.color = '#CD0000' // Red
+        attachment.text = "There are issues with the unit tests.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
+        // notifySlack("${APP_NAME}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
+        sh "exit 1002"
+      }
     }
 
     stage('Build Image') {
       echo "Build: ${BUILD_ID}"
-      // run the oc build to package the artifacts into a docker image
-      // TODO: refering to the existing build configs:
-      // openshiftBuild bldCfg: "${APP_NAME}-${GIT_BRANCH_NAME}-build", showBuildLogs: 'true', verbose: 'true'
-      // openshiftBuild bldCfg: "${CADDY_BUILD_CONFIG}-${GIT_BRANCH_NAME}-build", showBuildLogs: 'true', verbose: 'true'
-      
+      // run the oc build to package the artifacts into a docker image      
       openshiftBuild bldCfg: "${APP_NAME}-master-build", showBuildLogs: 'true', verbose: 'true'
       openshiftBuild bldCfg: "${CADDY_BUILD_CONFIG}-master-build", showBuildLogs: 'true', verbose: 'true'
 
@@ -201,23 +179,22 @@ podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkin
         attachment.text = "Another huge success for the Signing Web Team.\n A freshly minted build is being deployed. You should see the results shortly.\ncommit ${GIT_COMMIT_SHORT_HASH} by ${GIT_COMMIT_AUTHOR}"
         attachment.title = "WEB Build ${BUILD_ID} OK! :raised_hands: :clap: woot!"
         attachment.color = '#00FF00' // Lime Green
-
         notifySlack("${APP_NAME}", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [attachment], JENKINS_ICO)
       } catch (error) {
         echo "Unable send update to slack, error = ${error}"
       }
     }
 
-    // stage('Approval') {
-    //   timeout(time: 1, unit: 'DAYS') {
-    //     input message: "Deploy to test?", submitter: 'authenticated'
-    //   }
-    //   node ('master') {
-    //     stage('Promotion') {
-    //       openshiftTag destStream: CADDY_IMAGESTREAM_NAME, verbose: 'true', destTag: TAG_NAMES[1], srcStream: CADDY_IMAGESTREAM_NAME, srcTag: "${IMAGE_HASH}"
-    //       notifySlack("Promotion Completed\n Build #${BUILD_ID} was promoted to test.", "#range-web-caddy", "https://hooks.slack.com/services/${SLACK_TOKEN}", [], OPENSHIFT_ICO)
-    //     }
-    //   }
-    // }   
+    stage('Approval') {
+      timeout(time: 1, unit: 'DAYS') {
+        input message: "Deploy to test?", submitter: 'authenticated'
+      }
+      node ('master') {
+        stage('Promotion') {
+          openshiftTag destStream: CADDY_IMAGESTREAM_NAME, verbose: 'true', destTag: TAG_NAMES[1], srcStream: CADDY_IMAGESTREAM_NAME, srcTag: "${IMAGE_HASH}"
+          // notifySlack("Promotion ${APP_NAME} Completed to test.", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [], JENKINS_ICO)
+        }
+      }
+    }   
   }
 }
