@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Instruction from '../../components/Instruction';
+import Instruction from '../../components/Instruction/Instruction';
 
 describe('Instruction Component', () => {
   it('matches snapshot', () => {
