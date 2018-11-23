@@ -10,5 +10,6 @@ The signing tool has three components. See the related repositories for more inf
 
 <!-- [![License](https://github.com/bcgov/devhub-signing-api)](API) -->
 <!-- [![License](https://github.com/bcgov/devhub-signing-agent)](Agent) -->
-[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://github.com/bcgov/devhub-signing-api)
-[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://github.com/bcgov/devhub-signing-agent)
+[![Website shields.io](https://img.shields.io/badge/repo-API-green.svg)](https://github.com/bcgov/devhub-signing-api)
+
+[![Website shields.io](https://img.shields.io/badge/repo-Agent-green.svg)](https://github.com/bcgov/devhub-signing-agent)

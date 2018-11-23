@@ -89,7 +89,7 @@ baseNavigatorWaiting = true
 def env = System.getenv()
 baseUrl = env['BASEURL']
 if (!baseUrl) {
-	baseUrl = "xxxx"
+	baseUrl = ""
 }
 
 println "BaseURL: ${baseUrl}"

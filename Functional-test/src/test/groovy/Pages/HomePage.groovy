@@ -1,17 +1,23 @@
 import geb.Page
+import java.util.regex.*
 
-class GebishOrgHomePage extends Page {
+class HomePage extends Page {
+  // sample:
+  static at = { title == "" }
 
-    static at = { title == "Geb - Very Groovy Browser Automation" }
+  static content = {
+    toggle { $("div.menu a.manuals") }
+    linksContainer { $("#manuals-menu") }
+    links { linksContainer.find("a") }
+  }
 
-    static content = {
-        toggle { $("div.menu a.manuals") }
-        linksContainer { $("#manuals-menu") }
-        links { linksContainer.find("a") }
-    }
+  def toggle(index){
+    return { $("div.menu".find(index)) }
+  }
 
-    void open() {
-        toggle.click()
-        waitFor { !linksContainer.hasClass("animating") }
-    }
+  void toggle() {
+    toggle.click()
+    waitFor { !linksContainer.hasClass("animating") }
+  }
+
 }

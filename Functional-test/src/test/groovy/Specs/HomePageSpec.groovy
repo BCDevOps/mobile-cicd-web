@@ -1,21 +1,27 @@
-import geb.spock.GebSpec
+import geb.spock.GebReportingSpec
+import spock.lang.*
+import pages.*
 
-class GebishOrgSpec extends GebSpec {
+@Title("Signing Homepage")
+@Narrative("I can go to home page and login")
+@Stepwise
+class  A_HomePageSpec extends GebReportingSpec {
+  def "I see the home page"(){
+    when:"I go to the homepage"
+    to HomePage
 
-    def "can get to the current Book of Geb"() {
-        when:
-        to GebishOrgHomePage
+    then: "I am not logged in"
 
-        and:
-        manualsMenu.open()
+    and: "I click on login button"
 
-        then:
-        manualsMenu.links[0].text().startsWith("current")
+    then: "I should be redirected to the login page"
 
-        when:
-        manualsMenu.links[0].click()
+    and: "I enter my credential and submit"
+    // Dotenv dotenv = Dotenv.configure().directory("./").load()
+    // IDIRusername = dotenv.get("IDIR_USERNAME")
+    // IDIRpassword = dotenv.get("IDIR_PASSWORD")
 
-        then:
-        at TheBookOfGebPage
-    }
+    then: "I should be at homepage and logged in"
+    at HomePage
+  }
 }
