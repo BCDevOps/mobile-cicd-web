@@ -25,6 +25,7 @@ import {
   jobCreated,
   jobCreating,
   jobCreationFailed,
+  jobFailed,
   jobProcessing,
 } from '../actions';
 import implicitAuthManager from '../auth';
@@ -104,17 +105,15 @@ const checkJobStatus = (jobId, dispatch) => {
         setTimeout(() => {
           checkJobStatus(jobId, dispatch);
         }, apiPollTimeout);
-
-        return;
-      }
-
-      if (res.status === 200 && res.data.status === 'Completed') {
+      } else if (res.status === 200 && res.data.status === 'Completed') {
         dispatch(jobCompleted(res.data));
+      } else if (res.status === 200 && res.data.status === 'Failed') {
+        dispatch(jobFailed(res.data));
       }
     })
     .catch(err => {
       let message = 'Unable to check job status';
-      const code = err.response.status;
+      const code = typeof err.response.status != 'undefined' ? err.response.status : 0;
       if (err.response.data.error) {
         message = err.response.data.error;
       }
