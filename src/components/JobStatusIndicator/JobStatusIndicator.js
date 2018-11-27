@@ -82,7 +82,8 @@ const JobStatusIndicator = ({ job }) => {
         </div>
       );
     case JOB_STATUS.FAILED:
-      return <div className="job-status">Failed</div>;
+      console.log('xxx', job);
+      return <div className="job-status">Failed. {job.message} </div>;
     default:
       return <div />;
   }

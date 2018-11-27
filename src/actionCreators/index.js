@@ -34,7 +34,6 @@ import { API } from '../constants';
 const axi = axios.create({
   baseURL: API.BASE_URL(),
 });
-
 const apiPollTimeout = 3000;
 const maxStatusCheckCount = (120 * 1000) / apiPollTimeout;
 let statusCheckCount = 0;
@@ -72,12 +71,12 @@ export const createSigningJob = (files, platform) => dispatch => {
     .catch(err => {
       dispatch(jobCreationFailed());
 
+      const code = typeof err.response.status !== 'undefined' ? err.response.status : 0;
       let message = 'Unable to create signing job';
-      const code = err.response.status;
       if (err.response.data.error) {
         message = err.response.data.error;
       }
-      console.log(`error = ${message}, code = ${code}`);
+
       dispatch(apiRequestFailed(message, code));
     });
 };

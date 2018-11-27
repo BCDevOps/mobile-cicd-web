@@ -68,7 +68,7 @@ export const jobCompleted = data => {
 export const jobFailed = data => {
   return {
     type: JOB_STATUS.FAILED,
-    url: data.url,
+    message: data.statusMessage,
   };
 };
 
