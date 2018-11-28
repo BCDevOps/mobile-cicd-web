@@ -32,7 +32,10 @@ export const JOB_STATUS = {
 };
 
 export const API = {
-  BASE_URL: () => `${window.location.origin}/api/v1/` || 'http://localhost:8089',
+  BASE_URL: () =>
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:8089/api/v1/'
+      : `${window.location.origin}/api/v1/`,
   CREATE_JOB: platformId => `sign?platform=${platformId}`,
   CHECK_JOB_STATUS: jobId => `job/${jobId}/status`,
 };

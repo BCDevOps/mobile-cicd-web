@@ -65,6 +65,13 @@ export const jobCompleted = data => {
   };
 };
 
+export const jobFailed = data => {
+  return {
+    type: JOB_STATUS.FAILED,
+    message: data.statusMessage,
+  };
+};
+
 export const apiRequestFailed = (message, code) => {
   return {
     type: API_ERROR.JOB_STATUS_CHECK_FAILED,

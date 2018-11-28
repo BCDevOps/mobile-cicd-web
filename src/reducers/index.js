@@ -39,24 +39,28 @@ const job = (state = {}, action) => {
     case JOB_STATUS.CREATING:
       return {
         status: JOB_STATUS.CREATING,
+        message: undefined,
         jobId: undefined,
         url: undefined,
       };
     case JOB_STATUS.CREATED:
       return {
         status: JOB_STATUS.CREATED,
+        message: undefined,
         jobId: action.jobId,
         url: undefined,
       };
     case JOB_STATUS.FAILED:
       return {
         status: JOB_STATUS.FAILED,
+        message: action.message,
         jobId: undefined,
         url: undefined,
       };
     case JOB_STATUS.PROCESSING:
       return {
         status: JOB_STATUS.PROCESSING,
+        message: undefined,
         jobId: state.jobId,
         url: undefined,
       };
