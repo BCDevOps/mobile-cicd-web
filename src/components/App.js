@@ -20,7 +20,7 @@ export class App extends Component {
   }
 
   componentDidMount = () => {
-    document.title = "Secure Sign";
+    // document.title = "Secure Sign";
     implicitAuthManager.registerHooks({
       onAuthenticateSuccess: () => this.props.login(),
       onAuthenticateFail: () => this.props.logout(),
