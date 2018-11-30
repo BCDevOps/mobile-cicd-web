@@ -6,18 +6,15 @@ import { authenticateFailed, authenticateSuccess } from '../actions';
 import implicitAuthManager from '../auth';
 import './App.css';
 import FileUpload from './FileUpload/FileUpload';
-import Footer from './UI/Footer';
-import Header from './UI/Header';
 import Instruction from './Instruction/Instruction';
 import JobStatusIndicator from './JobStatusIndicator/JobStatusIndicator';
-
+import Footer from './UI/Footer';
+import Header from './UI/Header';
 export class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: true,
-    };
-  }
+  state = {
+    loading: true,
+    userAgreedToTerms: false,
+  };
 
   componentDidMount = () => {
     implicitAuthManager.registerHooks({
@@ -31,12 +28,30 @@ export class App extends Component {
     }
   };
 
+  onUserDoesAgree = e => {
+    this.setState({ userAgreedToTerms: !this.state.userAgreedToTerms });
+  };
+
   onPlatformChanged = e => {
     this.setState({ platform: e.currentTarget.value });
   };
 
   onFileAccepted = files => {
     this.setState({ files });
+  };
+
+  validateForm = () => {
+    if (!implicitAuthManager.isAuthenticated()) {
+      alert('You need to login before you can submit signing jobs.');
+      return false;
+    }
+
+    if (!this.state.userAgreedToTerms) {
+      alert('You need to agree to complete a STRA & PIA before you can submit signing jobs.');
+      return false;
+    }
+
+    return true;
   };
 
   render() {
@@ -76,10 +91,24 @@ export class App extends Component {
               </ul>
             </li>
             <li>
+              <p>You must complete a STRA &amp; PIA before your production release.</p>
+              <ul className="flex-inner">
+                <li>
+                  <input
+                    type="checkbox"
+                    id="i-agree"
+                    name="i-agree"
+                    value="agree"
+                    onChange={this.onUserDoesAgree}
+                  />
+                  <label htmlFor="i-agree">Yes, I will</label>
+                </li>
+              </ul>
+            </li>
+            <li>
               <button
                 onClick={() => {
-                  if (!implicitAuthManager.isAuthenticated()) {
-                    alert('You need to login before you can submit signing jobs.');
+                  if (!this.validateForm()) {
                     return;
                   }
 
