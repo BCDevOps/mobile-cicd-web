@@ -46,6 +46,16 @@ export class App extends Component {
       return false;
     }
 
+    if (!this.state.files) {
+      alert('You need to add a file to be uploaded for signing.');
+      return false;
+    }
+
+    if (!this.state.platform) {
+      alert('You need to select a platform for your signing job.');
+      return false;
+    }
+
     if (!this.state.userAgreedToTerms) {
       alert('You need to agree to complete a STRA & PIA before you can submit signing jobs.');
       return false;
