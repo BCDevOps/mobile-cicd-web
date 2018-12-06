@@ -27,11 +27,11 @@ import './Header.css';
 const Header = ({ authentication }) => {
   return (
     <header>
-      <img src={logo} className="header-logo" alt="logo" />
-      <h1>Secure Sign</h1>
-      <div className="right-push">
-        <AuthButton isAuthenticated={authentication.isAuthenticated} />
+      <div className="banner">
+        <img src={logo} className="header-logo" alt="logo" />
+        <h1>Secure Sign</h1>
       </div>
+      <AuthButton isAuthenticated={authentication.isAuthenticated} />
     </header>
   );
 };
