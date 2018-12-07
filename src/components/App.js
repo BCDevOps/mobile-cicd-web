@@ -4,12 +4,14 @@ import { bindActionCreators } from 'redux';
 import { createSigningJob } from '../actionCreators';
 import { authenticateFailed, authenticateSuccess } from '../actions';
 import implicitAuthManager from '../auth';
+import { AC_ROLE } from '../constants';
 import './App.css';
 import FileUpload from './FileUpload/FileUpload';
 import Instruction from './Instruction/Instruction';
 import JobStatusIndicator from './JobStatusIndicator/JobStatusIndicator';
 import Footer from './UI/Footer';
 import Header from './UI/Header';
+
 export class App extends Component {
   state = {
     loading: true,
@@ -43,6 +45,11 @@ export class App extends Component {
   validateForm = () => {
     if (!implicitAuthManager.isAuthenticated()) {
       alert('You need to login before you can submit signing jobs.');
+      return false;
+    }
+
+    if (!implicitAuthManager.roles.includes(AC_ROLE)) {
+      alert('You need the proper role to be able to create signing jobs');
       return false;
     }
 
