@@ -18,6 +18,8 @@
 // Created by Jason Leach on 2018-09-17.
 //
 
+export const AC_ROLE = 'devhub_sign';
+
 export const AUTHENTICATION = {
   SUCCESS: 'AUTHENTICATE_SUCCESS',
   FAILED: 'AUTHENTICATE_FAILED',
