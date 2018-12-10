@@ -24,7 +24,6 @@ import React from 'react';
 import { css } from 'react-emotion';
 import { MoonLoader } from 'react-spinners';
 import { JOB_STATUS } from '../../constants';
-import './JobStatusIndicator.css';
 
 const override = css`
   display: block;
