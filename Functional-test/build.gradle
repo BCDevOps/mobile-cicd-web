@@ -56,6 +56,8 @@ dependencies {
     }
     testCompile 'org.slf4j:slf4j-api:1.7.13'
     testCompile 'org.slf4j:slf4j-simple:1.7.13'
+    // to grab environment vars
+    compile 'io.github.cdimascio:java-dotenv:3.1.2'
 }
 
 webdriverBinaries {

@@ -89,7 +89,7 @@ baseNavigatorWaiting = true
 def env = System.getenv()
 baseUrl = env['BASEURL']
 if (!baseUrl) {
-	baseUrl = ""
+	baseUrl = "https://signing-web-devhub-prod.pathfinder.gov.bc.ca"
 }
 
 println "BaseURL: ${baseUrl}"
