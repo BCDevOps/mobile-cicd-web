@@ -18,6 +18,8 @@
 // Created by Jason Leach on 2018-09-17.
 //
 
+export const AC_ROLE = 'devhub_sign';
+
 export const AUTHENTICATION = {
   SUCCESS: 'AUTHENTICATE_SUCCESS',
   FAILED: 'AUTHENTICATE_FAILED',
@@ -32,7 +34,10 @@ export const JOB_STATUS = {
 };
 
 export const API = {
-  BASE_URL: () => `${window.location.origin}/api/v1/` || 'http://localhost:8089',
+  BASE_URL: () =>
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:8089/api/v1/'
+      : `${window.location.origin}/api/v1/`,
   CREATE_JOB: platformId => `sign?platform=${platformId}`,
   CHECK_JOB_STATUS: jobId => `job/${jobId}/status`,
 };

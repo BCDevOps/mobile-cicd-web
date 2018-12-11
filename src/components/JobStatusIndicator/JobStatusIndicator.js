@@ -18,11 +18,11 @@
 // Created by Jason Leach on 2018-09-04.
 //
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import { MoonLoader } from 'react-spinners';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { css } from 'react-emotion';
+import { MoonLoader } from 'react-spinners';
 import { JOB_STATUS } from '../../constants';
 import './JobStatusIndicator.css';
 
@@ -81,6 +81,8 @@ const JobStatusIndicator = ({ job }) => {
           &nbsp;&nbsp; {deliveryUrlForJob(job)}
         </div>
       );
+    case JOB_STATUS.FAILED:
+      return <div className="job-status">Failed. {job.message} </div>;
     default:
       return <div />;
   }

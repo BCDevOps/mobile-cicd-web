@@ -45,7 +45,7 @@ const AuthButton = ({ isAuthenticated }) => {
       <button
         className="auth-button"
         onClick={() => {
-          window.location = locationForCurrentState();
+          window.location.assign(locationForCurrentState(isAuthenticated));
         }}
       >
         {titleForAuthenticationState(isAuthenticated)}

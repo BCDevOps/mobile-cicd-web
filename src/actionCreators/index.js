@@ -25,6 +25,7 @@ import {
   jobCreated,
   jobCreating,
   jobCreationFailed,
+  jobFailed,
   jobProcessing,
 } from '../actions';
 import implicitAuthManager from '../auth';
@@ -33,7 +34,6 @@ import { API } from '../constants';
 const axi = axios.create({
   baseURL: API.BASE_URL(),
 });
-
 const apiPollTimeout = 3000;
 const maxStatusCheckCount = (120 * 1000) / apiPollTimeout;
 let statusCheckCount = 0;
@@ -71,12 +71,12 @@ export const createSigningJob = (files, platform) => dispatch => {
     .catch(err => {
       dispatch(jobCreationFailed());
 
+      const code = typeof err.response.status !== 'undefined' ? err.response.status : 0;
       let message = 'Unable to create signing job';
-      const code = err.response.status;
       if (err.response.data.error) {
         message = err.response.data.error;
       }
-      console.log(`error = ${message}, code = ${code}`);
+
       dispatch(apiRequestFailed(message, code));
     });
 };
@@ -104,17 +104,15 @@ const checkJobStatus = (jobId, dispatch) => {
         setTimeout(() => {
           checkJobStatus(jobId, dispatch);
         }, apiPollTimeout);
-
-        return;
-      }
-
-      if (res.status === 200 && res.data.status === 'Completed') {
+      } else if (res.status === 200 && res.data.status === 'Completed') {
         dispatch(jobCompleted(res.data));
+      } else if (res.status === 200 && res.data.status === 'Failed') {
+        dispatch(jobFailed(res.data));
       }
     })
     .catch(err => {
       let message = 'Unable to check job status';
-      const code = err.response.status;
+      const code = typeof err.response.status != 'undefined' ? err.response.status : 0;
       if (err.response.data.error) {
         message = err.response.data.error;
       }
