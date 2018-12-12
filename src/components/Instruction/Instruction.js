@@ -18,7 +18,8 @@ const Instruction = () => {
           </li>
           <li>
             <p>
-              Create or copy your options.plist from step 1, you could update the content from sample below:
+              Create or copy your options.plist from step 1, you could update the content from
+              sample below:
             </p>
             <pre>{XML_SAMPLES.PLIST}</pre>
           </li>
