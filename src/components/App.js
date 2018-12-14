@@ -83,7 +83,7 @@ export class App extends Component {
               <FileUpload files={this.state.files || []} onFileAccepted={this.onFileAccepted} />
             </li>
             <li>
-              <p>What is the deployment platform this archive is meant for?</p>
+              <label>What is the deployment platform this archive is meant for?</label>
               <ul className="flex-inner">
                 <li>
                   <input
@@ -108,7 +108,7 @@ export class App extends Component {
               </ul>
             </li>
             <li>
-              <p>You must complete a STRA &amp; PIA before your production release.</p>
+              <label>You must complete a STRA &amp; PIA before your production release.</label>
               <ul className="flex-inner">
                 <li>
                   <input
