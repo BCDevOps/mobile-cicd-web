@@ -19,7 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h3>
-          Steps to Upload Your App
+          How to Create a Package File
         </h3>,
         <Toggle
           title="XcodeArchive"
@@ -104,10 +104,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Steps to Upload Your App",
+          "children": "How to Create a Package File",
         },
         "ref": null,
-        "rendered": "Steps to Upload Your App",
+        "rendered": "How to Create a Package File",
         "type": "h3",
       },
       Object {

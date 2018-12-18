@@ -12,6 +12,14 @@
   box-sizing: border-box;
 }
 
+.main-container h3 {
+  font-size: 20px;
+  color: #00316b;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3em;
+}
+
 .flex-outer,
 .flex-inner {
   list-style-type: none;

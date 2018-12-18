@@ -76,10 +76,11 @@ export class App extends Component {
       <div>
         <Header authentication={this.props.authentication} />
         <div className="main-container">
+        <h3>Upload Your Package File</h3>
           {/* <form> */}
           <ul className="flex-outer">
             <li>
-              <label>Drag and drop the archive you with to sign onto this area.</label>
+              <label>Drag and drop the archive you wish to sign.</label>
               <FileUpload files={this.state.files || []} onFileAccepted={this.onFileAccepted} />
             </li>
             <li>

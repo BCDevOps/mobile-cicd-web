@@ -6,7 +6,7 @@ import Toggle from '../Toggle/Toggle';
 const Instruction = () => {
   return (
     <div className="instructions">
-      <h3>Steps to Upload Your App</h3>
+      <h3>How to Create a Package File</h3>
       <Toggle title="XcodeArchive">
         <p>To package up an xcarchive to submit for signing you need to:</p>
         <ol>
