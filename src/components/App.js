@@ -75,7 +75,7 @@ export class App extends Component {
     return (
       <div>
         <Header authentication={this.props.authentication} />
-        <div className="container">
+        <div className="main-container">
           {/* <form> */}
           <ul className="flex-outer">
             <li>
@@ -122,24 +122,24 @@ export class App extends Component {
                 </li>
               </ul>
             </li>
-            <li>
-              <button
-                onClick={() => {
-                  if (!this.validateForm()) {
-                    return;
-                  }
-
-                  this.props.createSigningJob(this.state.files, this.state.platform);
-                }}
-              >
-                Start
-              </button>
-            </li>
           </ul>
+          <div className="start-button">
+            <button
+              className="primarybutton"
+              onClick={() => {
+                if (!this.validateForm()) {
+                  return;
+                }
+                this.props.createSigningJob(this.state.files, this.state.platform);
+              }}
+            >
+              Start
+            </button>
+          </div>
           {/* </form> */}
           <JobStatusIndicator job={this.props.job} />
         </div>
-        <div className="container">
+        <div className="main-container">
           <Instruction />
         </div>
         <Footer />

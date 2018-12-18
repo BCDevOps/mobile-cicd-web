@@ -1,17 +1,22 @@
-.auth-button {
-  position: relative;
-  margin-left: auto;
-  padding: 8px 16px;
-  border: none;
+.secondarybutton {
   background-color: #fcba19;
-  color: #003366;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  border-radius: 2px;
-  outline-width: 0;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
   text-decoration: none;
-  overflow: hidden;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Noto Sans','Calibri', 'Arial', 'Sans Serif';
   cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
+  padding: 4px 16px;
+}
+
+.secondarybutton:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.other {
+  margin: auto 0;
 }

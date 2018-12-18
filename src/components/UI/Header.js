@@ -21,17 +21,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AuthButton from '../AuthButton/AuthButton';
-import logo from './bcgovlogo.svg';
+import logo from './gov3_bc_logo.png';
 import './Header.css';
 
 const Header = ({ authentication }) => {
   return (
     <header>
       <div className="banner">
-        <img src={logo} className="header-logo" alt="logo" />
+        <a href="https://gov.bc.ca" alt="British Columbia">
+          <img src={logo} alt="British Colombia" />
+        </a>
         <h1>Secure Sign</h1>
       </div>
-      <AuthButton isAuthenticated={authentication.isAuthenticated} />
+      <div className="other">
+        <AuthButton isAuthenticated={authentication.isAuthenticated} />  
+      </div>
     </header>
   );
 };

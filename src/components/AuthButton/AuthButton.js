@@ -43,7 +43,7 @@ const AuthButton = ({ isAuthenticated }) => {
   return (
     <span>
       <button
-        className="auth-button"
+        className="secondarybutton"
         onClick={() => {
           window.location.assign(locationForCurrentState(isAuthenticated));
         }}
