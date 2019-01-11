@@ -28,7 +28,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --coverage",
     "test:watch": "react-scripts test --watch --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:lint": "eslint src/"
   },
   "devDependencies": {
     "enzyme": "^3.7.0",
