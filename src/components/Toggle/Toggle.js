@@ -23,24 +23,20 @@ class Toggle extends Component {
       <FontAwesomeIcon
         icon={faArrowUp}
         className="toggle-icon"
-        onClick={() => {
-          this.toggledHandler(false);
-        }}
       />
     ) : (
       <FontAwesomeIcon
         icon={faArrowDown}
         className="toggle-icon"
-        onClick={() => {
-          this.toggledHandler(true);
-        }}
       />
     );
     const { children, title } = this.props;
 
     return (
       <div className={`instruction ${toggleClass}`}>
-        <div className="toggle-header">
+        <div className="toggle-header" onClick={() => {
+          this.toggledHandler(!this.state.toggled);
+        }}>
           <div>{title}</div>
           <div>{toggleIcon}</div>
         </div>

@@ -13,7 +13,7 @@ describe('Toggle Component', () => {
     const wrapper = shallow(<Toggle title="test toggle" children={<div>test toggle</div>} />);
     expect(wrapper.state('toggled')).toBe(false);
     wrapper
-      .find('.toggle-icon')
+      .find('.toggle-header')
       .first()
       .simulate('click');
     expect(wrapper.state('toggled')).toBe(true);
@@ -23,7 +23,10 @@ describe('Toggle Component', () => {
     const wrapper = shallow(<Toggle title="test toggle" children={<div>test toggle</div>} />);
     const button0 = wrapper.find('.toggle-icon').first();
     expect(button0.prop('icon')).toEqual(faArrowDown);
-    button0.simulate('click');
+    wrapper
+      .find('.toggle-header')
+      .first()
+      .simulate('click');
     const button1 = wrapper.find('.toggle-icon').first();
     expect(button1.prop('icon')).toEqual(faArrowUp);
   });
