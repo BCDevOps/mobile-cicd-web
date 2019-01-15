@@ -72,7 +72,7 @@ ShallowWrapper {
           title="IPA"
         >
           <p>
-            To be documented.
+            Signing IPA files is currently Alpha. Please use xcarchive.
           </p>
         </Toggle>,
         <Toggle
@@ -390,7 +390,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <p>
-            To be documented.
+            Signing IPA files is currently Alpha. Please use xcarchive.
           </p>,
           "title": "IPA",
         },
@@ -400,10 +400,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "To be documented.",
+            "children": "Signing IPA files is currently Alpha. Please use xcarchive.",
           },
           "ref": null,
-          "rendered": "To be documented.",
+          "rendered": "Signing IPA files is currently Alpha. Please use xcarchive.",
           "type": "p",
         },
         "type": [Function],
@@ -581,7 +581,7 @@ ShallowWrapper {
             title="IPA"
           >
             <p>
-              To be documented.
+              Signing IPA files is currently Alpha. Please use xcarchive.
             </p>
           </Toggle>,
           <Toggle
@@ -899,7 +899,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <p>
-              To be documented.
+              Signing IPA files is currently Alpha. Please use xcarchive.
             </p>,
             "title": "IPA",
           },
@@ -909,10 +909,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "To be documented.",
+              "children": "Signing IPA files is currently Alpha. Please use xcarchive.",
             },
             "ref": null,
-            "rendered": "To be documented.",
+            "rendered": "Signing IPA files is currently Alpha. Please use xcarchive.",
             "type": "p",
           },
           "type": [Function],
