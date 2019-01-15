@@ -185,16 +185,17 @@ podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkin
       }
     }
 
+  }
+  node ('master') {
     stage('Approval') {
       timeout(time: 1, unit: 'DAYS') {
         input message: "Deploy to Production?", submitter: 'authenticated'
       }
-      node ('master') {
-        stage('Promotion') {
-          openshiftTag destStream: CADDY_IMAGESTREAM_NAME, verbose: 'true', destTag: TAG_NAMES[2], srcStream: CADDY_IMAGESTREAM_NAME, srcTag: "${IMAGE_HASH}"
-          notifySlack("Promotion ${APP_NAME} Completed deployment in production.", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [], JENKINS_ICO)
-        }
+      
+      stage('Promotion') {
+        openshiftTag destStream: CADDY_IMAGESTREAM_NAME, verbose: 'true', destTag: TAG_NAMES[2], srcStream: CADDY_IMAGESTREAM_NAME, srcTag: "${IMAGE_HASH}"
+        notifySlack("Promotion ${APP_NAME} Completed deployment in production.", "${SLACK_CHANNEL}", "https://hooks.slack.com/services/${SLACK_TOKEN}", [], JENKINS_ICO)
       }
-    }   
-  }
+    } 
+  }  
 }
