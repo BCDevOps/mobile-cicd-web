@@ -1,7 +1,7 @@
 import React from 'react';
-import './Instruction.css';
 import { XML_SAMPLES } from '../../constants';
 import Toggle from '../Toggle/Toggle';
+import './Instruction.css';
 
 const Instruction = () => {
   return (
@@ -29,7 +29,7 @@ const Instruction = () => {
         </ol>
       </Toggle>
       <Toggle title="IPA">
-        <p>To be documented.</p>
+        <p>Signing IPA files is currently Alpha. Please use xcarchive.</p>
       </Toggle>
       <Toggle title="APK">
         <p>To package up an android package to submit for signing you need to:</p>
