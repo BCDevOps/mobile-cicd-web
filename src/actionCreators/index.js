@@ -34,8 +34,8 @@ import { API } from '../constants';
 const axi = axios.create({
   baseURL: API.BASE_URL(),
 });
-const apiPollTimeout = 3000;
-const maxStatusCheckCount = (120 * 1000) / apiPollTimeout;
+const apiPollTimeout = 3000; // Timout in Ms.
+const maxStatusCheckCount = (10 * 60 * 1000) / apiPollTimeout; // delayInMin * sec * Ms / timeout
 let statusCheckCount = 0;
 
 const authenticationHeaderValue = () => {
@@ -43,7 +43,7 @@ const authenticationHeaderValue = () => {
   try {
     token = implicitAuthManager.idToken.bearer;
   } catch (err) {
-    console.log('No JWT for authenticaiton.');
+    console.log('No JWT for authentication.');
   }
 
   return `Bearer ${token}`;
