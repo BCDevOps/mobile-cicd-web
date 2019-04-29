@@ -50,9 +50,9 @@ const titleForCurrentState = files => {
 const FileUpload = ({ onFileAccepted, files }) => {
   return (
     <div className="file-upload-container">
-      <Dropzone onDrop={onFileAccepted} disabled={isDisabled(files)}>
+      <Dropzone className="drop-zone" onDrop={onFileAccepted} disabled={isDisabled(files)}>
         {({ getRootProps, getInputProps }) => (
-          <div className="drop-zone" {...getRootProps()}>
+          <div className="drop-zone-content" {...getRootProps()}>
             <input {...getInputProps()} />
             {titleForCurrentState(files)}
           </div>
