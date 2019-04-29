@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@bcgov/common-nodejs-utils": "^0.1.17",
@@ -28,6 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --coverage",
+    "test:ci": "CI=true react-scripts test --env=jsdom --coverage",
     "test:watch": "react-scripts test --watch --env=jsdom",
     "eject": "react-scripts eject",
     "test:lint": "eslint src/"
