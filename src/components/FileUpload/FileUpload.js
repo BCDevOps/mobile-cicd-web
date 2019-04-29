@@ -41,26 +41,22 @@ const isDisabled = files => {
 
 const titleForCurrentState = files => {
   if (isDisabled(files)) {
-    return <div className="title">Only one file can be selected.</div>;
+    return <p className="title">Only one file can be selected.</p>;
   }
 
-  return <div className="title">Drag file to upload.</div>;
-};
-
-const subTitleForCurrentState = files => {
-  if (isDisabled(files)) {
-    return <div className="sub-title" />;
-  }
-
-  return <div className="sub-title">(.ZIP format only)</div>;
+  return <p className="title">Drag a file to upload (ZIP format only).</p>;
 };
 
 const FileUpload = ({ onFileAccepted, files }) => {
   return (
     <div className="file-upload-container">
-      <Dropzone className="drop-zone" onDrop={onFileAccepted} disabled={isDisabled(files)}>
-        {titleForCurrentState(files)}
-        {subTitleForCurrentState(files)}
+      <Dropzone onDrop={onFileAccepted} disabled={isDisabled(files)}>
+        {({ getRootProps, getInputProps }) => (
+          <div className="drop-zone" {...getRootProps()}>
+            <input {...getInputProps()} />
+            {titleForCurrentState(files)}
+          </div>
+        )}
       </Dropzone>
       <ul className="file-list">
         {files.map(file => (
