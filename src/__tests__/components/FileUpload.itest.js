@@ -21,4 +21,6 @@ describe('FileUpload Component', () => {
     const wrapper = shallow(<FileUpload onFileAccepted={onFileAccepted} files={files} />);
     expect(wrapper.find('.drop-zone').prop('disabled')).toBe(true);
   });
+
+  it.skip('how do we test the contest of the <p> tag?', () => {});
 });
