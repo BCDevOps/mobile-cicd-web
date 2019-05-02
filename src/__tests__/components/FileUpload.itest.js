@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import FileUpload from '../../components/FileUpload/FileUpload';
+import Dropzone from 'react-dropzone';
 
 describe('FileUpload Component', () => {
   const onFileAccepted = jest.fn();
@@ -22,5 +23,14 @@ describe('FileUpload Component', () => {
     expect(wrapper.find('.drop-zone').prop('disabled')).toBe(true);
   });
 
-  it.skip('how do we test the contest of the <p> tag?', () => {});
+  it('initial text is displayed', () => {
+    const wrapper = shallow(<FileUpload onFileAccepted={onFileAccepted} files={files} />);
+    expect(
+      wrapper
+        .find(Dropzone)
+        .dive()
+        .find('.title')
+        .text()
+    ).toBe('Only one file can be selected.');
+  });
 });
