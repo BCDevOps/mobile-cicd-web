@@ -3,7 +3,7 @@
   /* margin: 0em 3em 0em 3em; */
 }
 
-.file-upload-container .drop-zone {
+.file-upload-container .drop-zone-content {
   text-align: center;
   height: 4em;
   /* width: 16em; */
@@ -33,12 +33,8 @@
   text-align: left;
 }
 
-.file-upload-container .title {
-  font-size: 1.1em;
-}
-
-.file-upload-container .sub-title {
-  font-size: 0.8em;
+.drop-zone-content .title {
+  font-size: 1em;
 }
 
 .file-list li {

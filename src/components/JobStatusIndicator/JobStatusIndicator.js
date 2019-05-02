@@ -21,7 +21,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import { MoonLoader } from 'react-spinners';
 import { JOB_STATUS } from '../../constants';
 
