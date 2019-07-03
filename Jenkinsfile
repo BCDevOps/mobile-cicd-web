@@ -18,7 +18,7 @@
 // Created by Jason Leach on 2018-02-01.
 //
 
-def BUILD_CONFIG = 'signing-api-master-build'
+def BUILD_CONFIG = 'signing-web-master-build'
 
 pipeline {
     agent none
