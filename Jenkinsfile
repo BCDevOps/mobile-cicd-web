@@ -18,8 +18,6 @@
 // Created by Jason Leach on 2018-02-01.
 //
 
-def BUILD_CONFIG = 'signing-web-master-build'
-
 pipeline {
     agent none
     options {
@@ -37,7 +35,8 @@ pipeline {
                 echo "Building ..."
                 script { 
                   sh "tar -cf artifact.tar ."
-                  sh "oc start-build ${BUILD_CONFIG} --from-archive=artifact.tar --follow --wait"
+                  sh "oc start-build signing-web-master-build --from-archive=artifact.tar --follow --wait"
+                  sh "oc start-build signing-web-caddy-master-build --follow --wait"
                 }
             }
         }
